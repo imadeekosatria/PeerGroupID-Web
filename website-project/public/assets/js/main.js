@@ -2,11 +2,18 @@
 const navMenu = document.getElementById('nav-menu'),
     toggleMenu = document.getElementById('nav-toggle'),
     closeMenu = document.getElementById('nav-close'),
-    dropdown = document.getElementById('dropdown-toggle')
+    dropdown = document.getElementById('dropdown'),
+    dropdownMenu = document.getElementById('dropdown-menu'),
+    dropicon = document.getElementById('drop-icon')
 
 // SHOW
 toggleMenu.addEventListener('click', ()=>{
     navMenu.classList.toggle('show')
+})
+
+dropdown.addEventListener('click', ()=>{
+    dropdownMenu.classList.toggle('drop-show');
+    dropicon.classList.toggle('icon-rotate');
 })
 
 // HIDDEN
@@ -14,10 +21,8 @@ closeMenu.addEventListener('click', ()=>{
     navMenu.classList.remove('show')
 })
 
-//ARROW
-dropdown.addEventListener('click', ()=>{
-  dropdown.classList.toggle('dis-block')
-})
+
+
 
 /*===== MOUSEMOVE HOME IMG =====*/
 document.addEventListener('mousemove', move);
@@ -39,7 +44,7 @@ gsap.from('.nav__item', {opacity: 0, duration: 1, delay: 2.1, y: 30, stagger: 0.
 
 // HOME
 gsap.from('.home__title', {opacity: 0, duration: 1, delay:1.6, y: 30})
-gsap.from('.content', {opacity: 0, duration: 1, delay:1.8, y: 30})
+gsap.from('.home__description', {opacity: 0, duration: 1, delay:1.8, y: 30})
 gsap.from('.home__button', {opacity: 0, duration: 1, delay:2.1, y: 30})
 gsap.from('.home__img', {opacity: 0, duration: 1, delay:1.3, y: 30})
 

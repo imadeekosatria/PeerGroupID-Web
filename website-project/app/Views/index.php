@@ -27,9 +27,9 @@
                     <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
                     <li class="nav__item"><a href="index.html" class="nav__link">About Us</a></li>
                     
-                    <li class="nav__item dropdown">
-                        <a href="#" class="nav__link dropdown__link" id=dropdown-toggle>Artikel <i class='bx bx-chevron-down dropdown__icon'></i></a>
-                        <ul class="dropdown__menu">
+                    <li class="nav__item dropdown" >
+                        <a href="#" class="nav__link dropdown__link" id="dropdown">Artikel <i class='bx bx-chevron-down dropdown__icon' id="drop-icon"></i></a>
+                        <ul class="dropdown__menu" id="dropdown-menu">
                             <li class="dropdown__item"><a href="#" class="nav__link">Self Development</a></li>
                             <li class="dropdown__item"><a href="#" class="nav__link">Jurusan</a></li>
                             <li class="dropdown__item"><a href="#" class="nav__link">Karir</a></li>

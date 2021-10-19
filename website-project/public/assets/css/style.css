@@ -215,16 +215,9 @@
 }
 
 .dropdown__item {
-  margin: 1rem 0;
+  margin: 1rem 1rem;
 }
 
-.dropdown:hover > .dropdown__menu {
-  display: block;
-}
-
-.dropdown:hover .dropdown__icon {
-  transform: rotate(180deg);
-}
 
 .section{
   padding-top: 3rem;
@@ -311,6 +304,7 @@
   }
 }
 @media screen and (max-width: 768px){
+
   .home__container{
     display: flex;
     flex-direction: column-reverse;
@@ -339,6 +333,12 @@
   }
 }
 @media screen and (min-width: 769px){
+  .dropdown:hover .dropdown__icon {
+    transform: rotate(180deg);
+  }
+  .dropdown:hover > .dropdown__menu {
+    display: block;
+  }
   .home__img{
     right: 2.5rem;
   }
@@ -428,4 +428,12 @@
     left: 6rem;
     top: 3rem;
   }
+}
+
+.drop-show{
+  display: block;
+}
+
+.icon-rotate{
+  transform: rotate(180deg);
 }
