@@ -559,3 +559,43 @@
   color: #fff;
   text-align: center;
 }
+
+/*ARTIKEL*/
+.artikel__container{
+  margin-top: 4rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+.title-artikel {
+  text-align: center;
+  color: var(--accent-color);
+  font-family: var(--font-family);
+}
+
+.header-artikel {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+}
+.author {
+  font-style: italic;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.arti-image{
+  max-width: 720px;
+  height: 385px;
+  margin-bottom: 1rem;
+}
+
+.arti-image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+}
+
+.sumber{
+  font-style: italic;
+}

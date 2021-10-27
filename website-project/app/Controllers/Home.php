@@ -6,6 +6,10 @@ class Home extends BaseController
 {
     public function index()
     {
-        return view('index');
+        return view('Apps/index');
+    }
+
+    public function detart(){
+        return view('Apps/detail artikel');
     }
 }
