@@ -8,7 +8,10 @@ class Home extends BaseController
 {
     public function index()
     {
-        return view('Apps/index');
+        $data = [
+            'title' => 'Peer Group ID'
+        ];
+        return view('Apps/index', $data);
     }
     protected $get;
     public function __construct(){
