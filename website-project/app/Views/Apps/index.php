@@ -131,11 +131,6 @@
                 </div>
             </div>
         </section>
-
-        <footer class="footer">
-            <!-- <a href="#" class="nav__logo"><img src="/assets/images/Logo Peer Group Transparan.png" alt=""></a>  -->
-            <small>Copyright &copy; Peergroup.id 2021</small>
-        </footer>
     </main>
 <?= $this->endsection();?>
     
