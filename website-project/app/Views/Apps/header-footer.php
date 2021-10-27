@@ -24,8 +24,8 @@
                     <i class='bx bx-x'></i>
                 </div>
                 <ul class="nav__list">
-                    <li class="nav__item"><a href="index.html" class="nav__link">Beranda</a></li>
-                    <li class="nav__item"><a href="index.html" class="nav__link">Siapa Kita</a></li>
+                    <li class="nav__item"><a href="/" class="nav__link">Beranda</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link">Siapa Kita</a></li>
                     
                     <li class="nav__item dropdown" >
                         <a href="#" class="nav__link dropdown__link" id="dropdown">Artikel <i class='bx bx-chevron-down dropdown__icon' id="drop-icon"></i></a>
@@ -35,7 +35,7 @@
                             <li class="dropdown__item"><a href="#" class="nav__link">Karir</a></li>
                         </ul>
                     </li>
-                    <li class="nav__item"><a href="index.html" class="nav__link">Kegiatan Kami</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link">Kegiatan Kami</a></li>
                     <li class="nav__item"><a href="#" class="nav__link">Kontak</a></li>
                 </ul>
             </div>
