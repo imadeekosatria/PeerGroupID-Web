@@ -17,7 +17,7 @@
                 <div class="header-artikel">
                     <h1 class="title-artikel"><?=$judul?></h1>
                     <div class="author">
-                        <p>Penulis : <span class="author-name"><?php echo $penulis?></span> - <span class="date"><?php echo $date?></span></p>
+                        <p><span style="font-weight: var(--font-bold);">Penulis</span>  : <span class="author-name"><?php echo $penulis?></span> - <span class="date"><?php echo $date?></span></p>
                     </div>
                     <?php
                         if ($cover != NULL) {

@@ -616,7 +616,9 @@
 .text-list-paragraph{
   margin-left: 3rem;
 }
-
+html{
+  scroll-behavior: smooth;
+}
 .close{
   margin-top: 1rem;
 }

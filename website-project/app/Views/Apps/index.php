@@ -9,7 +9,7 @@
                     <p class="desc">Temukan potensimu, fokus pada kelebihanmu, 
                         jadilah unik dan berbeda versi dirimu bersama 
                         Peer Group ID ✨</p>
-                    <a href="" class="button-link kepoin">Kepoin Yuk <i class='bx bx-arrow-back bx-rotate-270' ></i></a>
+                    <a href="#about" class="button-link kepoin">Kepoin Yuk <i class='bx bx-arrow-back bx-rotate-270' ></i></a>
                 </div>
                 <div class="home__img">
                     <img class="front" src="/assets/images/FAQ.svg" alt="">
@@ -132,5 +132,7 @@
             </div>
         </section>
     </main>
+    <!--===== SCROLL REVEAL =====-->
+    <script src="https://unpkg.com/scrollreveal"></script>
 <?= $this->endsection();?>
     
