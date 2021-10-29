@@ -6,6 +6,7 @@
         $text = $data->text;
         $cover = $data->cover;
         $sumber_cover = $data->sumber_cover;
+        $date = $data->created_at;
     }
 ?>
 <?= $this->extend('/Apps/header-footer');?>
@@ -16,14 +17,19 @@
                 <div class="header-artikel">
                     <h1 class="title-artikel"><?=$judul?></h1>
                     <div class="author">
-                        <p>Penulis : <?php echo $penulis?></p>
+                        <p>Penulis : <span class="author-name"><?php echo $penulis?></span> - <span class="date"><?php echo $date?></span></p>
                     </div>
-                    <div class="arti-image">
-                        <img src="/assets/images/<?=$cover?>" alt="">
-                    </div>
-                    <div class="sumber">
-                        <p>Sumber: <?php echo $sumber_cover?></p>
-                    </div>
+                    <?php
+                        if ($cover != NULL) {
+                            echo "<div class='arti-image'>
+                                        <img src='/assets/images/$cover' alt=''>
+                                </div>
+                                <div class='sumber'>
+                                    <p>Sumber: $sumber_cover</p>
+                                </div>";
+                        }
+                    ?>
+
                 </div>
                 <div class="text">
                     <?php echo $text?>

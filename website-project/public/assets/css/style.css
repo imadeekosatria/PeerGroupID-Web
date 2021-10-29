@@ -610,8 +610,25 @@
 
 .paragraph{
   text-indent: 3rem;
+  line-height: 43px;
 }
 
 .text-list-paragraph{
   margin-left: 3rem;
+}
+
+.close{
+  margin-top: 1rem;
+}
+
+.open{
+  margin-bottom: 1rem;
+}
+
+.author-name{
+  color: #D3766A;
+}
+
+.date{
+  color: rgba(0, 0, 0, 0.5);
 }

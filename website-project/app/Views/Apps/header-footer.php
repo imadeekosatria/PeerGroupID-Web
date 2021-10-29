@@ -26,9 +26,8 @@
                 <ul class="nav__list">
                     <li class="nav__item"><a href="/" class="nav__link">Beranda</a></li>
                     <li class="nav__item"><a href="#" class="nav__link">Siapa Kita</a></li>
-                    
                     <li class="nav__item dropdown" >
-                        <a href="#" class="nav__link dropdown__link" id="dropdown">Artikel <i class='bx bx-chevron-down dropdown__icon' id="drop-icon"></i></a>
+                        <a href="/detail-artikel" class="nav__link dropdown__link" id="dropdown">Artikel <i class='bx bx-chevron-down dropdown__icon' id="drop-icon"></i></a>
                         <ul class="dropdown__menu" id="dropdown-menu">
                             <li class="dropdown__item"><a href="#" class="nav__link">Self Development</a></li>
                             <li class="dropdown__item"><a href="#" class="nav__link">Jurusan</a></li>
