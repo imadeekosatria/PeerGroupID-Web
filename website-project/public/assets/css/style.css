@@ -280,7 +280,7 @@
   justify-self: center;
 }
 .about__img img{
-  width: 200px;
+  width: 322px;
   border-radius: .5rem;
 }
 
@@ -491,7 +491,8 @@
 .text-isi-artikel{
   padding: .5rem 1rem;
   text-overflow: ellipsis;
-  font-weight: var(--font-medium);
+  font-weight: var(--font-low-medium);
+  max-lines: 5;
 }
 .text-artikel{
   text-align: center;
