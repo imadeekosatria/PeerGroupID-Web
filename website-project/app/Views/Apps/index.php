@@ -55,19 +55,21 @@
                 </div>
                 <!--Jurusan-->
                 <div class=kategori>
-                    <h3 class="text-artikel">Jurusan</h3>
+                    <h3 class="text-artikel">Self Development</h3>
                 <div class="artikel-content">
-                    <h4 class="text-artikel">E-Commerce</h4>
-                    <p class="text-isi-artikel">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                    <img src="/assets/images/header artikel.jpg" alt="">
+                    <p class="home-artikel-judul">Yuk, Belajar Memulai Karir di Dunia Startup</p>
+                    <p class="text-isi-artikel">Halo captainers! buat kamu yang mau kerja di dunia startup, simak tips berkarir di dunia startup biar kamu lebih berpeluang diterima.</p>
                 </div>
                     <a href="/" class="selengkapnya-artikel">Selengkapnya<i class='bx bx-arrow-back bx-flip-horizontal' ></i></a>
                 </div>
                 <!--Karir-->
                 <div class=kategori>
-                    <h3 class="text-artikel">Karir</h3>
+                    <h3 class="text-artikel">Self Development</h3>
                 <div class="artikel-content">
-                    <h4 class="text-artikel">E-Commerce</h4>
-                    <p class="text-isi-artikel">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                    <img src="/assets/images/header artikel.jpg" alt="">
+                    <p class="home-artikel-judul">Yuk, Belajar Memulai Karir di Dunia Startup</p>
+                    <p class="text-isi-artikel">Halo captainers! buat kamu yang mau kerja di dunia startup, simak tips berkarir di dunia startup biar kamu lebih berpeluang diterima.</p>
                 </div>
                     <a href="/" class="selengkapnya-artikel">Selengkapnya<i class='bx bx-arrow-back bx-flip-horizontal' ></i></a>
                 </div>
@@ -122,7 +124,7 @@
                 <div class="kontak-descrption">
                 <div class="sosial-media">
                     <img src="/assets/images/ig.svg" class="img-kontak-media" alt="">
-                    Peergroup.id
+                    <a href="https://www.instagram.com/peergroup.id/" target="_blank">Peergroup.id</a> 
                 </div>
                 <div class="sosial-media">
                     <img src="/assets/images/mail.svg" class="img-kontak-media" alt="">

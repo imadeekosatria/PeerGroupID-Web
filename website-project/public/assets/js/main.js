@@ -61,7 +61,6 @@ const sr = ScrollReveal({
 });
 
 /*SCROLL HOME*/
-sr.reveal('.home__img',{});
 sr.reveal('.title',{});
 sr.reveal('.desc',{delay: 400});
 sr.reveal('.kepoin', {delay: 400});
@@ -70,4 +69,4 @@ sr.reveal('.kepoin', {delay: 400});
 /*SCROLL ABOUT*/
 sr.reveal('.about__img',{}); 
 sr.reveal('.siapa',{delay: 400}); 
-sr.reveal('.about__text',{delay: 400}); 
+sr.reveal('.about__text',{delay: 400});

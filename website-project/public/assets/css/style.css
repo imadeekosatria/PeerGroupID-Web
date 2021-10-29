@@ -459,20 +459,29 @@
 
 .artikel-content{
   background-color: var(--primary-color);
-  border-radius: 20px;
-  height: 23rem;
+  height: 24rem;
   width: 20.2rem;
   margin: 1rem 10px;
   border-radius: 10px;
   color: var(--white-color);
+  overflow: hidden;
 }
 
 .artikel-content img{
   width: 100%;
+  height: 12rem;
+  object-fit: cover;
   border-radius: 10px;
+  transition: 1s;
+  cursor: auto;
+}
+
+.artikel-content img:hover{
+  transform: scale(1.1);
 }
 .home-artikel-judul{
   font-size:1.2rem;
+  margin-top: .7rem;
   padding: .5rem 1rem;
   font-weight: var(--font-bold);
 }
