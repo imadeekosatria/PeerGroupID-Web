@@ -37,6 +37,9 @@
     box-sizing: border-box;
   }
   
+  h5{
+    font-size: 1.5em;
+  }
   body{
     margin: var(--header-height) 0 0 0;
     padding: 0;
@@ -561,26 +564,36 @@
 }
 
 /*ARTIKEL*/
+/*Grid*/
+.artikel { grid-area: artikel; }
+
+.rekomendasi { 
+  grid-area: rekomendasi; 
+}
+
 .artikel__container{
   margin-top: 4rem;
-  margin-left: auto;
-  margin-right: auto;
+  display: grid;
+  grid-template-columns: 1.5fr 0.5fr;
+  grid-template-rows: 1fr;
+  gap: 0px 2rem;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "artikel rekomendasi";
 }
 .title-artikel {
-  text-align: center;
   color: var(--accent-color);
   font-family: var(--font-family);
+  font-size: 3rem;
 }
 
 .header-artikel {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  align-items: center;
 }
 .author {
   font-style: italic;
-  text-align: center;
   margin-bottom: 1rem;
 }
 
@@ -588,6 +601,8 @@
   max-width: 720px;
   height: 385px;
   margin-bottom: 1rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .arti-image img {
@@ -598,6 +613,7 @@
 
 .sumber{
   font-style: italic;
+  text-align: center;
 }
 
 .text{
@@ -608,17 +624,20 @@
   margin-top: 1rem;
 }
 
+.text, .header-artikel{
+  margin-left: 3rem;
+}
+
 .paragraph{
-  text-indent: 3rem;
-  line-height: 43px;
+  line-height: 1.5rem;
+  margin-top: 1rem;
 }
 
 .text-list-paragraph{
-  margin-left: 3rem;
+  line-height: 1.5rem;
+  margin-top: 1rem;
 }
-html{
-  scroll-behavior: smooth;
-}
+
 .close{
   margin-top: 1rem;
 }
@@ -633,4 +652,70 @@ html{
 
 .date{
   color: rgba(0, 0, 0, 0.5);
+}
+
+.ls-paragraph{
+  padding-right: 2.7em;
+}
+
+/*Rekomendasi*/
+.Rekomendasi{
+  margin-right: 2rem;
+}
+.rekomendasi-container{
+  width: 100%;
+  height: 617px;
+  border-radius: 5px;
+}
+
+.header-rekomendasi{
+  display: flex;
+  width: 100%;
+  color: var(--white-color);
+  height: 3rem;
+  background-color: #1E435B;
+  justify-content: center;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  align-items: center;
+  margin-top: 4rem;
+}
+
+.rekomen-fill {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 3em 1rem;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "left right"
+    "left right"
+    "left right";
+}
+
+.left, .right{
+  margin-top: 1rem;
+}
+
+.left { 
+  grid-area: left; 
+}
+
+.right { 
+  grid-area: right; 
+}
+
+.konten{
+  width: 10rem;
+  margin-bottom: 1rem;
+}
+
+.rekomen-img {
+  width: 100%;
+}
+
+.text-rekomen{
+  max-lines: 3;
+  text-overflow: ellipsis;
+  
 }

@@ -15,7 +15,7 @@ class ArtikelModel extends Model
 
     //Get data artikel
     public function getartikel(){
-        $query = $this->db->query("SELECT * FROM artikel Where id = 2");
+        $query = $this->db->query("SELECT * FROM artikel Where id = 1");
         return $query;
     }
 }
