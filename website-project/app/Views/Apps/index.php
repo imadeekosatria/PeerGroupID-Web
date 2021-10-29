@@ -39,38 +39,42 @@
             </div>
         </section>
 
-                <!--Artikel-->
-                <section class="artikel section" id="artikel">
+            <!--Artikel-->
+            <section class="artikel section" id="artikel">
             <h2 class="section-title">Artikel</h2>
             <div class= "artikel-container">
-            <div class=kategori>
-                <h3 class="text-artikel">Self Development</h3>
-            <div class="artikel-content">
-                <h4 class="text-artikel">E-Commerce</h4>
-                <p class="text-isi-artikel">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
-            </div>
-                <a href="/" class="selengkapnya-artikel">Selengkapnya<i class='bx bx-arrow-back bx-flip-horizontal' ></i></a>
-            </div>
-            <div class=kategori>
-                <h3 class="text-artikel">Jurusan</h3>
-            <div class="artikel-content">
-                <h4 class="text-artikel">E-Commerce</h4>
-                <p class="text-isi-artikel">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
-            </div>
-                <a href="/" class="selengkapnya-artikel">Selengkapnya<i class='bx bx-arrow-back bx-flip-horizontal' ></i></a>
-            </div>
-            <div class=kategori>
-                <h3 class="text-artikel">Karir</h3>
-            <div class="artikel-content">
-                <h4 class="text-artikel">E-Commerce</h4>
-                <p class="text-isi-artikel">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
-            </div>
-                <a href="/" class="selengkapnya-artikel">Selengkapnya<i class='bx bx-arrow-back bx-flip-horizontal' ></i></a>
-            </div>
+                <!--Self Development-->
+                <div class=kategori>
+                    <h3 class="text-artikel">Self Development</h3>
+                <div class="artikel-content">
+                    <img src="/assets/images/header artikel.jpg" alt="">
+                    <p class="home-artikel-judul">Yuk, Belajar Memulai Karir di Dunia Startup</p>
+                    <p class="text-isi-artikel">Halo captainers! buat kamu yang mau kerja di dunia startup, simak tips berkarir di dunia startup biar kamu lebih berpeluang diterima.</p>
+                </div>
+                    <a href="/" class="selengkapnya-artikel">Selengkapnya<i class='bx bx-arrow-back bx-flip-horizontal' ></i></a>
+                </div>
+                <!--Jurusan-->
+                <div class=kategori>
+                    <h3 class="text-artikel">Jurusan</h3>
+                <div class="artikel-content">
+                    <h4 class="text-artikel">E-Commerce</h4>
+                    <p class="text-isi-artikel">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                </div>
+                    <a href="/" class="selengkapnya-artikel">Selengkapnya<i class='bx bx-arrow-back bx-flip-horizontal' ></i></a>
+                </div>
+                <!--Karir-->
+                <div class=kategori>
+                    <h3 class="text-artikel">Karir</h3>
+                <div class="artikel-content">
+                    <h4 class="text-artikel">E-Commerce</h4>
+                    <p class="text-isi-artikel">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                </div>
+                    <a href="/" class="selengkapnya-artikel">Selengkapnya<i class='bx bx-arrow-back bx-flip-horizontal' ></i></a>
+                </div>
             </div>
         </section>
 
-        <!-- KEGIATAN KAMI -->
+        <!-- KEGIATAN KAMI 
         <section class="kegiatan-kami section" id="kegiatan-kami">
         <h2 class="section-title">Kegiatan Kami</h2>
         <div class="activity-container">
@@ -79,7 +83,7 @@
                 <div class="activity-description">
                     <h5 class="title-activity">LOREM IPSUM</h5>
                     <p class="text-activity">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam</p>
-                    <!-- <a href="" class="button-activity">Detail <i class='bx bx-arrow-back bx-rotate-180' ></i></a> -->
+                    <a href="" class="button-activity">Detail <i class='bx bx-arrow-back bx-rotate-180' ></i></a>
                 </div>
             </div>
             <div class="activity">
@@ -106,7 +110,7 @@
                 </div>
             </div>
         </div>
-        </section>
+        </section>-->
 
         <!-- KONTAK -->
         <section class="kontak section" id="kontak">

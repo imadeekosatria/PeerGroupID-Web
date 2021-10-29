@@ -458,15 +458,30 @@
 }
 
 .artikel-content{
-  background-color: #B9E5E6;
-  border: 1px solid #B9E5E6;
+  background-color: var(--primary-color);
   border-radius: 20px;
-  padding: 1rem 1rem;
   height: 23rem;
   width: 20.2rem;
   margin: 1rem 10px;
+  border-radius: 10px;
+  color: var(--white-color);
 }
 
+.artikel-content img{
+  width: 100%;
+  border-radius: 10px;
+}
+.home-artikel-judul{
+  font-size:1.2rem;
+  padding: .5rem 1rem;
+  font-weight: var(--font-bold);
+}
+
+.text-isi-artikel{
+  padding: .5rem 1rem;
+  text-overflow: ellipsis;
+  font-weight: var(--font-medium);
+}
 .text-artikel{
   text-align: center;
   color: #1E435B;
@@ -678,7 +693,7 @@
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   align-items: center;
-  margin-top: 4rem;
+  margin-top: 9rem;
 }
 
 .rekomen-fill {
