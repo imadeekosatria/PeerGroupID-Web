@@ -25,4 +25,11 @@ class Home extends BaseController
         ];
         return view('Apps/detail artikel', $data);
     }
+
+    public function artikel(){
+        $data = [
+            'title' => 'Artikel Karir'
+        ];
+        return view('Apps/artikel', $data);
+    }
 }
