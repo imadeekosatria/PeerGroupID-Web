@@ -125,6 +125,7 @@
         <div class="left">
         <button class="beranda"> <a href="home" class="link"> Beranda </a></button>
         <form method="post" action="<?= base_url(); ?>/login/process">
+        <?= csrf_field(); ?>
         <br>
         <?php if (!empty(session()->getFlashdata('error'))) : ?>
             <div class="alert" role="alert">
@@ -132,7 +133,6 @@
             </div>
         <?php endif; ?>
         <br>
-        <?= csrf_field(); ?>
           <p>
             <label for="username">Username</label>
             <input type="text" name="username" id="username" placeholder="Username" class="form-input" required>
