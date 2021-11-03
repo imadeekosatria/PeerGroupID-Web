@@ -37,6 +37,11 @@ $routes->get('/artikel', 'Home::artikel');
 $routes->get('/self-dev', 'Home::detart');
 $routes->get('/jurusan', 'Home::detart');
 $routes->get('/karir', 'Home::detart');
+$routes->get('/login', 'Login::index');
+$routes->post('/login/process', 'Login::process');
+$routes->get('/logout', 'Login::logout');
+
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing

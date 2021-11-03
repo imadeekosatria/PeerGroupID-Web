@@ -35,7 +35,7 @@
                         </ul>
                     </li>
                     <li class="nav__item"><a href="#" class="nav__link">Kegiatan Kami</a></li>
-                    <li class="nav__item"><a href="#" class="nav__link">Login</a></li>
+                    <li class="nav__item"><a href="/login" class="nav__link">Login</a></li>
                 </ul>
             </div>
         </nav>
