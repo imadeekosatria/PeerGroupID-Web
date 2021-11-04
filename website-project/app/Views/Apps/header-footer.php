@@ -27,17 +27,17 @@
                 </div>
                 <ul class="nav__list">
                     <li class="nav__item"><a href="/" class="nav__link">Beranda</a></li>
-                    <li class="nav__item"><a href="about" class="nav__link">Siapa Kita</a></li>
+                    <li class="nav__item"><a href="/about" class="nav__link">Siapa Kita</a></li>
                     <li class="nav__item dropdown" >
                         <a href="#" class="nav__link dropdown__link" id="dropdown">Artikel <i class='bx bx-chevron-down dropdown__icon' id="drop-icon"></i></a>
                         <ul class="dropdown__menu" id="dropdown-menu">
-                            <li class="dropdown__item"><a href="#" class="nav__link">Self Development</a></li>
-                            <li class="dropdown__item"><a href="#" class="nav__link">Jurusan</a></li>
-                            <li class="dropdown__item"><a href="#" class="nav__link">Karir</a></li>
+                            <li class="dropdown__item"><a href="/artikel/self" class="nav__link">Self Development</a></li>
+                            <li class="dropdown__item"><a href="/artikel/jurusan" class="nav__link">Jurusan</a></li>
+                            <li class="dropdown__item"><a href="/artikel/karir" class="nav__link">Karir</a></li>
                         </ul>
                     </li>
                     <li class="nav__item"><a href="#" class="nav__link">Kegiatan Kami</a></li>
-                    <li class="nav__item"><a href="/login" class="nav__link">Login</a></li>
+                    <!--<li class="nav__item"><a href="/login" class="nav__link">Login</a></li>-->
                 </ul>
             </div>
         </nav>

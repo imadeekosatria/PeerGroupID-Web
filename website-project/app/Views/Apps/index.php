@@ -43,36 +43,28 @@
             <section class="artikel section" id="artikel">
             <h2 class="section-title">Artikel</h2>
             <div class= "artikel-container">
-                <!--Self Development-->
-                <div class=kategori>
-                    <h3 class="text-artikel">Self Development</h3>
-                <div class="artikel-content">
-                    <img src="/assets/images/header artikel.jpg" alt="">
-                    <p class="home-artikel-judul">Yuk, Belajar Memulai Karir di Dunia Startup</p>
-                    <p class="text-isi-artikel">Halo captainers! buat kamu yang mau kerja di dunia startup, simak tips berkarir di dunia startup biar kamu lebih berpeluang diterima.</p>
-                </div>
-                    <a href="/" class="selengkapnya-artikel">Selengkapnya<i class='bx bx-arrow-back bx-flip-horizontal' ></i></a>
-                </div>
+                <?php
+                    foreach($newartikel->getResultArray() as $data):
+                ?>
                 <!--Jurusan-->
                 <div class=kategori>
-                    <h3 class="text-artikel">Self Development</h3>
+                    <?php
+                        if ($data['kategori'] == 'jurusan') {
+                            echo '<h3 class="text-artikel">Jurusan</h3>';
+                        }elseif ($data['kategori'] == 'self-development') {
+                            echo '<h3 class="text-artikel">Self Development</h3>';
+                        }elseif ($data['kategori'] == 'karir'){
+                            echo '<h3 class="text-artikel">Karir</h3>';
+                        }
+                    ?>
                 <div class="artikel-content">
                     <img src="/assets/images/header artikel.jpg" alt="">
-                    <p class="home-artikel-judul">Yuk, Belajar Memulai Karir di Dunia Startup</p>
-                    <p class="text-isi-artikel">Halo captainers! buat kamu yang mau kerja di dunia startup, simak tips berkarir di dunia startup biar kamu lebih berpeluang diterima.</p>
+                    <p class="home-artikel-judul"><?php echo $data['judul']; ?></p>
+                    <p class="text-isi-artikel"><?php echo $data['deskripsi']; ?></p>
                 </div>
-                    <a href="/" class="selengkapnya-artikel">Selengkapnya<i class='bx bx-arrow-back bx-flip-horizontal' ></i></a>
+                    <a href="/detail-artikel/<?php echo $data['id']; ?>" class="selengkapnya-artikel">Selengkapnya<i class='bx bx-arrow-back bx-flip-horizontal' ></i></a>
                 </div>
-                <!--Karir-->
-                <div class=kategori>
-                    <h3 class="text-artikel">Self Development</h3>
-                <div class="artikel-content">
-                    <img src="/assets/images/header artikel.jpg" alt="">
-                    <p class="home-artikel-judul">Yuk, Belajar Memulai Karir di Dunia Startup</p>
-                    <p class="text-isi-artikel">Halo captainers! buat kamu yang mau kerja di dunia startup, simak tips berkarir di dunia startup biar kamu lebih berpeluang diterima.</p>
-                </div>
-                    <a href="/" class="selengkapnya-artikel">Selengkapnya<i class='bx bx-arrow-back bx-flip-horizontal' ></i></a>
-                </div>
+                <?php endforeach?>
             </div>
         </section>
 

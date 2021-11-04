@@ -13,7 +13,7 @@
 <?= $this->section('content')?>
     <main class="l-main">
         <section class="artikel section">
-            <div class="artikel__container">
+            <div class="artikel__container detail">
                 <!--Area artikel-->
                 <div class="artikel">
                     <div class="header-artikel">

@@ -6,19 +6,26 @@ use App\Models\ArtikelModel;
 
 class Home extends BaseController
 {
-    public function index()
-    {
-        $data = [
-            'title' => 'Peer Group ID'
-        ];
-        return view('Apps/index', $data);
-    }
+    //Global Constructor
     protected $get;
     public function __construct(){
         $this->get = new ArtikelModel();
     }
-    public function detart(){
-        $list = $this->get->getartikel();
+
+    //Index
+    public function index()
+    {
+        $newartikel = $this->get->getnewartikel();
+        $data = [
+            'title' => 'Peer Group ID',
+            'newartikel' => $newartikel
+        ];
+        return view('Apps/index', $data);
+    }
+
+    //Detail Artikel
+    public function detart($id){
+        $list = $this->get->getartikel($id);
         $data = [
             'title' => 'Detail Artikel',
             'artikel' => $list
@@ -26,13 +33,35 @@ class Home extends BaseController
         return view('Apps/detail artikel', $data);
     }
 
-    public function artikel(){
-        $data = [
-            'title' => 'Artikel Karir'
-        ];
+    //Halaman Artikel
+    public function artikel($e){
+        if ($e == 'self') {
+            $getartikel = $this->get->getdataartikel('self-development');
+            $data = [
+                'title' => 'Artikel',
+                'kategori' => 'Self Development',
+                'artikel' => $getartikel
+            ];
+        }elseif ($e == 'jurusan') {
+            $getartikel = $this->get->getdataartikel($e);
+            $data = [
+                'title' => 'Artikel',
+                'kategori' => 'Jurusan',
+                'artikel' => $getartikel
+            ];
+        }elseif ($e == 'karir') {
+            $getartikel = $this->get->getdataartikel($e);
+            $data = [
+                'title' => 'Artikel',
+                'kategori' => 'Karir',
+                'artikel' => $getartikel
+            ];
+        }
+        
         return view('Apps/artikel', $data);
     }
 
+    //About
     public function about(){
         $data = [
             'title' => 'Siapa Kita ?'

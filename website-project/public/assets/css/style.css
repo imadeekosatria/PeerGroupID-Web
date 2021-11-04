@@ -606,7 +606,6 @@
 }
 
 .artikel__container{
-  margin-top: 4rem;
   display: grid;
   grid-template-columns: 1.5fr 0.5fr;
   grid-template-rows: 1fr;
@@ -614,6 +613,10 @@
   grid-auto-flow: row;
   grid-template-areas:
     "artikel rekomendasi";
+}
+
+.detail{
+  margin-top: 4rem;
 }
 .title-artikel {
   color: var(--accent-color);
@@ -821,6 +824,9 @@ position: absolute;
   grid-area: 1 / 1 / 2 / 2; 
   font-size: 1.3rem;
   font-weight: var(--font-bold);
+}
+
+.title-thumbnail a{
   color: var(--primary-color);
 }
 

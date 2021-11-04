@@ -14,8 +14,20 @@ class ArtikelModel extends Model
     }
 
     //Get data artikel
-    public function getartikel(){
-        $query = $this->db->query("SELECT * FROM artikel Where id = 1");
+    public function getartikel($id) {
+        $query = $this->db->query("SELECT * FROM artikel Where id = $id");
         return $query;
     }
+
+    //Get Artikel
+    public function getdataartikel($kategori){
+        $query = $this->db->query("SELECT * FROM artikel WHERE kategori = '$kategori'");
+        return $query;
+    }
+
+    public function getnewartikel(){
+        $query = $this->db->query("SELECT * FROM artikel ORDER BY kategori ASC, created_at DESC LIMIT 3;");
+        return $query;
+    }
+
 }
