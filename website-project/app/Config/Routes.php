@@ -40,6 +40,8 @@ $routes->get('/karir', 'Home::detart');
 $routes->get('/login', 'Login::index');
 $routes->post('/login/process', 'Login::process');
 $routes->get('/logout', 'Login::logout');
+$routes->get('about', 'Home::about');
+
 
 
 /*

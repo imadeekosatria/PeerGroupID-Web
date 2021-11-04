@@ -32,4 +32,12 @@ class Home extends BaseController
         ];
         return view('Apps/artikel', $data);
     }
+
+    public function about(){
+        $data = [
+            'title' => 'Siapa Kita ?'
+        ];
+
+        return view('Apps/about', $data);
+    }
 }
