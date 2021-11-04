@@ -15,10 +15,14 @@ class Home extends BaseController
     //Index
     public function index()
     {
-        $newartikel = $this->get->getnewartikel();
+        $selfdev = $this->get->getnewartikel('self-development');
+        $karir = $this->get->getnewartikel('karir');
+        $jurusan = $this->get->getnewartikel('jurusan');
         $data = [
             'title' => 'Peer Group ID',
-            'newartikel' => $newartikel
+            'selfdev' => $selfdev,
+            'karir' => $karir,
+            'jurusan' => $jurusan
         ];
         return view('Apps/index', $data);
     }

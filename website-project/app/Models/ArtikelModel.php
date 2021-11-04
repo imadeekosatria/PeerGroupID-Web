@@ -25,8 +25,8 @@ class ArtikelModel extends Model
         return $query;
     }
 
-    public function getnewartikel(){
-        $query = $this->db->query("SELECT * FROM artikel ORDER BY kategori ASC, created_at DESC LIMIT 3;");
+    public function getnewartikel($kategori){
+        $query = $this->db->query("SELECT * FROM artikel WHERE kategori = '$kategori' ORDER BY created_at DESC Limit 1;");
         return $query;
     }
 

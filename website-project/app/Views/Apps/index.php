@@ -43,28 +43,57 @@
             <section class="artikel section" id="artikel">
             <h2 class="section-title">Artikel</h2>
             <div class= "artikel-container">
+                <!--Get data from new artikel-->
                 <?php
-                    foreach($newartikel->getResultArray() as $data):
+                    foreach($selfdev->getResult() as $self) {
+                        $sid =$self->id;
+                        $stitle = $self->judul;
+                        $scover = $self->cover;
+                        $sdeskripsi = $self->deskripsi;
+                    }
+                    foreach($karir->getResult() as $k) {
+                        $kid =$k->id;
+                        $ktitle = $k->judul;
+                        $kcover = $k->cover;
+                        $kdeskripsi = $k->deskripsi;
+                    }
+                    foreach($jurusan->getResult() as $j) {
+                        $jid =$j->id;
+                        $jtitle = $j->judul;
+                        $jcover = $j->cover;
+                        $jdeskripsi = $j->deskripsi;
+                    }
                 ?>
-                <!--Jurusan-->
+                <!--Self Development-->
                 <div class=kategori>
-                    <?php
-                        if ($data['kategori'] == 'jurusan') {
-                            echo '<h3 class="text-artikel">Jurusan</h3>';
-                        }elseif ($data['kategori'] == 'self-development') {
-                            echo '<h3 class="text-artikel">Self Development</h3>';
-                        }elseif ($data['kategori'] == 'karir'){
-                            echo '<h3 class="text-artikel">Karir</h3>';
-                        }
-                    ?>
+                    <h3 class="text-artikel">Self Development</h3>
                 <div class="artikel-content">
                     <img src="/assets/images/header artikel.jpg" alt="">
-                    <p class="home-artikel-judul"><?php echo $data['judul']; ?></p>
-                    <p class="text-isi-artikel"><?php echo $data['deskripsi']; ?></p>
+                    <p class="home-artikel-judul"><?php echo $stitle?></p>
+                    <p class="text-isi-artikel"><?php echo $sdeskripsi?></p>
                 </div>
-                    <a href="/detail-artikel/<?php echo $data['id']; ?>" class="selengkapnya-artikel">Selengkapnya<i class='bx bx-arrow-back bx-flip-horizontal' ></i></a>
+                    <a href="/detail-artikel/<?php echo $sid?>" class="selengkapnya-artikel">Selengkapnya<i class='bx bx-arrow-back bx-flip-horizontal' ></i></a>
                 </div>
-                <?php endforeach?>
+                <!--Jurusan-->
+                <div class=kategori>
+                    <h3 class="text-artikel">Jurusan</h3>
+                <div class="artikel-content">
+                    <img src="/assets/images/header artikel.jpg" alt="">
+                    <p class="home-artikel-judul"><?php echo $jtitle?></p>
+                    <p class="text-isi-artikel"><?php echo $jdeskripsi?></p>
+                </div>
+                    <a href="/detail-artikel/<?php echo $jid?>" class="selengkapnya-artikel">Selengkapnya<i class='bx bx-arrow-back bx-flip-horizontal' ></i></a>
+                </div>
+                <!--Karir-->
+                <div class=kategori>
+                    <h3 class="text-artikel">Karir</h3>
+                <div class="artikel-content">
+                    <img src="/assets/images/header artikel.jpg" alt="">
+                    <p class="home-artikel-judul"><?php echo $ktitle?></p>
+                    <p class="text-isi-artikel"><?php echo $kdeskripsi ?></p>
+                </div>
+                    <a href="/detail-artikel/<?php echo $kid?>" class="selengkapnya-artikel">Selengkapnya<i class='bx bx-arrow-back bx-flip-horizontal' ></i></a>
+                </div>
             </div>
         </section>
 
