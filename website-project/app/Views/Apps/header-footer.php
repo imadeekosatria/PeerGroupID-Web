@@ -45,8 +45,7 @@
         <!-- <a href="#" class="nav__logo"><img src="/assets/images/Logo Peer Group Transparan.png" alt=""></a>  -->
         <small>Copyright &copy; Peergroup.id 2021</small>
     </footer>
-    <!--GASP-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+    
     <!--Main JS-->
     <script src="/assets/js/main.js"></script>
 </body>
