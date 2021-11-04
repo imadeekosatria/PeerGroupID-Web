@@ -1,0 +1,63 @@
+.aboutcontent {
+    padding: 0 5%;
+    margin: 3rem 3rem;  
+}
+
+.abouttitle {
+    display: flex;
+    justify-content: center;
+    border-bottom: 2px solid rgb(182, 149, 41);
+    margin: 7rem 25% 5rem;
+}
+
+.descContent {
+    width: 50%;
+    float: left;
+    margin-bottom: 4rem;
+}
+
+.imgContent {
+    width: 50%;
+    float: right; 
+    margin-bottom: 2rem;
+}
+
+.imgsiapakita{
+    height: 27rem;
+    width: 40rem;
+}
+
+.valueContent {
+    margin: 0 7%;
+    width: 85%;
+    display: flex;
+    background-color: #BFCEF4;
+    padding: 1rem 2rem;
+    padding-bottom: 4rem;
+    border-radius: 10px;
+}
+
+.theader { 
+    text-align: center;
+    border-bottom: 2px solid #1E435B;
+    width: 30%;
+    margin-left: 20%;
+}
+
+.vision {
+    float: left;
+    width: 50%;
+}
+
+.mission {
+    float: right;
+    width: 50%;
+}
+
+.aboutsiapa{
+    margin: 0 0 1rem 0;
+}
+
+.aboutkita{
+    margin: 0 0 1rem 0;
+}

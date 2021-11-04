@@ -7,7 +7,9 @@
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <link rel="shortcut icon" href="/assets/images/Logo Peer Group.jpg" type="image/x-icon">
     <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/about.css">
     <title><?=$title?></title>
+    
 </head>
 <body>
     <!--Header-->
@@ -25,7 +27,7 @@
                 </div>
                 <ul class="nav__list">
                     <li class="nav__item"><a href="/" class="nav__link">Beranda</a></li>
-                    <li class="nav__item"><a href="#" class="nav__link">Siapa Kita</a></li>
+                    <li class="nav__item"><a href="about" class="nav__link">Siapa Kita</a></li>
                     <li class="nav__item dropdown" >
                         <a href="/artikel" class="nav__link dropdown__link" id="dropdown">Artikel <i class='bx bx-chevron-down dropdown__icon' id="drop-icon"></i></a>
                         <ul class="dropdown__menu" id="dropdown-menu">

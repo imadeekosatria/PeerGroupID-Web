@@ -14,16 +14,14 @@ class Login extends BaseController
     public function process()
     {
         $users = new LoginModel();
-        $username = $this->request->getVar('username');
-        $password = $this->request->getVar('password');
-        $dataUser = $users->where([
-            'username' => $username,
-        ])->first();
+        $username = $this->request->getPost('username');
+        $password = $this->request->getPost('password');
+        $dataUser = $users->where(['username' => $username,])->first();
+
         if ($dataUser) {
             if (password_verify($password, $dataUser->password)) {
                 session()->set([
                     'username' => $dataUser->username,
-                    'nama' => $dataUser->nama,
                     'logged_in' => TRUE
                 ]);
                 return redirect()->to(base_url('about'));

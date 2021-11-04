@@ -6,6 +6,6 @@ class Form extends BaseController
 {
     public function index()
     {
-        return view('form_artikel');
+        return view('Apps/form_artikel');
     }
 }

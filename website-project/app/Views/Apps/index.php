@@ -34,7 +34,7 @@
                         the 1500s, when an unknown printer took a galley 
                         of type and scrambled it to make a type specimen 
                         book.</p>     
-                        <a href="" class="button-link siapa">Kepoin Yuk <i class='bx bx-arrow-back bx-flip-horizontal' ></i></a>     
+                        <a href="about" class="button-link siapa">Kepoin Yuk <i class='bx bx-arrow-back bx-flip-horizontal' ></i></a>     
                 </div>                                   
             </div>
         </section>

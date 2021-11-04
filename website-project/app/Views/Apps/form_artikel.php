@@ -4,7 +4,6 @@
     <title>Registrasion Form</title>
     <link rel="stylesheet" href="/assets/css/form_artikel.css">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
-    <script src="script.js"></script>
 
     </script>
   </head>
