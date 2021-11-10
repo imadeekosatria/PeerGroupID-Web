@@ -22,11 +22,17 @@
     grid-column: 1;
     background-size: cover;
     background-position: center top;
-    background-image: url(/assets/images/form.svg);
     padding-top: 280px;
     padding-left: 20px;
     line-height: 4em;
+    background-color: #1E435B;
   }
+
+  .img{
+    margin: auto 9rem;
+    width:20rem;
+    height:20rem;
+}
   
   .form {
     grid-column: 2;

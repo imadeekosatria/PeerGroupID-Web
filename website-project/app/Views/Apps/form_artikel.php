@@ -10,6 +10,7 @@
   <body>
     <div class="wrapper">
       <div class="header">
+      <img src="/assets/images/Logo Peer Group Transparan.png" alt="" class="img">
       </div>
       <div class="form">
         <form action="" method="">
