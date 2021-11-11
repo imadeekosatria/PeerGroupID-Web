@@ -38,7 +38,9 @@ body {
 
   .header{
       display: flex;
-      margin: 1rem 1rem 0 53rem;
+      margin-right: 1rem;
+      justify-content: flex-end;
+      align-items: center;
   }
 
   .header p{

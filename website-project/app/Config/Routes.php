@@ -35,15 +35,13 @@ $routes->get('/', 'Home::index');
 $routes->get('/detail-artikel/(:num)', 'Home::detart/$1');
 $routes->get('/artikel/(:segment)', 'Home::artikel/$1');
 $routes->get('/login', 'Login::index');
-$routes->post('/login/process', 'Login::process');
+$routes->post('/process', 'Login::process');
 $routes->get('/logout', 'Login::logout');
 $routes->get('/about', 'Home::about');
-$routes->get('/admin-artikel', 'Artikel_Admin::index');
-$routes->get('/form', 'Form::index');
-$routes->get('/kegiatan', 'Kegiatan_admin::index');
-$routes->get('/profile', 'Profil_Admin::index');
-
-
+$routes->get('/artikel-admin', 'Login::artikel');
+$routes->get('/kegiatan-admin', 'Login::kegiatan');
+$routes->get('/profile', 'Login::profile');
+$routes->get('/update/profile/(:num)', 'Login::update_profile');
 
 
 /*

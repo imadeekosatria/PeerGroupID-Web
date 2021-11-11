@@ -5,7 +5,7 @@
     </div>
 
     <div>
-        <a href="" class="tambah">Tambah</a>
+        <a href="/tambah-kegiatan" class="tambah">Tambah</a>
     </div>
 
     <table class="table-paginate">

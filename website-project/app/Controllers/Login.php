@@ -16,17 +16,19 @@ class Login extends BaseController
         $users = new LoginModel();
         $username = $this->request->getPost('username');
         $password = $this->request->getPost('password');
-        $dataUser = $users->where(['username' => $username,])->first();
+        $dataUser = $users->where(['username' => $username])->first();
 
         if ($dataUser) {
-            if (password_verify($password, $dataUser->password)) {
-                session()->set([
+            if ($password === $dataUser->password) {
+                $session = session();
+                $session->set([
                     'username' => $dataUser->username,
+                    'name' => $dataUser->nama,
                     'logged_in' => TRUE
                 ]);
-                return redirect()->to(base_url('about'));
+                return redirect()->to('/artikel-admin');
             } else {
-                session()->setFlashdata('error', 'Username & Password Salah');
+                session()->setFlashdata('error', 'Password Salah');
                 return redirect()->back();
             }
         } else {
@@ -39,5 +41,53 @@ class Login extends BaseController
     {
         session()->destroy();
         return redirect()->to('/login');
+    }
+
+    public function artikel(){
+        $session = session();
+        if ($session->logged_in != TRUE) {
+            return redirect()->to('/login');
+        }
+        $data = [
+            'title' => 'Artikel Admin'
+        ];
+
+        return view('Apps/artikel_admin', $data);
+    }
+
+    public function kegiatan(){
+        $session = session();
+        if ($session->logged_in != TRUE) {
+            return redirect()->to('/login');
+        }
+        $data = [
+            'title' => 'Kegiatan Admin'
+        ];
+        return view('Apps/kegiatan_admin', $data);
+    }
+
+    public function profile(){
+        $model = new LoginModel();
+        $session = session();
+        if ($session->logged_in != TRUE) {
+            return redirect()->to('/login');
+        }
+        $user = $session->username;
+        $dataUser = $model->where(['username' => $user])->first();
+        $data = [
+            'title' => 'Profile',
+            'username' => $dataUser->username,
+            'password' => $dataUser->password,
+            'nama' => $dataUser->nama,
+            'id' => $dataUser->id_user 
+        ];
+
+        return view('Apps/profil_admin', $data);
+    }
+
+
+    public function update_profile($id){
+        $model = new LoginModel();
+        
     }
 }
