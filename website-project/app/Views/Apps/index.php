@@ -5,10 +5,8 @@
         <section class="home">
             <div class="home__container bd-grid">
                 <div class="content">
-                    <h2 class="title">Find Your Skill</h2>
-                    <p class="desc">Temukan potensimu, fokus pada kelebihanmu, 
-                        jadilah unik dan berbeda versi dirimu bersama 
-                        Peer Group ID ✨</p>
+                    <h2 class="title">Self-development bukan hanya pengetahuan, tetapi kebutuhan.</h2>
+                    <p class="desc">Yuk, bergabung bersama pemuda lainnya untuk temukan potensimu, belajar fokus pada kelebihanmu, dan menjadi unik versi dirimu. Bersama kami, mari belajar menjadi pribadi yang cemerlang!</p>
                     <a href="#about" class="button-link kepoin">Kepoin Yuk <i class='bx bx-arrow-back bx-rotate-270' ></i></a>
                 </div>
                 <div class="home__img">
@@ -28,12 +26,7 @@
                 </div>
                 
                 <div>
-                    <p class="about__text">Lorem Ipsum is simply dummy text of the printing 
-                        and typesetting industry. Lorem Ipsum has been 
-                        the industry's standard dummy text ever since 
-                        the 1500s, when an unknown printer took a galley 
-                        of type and scrambled it to make a type specimen 
-                        book.</p>     
+                    <p class="about__text">Peer Group ID merupakan platform paling tepat bagi para pemuda yang ingin mengembangkan diri lewat potensi yang dimiliki dengan berbagai kegiatan menarik berbasis pembinaan, pendampingan, dan konseling. Bersama kami, kamu bisa temukan, kembangkan, dan menjadi hebat dengan potensimu.</p>     
                         <a href="about" class="button-link siapa">Kepoin Yuk <i class='bx bx-arrow-back bx-flip-horizontal' ></i></a>     
                 </div>                                   
             </div>
@@ -140,7 +133,7 @@
             <h2 class="section-title">Kontak Kami</h2>
             <div class="kontak-container">
                 <div class="kontak-description">
-                    <img src="/assets/images/TemukanKami.svg" class="img-kontak" alt="">
+                    <img src="/assets/images/Temukankami.svg" class="img-kontak" alt="">
                 </div>
                 <div class="kontak-descrption">
                 <div class="sosial-media">

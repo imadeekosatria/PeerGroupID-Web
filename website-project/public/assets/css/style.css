@@ -203,6 +203,10 @@
   .home__button:hover, .button-link:hover{
     background-color: var(--hover-button);
   }
+
+  .content{
+    max-width: 388px;
+  }
   
 
 /*Needed*/
@@ -235,11 +239,10 @@
 
 .title{
   color: var(--accent-color);
-  font-family: var(--font-family)
+  font-family: var(--font-family);
 }
 
 .desc{
-  width: 300px;
   color: #5F9695;
 }
 
@@ -382,7 +385,7 @@
 
   .home__container{
     justify-content: initial;
-    column-gap: 4.5rem;
+    column-gap: .5rem;
   }
 
   .home__img{

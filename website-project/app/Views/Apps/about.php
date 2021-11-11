@@ -7,9 +7,8 @@
             <h1 style="color: rgb(182, 149, 41);" class="aboutkita"> Kita?</h1>
         </div>
         <div class="descContent">
-            <h2 style="color: rgb(182, 149, 41);">Lorem Ipsum Lorem Ipsum</h2>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores impedit illo animi temporibus cupiditate. 
-                Fugiat numquam quo sapiente corporis, porro est harum asperiores sed ab provident eum blanditiis illo ad.</p>
+            <h2 style="color: rgb(182, 149, 41);">Peer Group ID</h2>
+            <p>Peer Group ID merupakan platform paling tepat bagi para pemuda yang ingin mengembangkan diri lewat potensi yang dimiliki dengan berbagai kegiatan menarik berbasis pembinaan, pendampingan, dan konseling. Bersama kami, kamu bisa temukan, kembangkan, dan menjadi hebat dengan potensimu.</p>
         </div>
         <div class="imgContent">
             <img class="imgsiapakita" src="/assets/images/Siapakita.svg" alt="">
