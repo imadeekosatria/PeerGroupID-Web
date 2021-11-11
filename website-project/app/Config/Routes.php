@@ -38,6 +38,11 @@ $routes->get('/login', 'Login::index');
 $routes->post('/login/process', 'Login::process');
 $routes->get('/logout', 'Login::logout');
 $routes->get('/about', 'Home::about');
+$routes->get('/admin-artikel', 'Artikel_Admin::index');
+$routes->get('/form', 'Form::index');
+$routes->get('/kegiatan', 'Kegiatan_admin::index');
+$routes->get('/profile', 'Profil_Admin::index');
+
 
 
 

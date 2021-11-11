@@ -93,7 +93,7 @@
   }
   
   /*===== NAV =====*/
-  @media screen and (max-width: 768px){
+  @media screen and (max-width: 992px){
     .nav__menu{
       position: fixed;
       top: 0;
@@ -340,50 +340,11 @@
   }
 }
 @media screen and (min-width: 769px){
-  .dropdown:hover .dropdown__icon {
-    transform: rotate(180deg);
-  }
-  .dropdown:hover > .dropdown__menu {
-    display: block;
-  }
   .home__img{
     right: 2.5rem;
   }
   body{
     margin: 0;
-  }
-  .dropdown {
-    position: relative;
-  }
-  .dropdown__menu {
-    position: fixed;
-    margin: 0;
-    padding: .5rem 1.5rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    border-radius: .5rem;
-    background-color: var(--primary-color);
-  }
-  .dropdown__item {
-    margin: .5rem 0;
-  }
-  .nav{
-    height: calc(var(--header-height) + 1.5rem);
-  }
-
-  .nav__toggle, .nav__close{
-    display: none;
-  }
-
-  
-  .nav__list{
-    display: flex;
-    font-family: var(--font-family);
-    font-weight: var(--font-bold);
-  }
-
-  .nav__item{
-    margin-left: 3rem;
-    margin-bottom: 0;
   }
   
   .home__container{
@@ -442,6 +403,53 @@
   }
 }
 
+@media screen and (min-width: 993px){
+  .dropdown:hover .dropdown__icon {
+    transform: rotate(180deg);
+  }
+  .dropdown:hover > .dropdown__menu {
+    display: block;
+  }
+  .dropdown {
+    position: relative;
+  }
+  .dropdown__menu {
+    position: fixed;
+    margin: 0;
+    padding: .5rem 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: .5rem;
+    background-color: var(--primary-color);
+  }
+  .dropdown__item {
+    margin: .5rem 0;
+  }
+  .nav{
+    height: calc(var(--header-height) + 1.5rem);
+  }
+
+  .nav__toggle, .nav__close{
+    display: none;
+  }
+
+  
+  .nav__list{
+    display: flex;
+    font-family: var(--font-family);
+    font-weight: var(--font-bold);
+  }
+
+  .nav__item{
+    margin-left: 3rem;
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (max-width: 1052px) {
+  .nav__link{
+    font-size: var(--form-smaller-font-size);
+  }
+}
 .drop-show{
   display: block;
 }

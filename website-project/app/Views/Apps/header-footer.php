@@ -16,7 +16,7 @@
     <div class="l-header">
         <nav class="nav bd-grid">
             <div>
-                <a href="#" class="nav__logo"><img src="/assets/images/Logo Peer Group Transparan.png" alt=""></a> 
+                <a href="/" class="nav__logo"><img src="/assets/images/Logo Peer Group Transparan.png" alt=""></a> 
             </div>
             <div class="nav__toggle" id="nav-toggle">
                 <i class='bx bx-menu'></i>
@@ -36,8 +36,10 @@
                             <li class="dropdown__item"><a href="/artikel/karir" class="nav__link">Karir</a></li>
                         </ul>
                     </li>
+                    <li class="nav__item"><a href="#" class="nav__link">#CeritaMereka</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link">Review</a></li>
                     <li class="nav__item"><a href="#" class="nav__link">Kegiatan Kami</a></li>
-                    <!--<li class="nav__item"><a href="/login" class="nav__link">Login</a></li>-->
+                    <li class="nav__item"><a href="/login" class="nav__link">Login</a></li> 
                 </ul>
             </div>
         </nav>
