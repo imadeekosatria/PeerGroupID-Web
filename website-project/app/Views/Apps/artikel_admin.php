@@ -9,21 +9,31 @@
     </div>
 
     <table class="table-paginate">
-  <tr>
-    <td> <img src="/assets/images/image.png" alt="" class="img-tabel"></td>
-    <td> <span style="color: #1E435B; font-weight: bold; font-size: 18px;">Yuk, Belajar Memulai Karir di Dunia Startup </span> <br> <br>
-    <span style="color: #526260; font-style: italic; font-size: 14px;"> Muhammad Perwira Hutama A. </span><br> <br>
-    <span style="color: #030402; font-size: 16px;"> Perusahaan startup (perusahaan rintisan) sedang populer 
-    belakangan ini. Karena, perusahaan rintisan berbasis tekonologi 
-    dan digital ini menyediakan ragam aplikasi dan layanan yang memudahkan kehidupan masyarakat.
-    </span>
-     <br>
-    </td>
-    <td>
-        <a href=""><img src="/assets/images/launch.png" alt="" class="img-ikon"></a> <br>
-        <a href=""><img src="/assets/images/edit.png" alt="" class="img-ikon"></a> <br>
-        <a href=""><img src="/assets/images/hapus.png" alt="" class="img-ikon"></a> <br>
-    </td>
-  </tr>
-</table>
+      <?php
+          foreach ($artikel->getResultArray() as $data):
+      ?>
+      <tr>
+        <td>
+          <?php
+              if ($data['cover'] != NULL) {
+                $cover = $data['cover'];
+                echo "<img src='/assets/images/$cover' alt='' class='img-tabel'>";
+              }
+          ?> 
+          
+        </td>
+        <td> <span style="color: #1E435B; font-weight: bold; font-size: 18px;"><?php echo $data['judul']?> </span> <br> <br>
+        <span style="color: #526260; font-style: italic; font-size: 14px;"> <?php echo $data['penulis']?> </span><br> <br>
+        <span style="color: #030402; font-size: 16px;"> <?php echo $data['deskripsi']?>
+        </span>
+        <br>
+        </td>
+        <td>
+            <a href="/detail-artikel/<?php echo $data['id']?>"><img src="/assets/images/launch.png" alt="" class="img-ikon"></a> <br>
+            <a href="/admin-artikel/edit-artikel/<?php echo $data['id']?>"><img src="/assets/images/edit.png" alt="" class="img-ikon"></a> <br>
+            <a href="/admin-artikel/hapus/<?php echo $data['id']?>" onclick="return confirm('Apakah anda yakin ingin menghapus <?=$data['judul']?> ?')"><img src="/assets/images/hapus.png" alt="" class="img-ikon"></a> <br>
+        </td>
+      </tr>
+      <?php endforeach?>
+    </table>
 <?= $this->endsection();?>

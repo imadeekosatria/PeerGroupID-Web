@@ -3,7 +3,7 @@
 namespace App\Controllers;
  
 use App\Models\LoginModel;
-
+use App\Models\ArtikelModel;
 class Login extends BaseController
 {
     public function index()
@@ -43,29 +43,6 @@ class Login extends BaseController
         return redirect()->to('/login');
     }
 
-    public function artikel(){
-        $session = session();
-        if ($session->logged_in != TRUE) {
-            return redirect()->to('/login');
-        }
-        $data = [
-            'title' => 'Artikel Admin'
-        ];
-
-        return view('Apps/artikel_admin', $data);
-    }
-
-    public function kegiatan(){
-        $session = session();
-        if ($session->logged_in != TRUE) {
-            return redirect()->to('/login');
-        }
-        $data = [
-            'title' => 'Kegiatan Admin'
-        ];
-        return view('Apps/kegiatan_admin', $data);
-    }
-
     public function profile(){
         $model = new LoginModel();
         $session = session();
@@ -90,4 +67,72 @@ class Login extends BaseController
         $model = new LoginModel();
         
     }
+
+    //Management Konten
+    //Global Constructor Artikel
+    protected $get;
+    public function __construct(){
+        $this->get = new ArtikelModel();
+    }
+    public function artikel(){
+        $session = session();
+        if ($session->logged_in != TRUE) {
+            return redirect()->to('/login');
+        }
+        $artikel = $this->get->getadminartikel();
+        $data = [
+            'title' => 'Artikel Admin',
+            'artikel' => $artikel
+        ];
+
+        return view('Apps/artikel_admin', $data);
+    }
+
+    public function kegiatan(){
+        $session = session();
+        if ($session->logged_in != TRUE) {
+            return redirect()->to('/login');
+        }
+        $data = [
+            'title' => 'Kegiatan Admin'
+        ];
+        return view('Apps/kegiatan_admin', $data);
+    }
+
+    public function hapus_artikel($id){
+        $this->get->delete($id);
+		    return redirect()->to('/artikel-admin');
+    }
+
+    public function tambah_artikel(){
+        $data = [
+            'title' => 'Tambah Artikel',
+            'validation' => \Config\Services::validation()
+        ];
+
+        return view('Apps/form_artikel');
+    }
+
+    public function simpan(){
+        //Validation
+        if (!$this->validate([
+            'judul' => 'required|is_unique[artikel.judul]',
+            'kategori' => 'required',
+            
+        ])) {
+            $validation = \Config\Services::validation();
+            return redirect()->to('/tambah-artikel')->withInput()->with('validation',$validation);
+        }
+		
+        $kategori =$this->request->getVar('kategori');
+		$this->list->save([
+			'judul' => $this->request->getVar('judul'),
+			'alat' => $this->request->getVar('alat'),
+			'petunjuk' => $this->request->getVar('petunjuk'),
+            'rating' => $this->request->getVar('rating'),
+            'kategori' => $kategori,
+            'cover' => 'undraw_under_construction_46pa.svg',
+		]);
+	}
+    
 }

@@ -4,7 +4,7 @@
     <title>Registrasion Form</title>
     <link rel="stylesheet" href="/assets/css/form_artikel.css">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
-
+    <link rel="shortcut icon" href="/assets/images/Logo Peer Group.jpg" type="image/x-icon">
     </script>
   </head>
   <body>
@@ -13,7 +13,7 @@
       <img src="/assets/images/Logo Peer Group Transparan.png" alt="" class="img">
       </div>
       <div class="form">
-        <form action="" method="">
+        <form action="/Login/simpan" method="post">
           <h1>Ketikkan Artikel Disini </h1>
           <p>
             <label for="title">Title</label>

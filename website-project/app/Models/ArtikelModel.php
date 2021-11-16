@@ -30,4 +30,8 @@ class ArtikelModel extends Model
         return $query;
     }
 
+    public function getadminartikel(){
+        $query = $this->db->query("SELECT * FROM artikel");
+        return $query;
+    }
 }

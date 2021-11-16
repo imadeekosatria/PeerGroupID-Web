@@ -15,7 +15,7 @@ class Home extends BaseController
     //Index
     public function index()
     {
-        $selfdev = $this->get->getnewartikel('self-development');
+        $selfdev = $this->get->getnewartikel('self development');
         $karir = $this->get->getnewartikel('karir');
         $jurusan = $this->get->getnewartikel('jurusan');
         $data = [
