@@ -93,8 +93,10 @@ class Login extends BaseController
         if ($session->logged_in != TRUE) {
             return redirect()->to('/login');
         }
+        $artikel = $this->get->getadminkegiatan();
         $data = [
-            'title' => 'Kegiatan Admin'
+            'title' => 'Kegiatan Admin',
+            'artikel' => $artikel
         ];
         return view('Apps/kegiatan_admin', $data);
     }
