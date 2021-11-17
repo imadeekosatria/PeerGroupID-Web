@@ -1,3 +1,4 @@
+<?php $session = session();?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,10 +37,25 @@
                             <li class="dropdown__item"><a href="/artikel/karir" class="nav__link">Karir</a></li>
                         </ul>
                     </li>
-                    <li class="nav__item"><a href="#" class="nav__link">#CeritaMereka</a></li>
-                    <li class="nav__item"><a href="#" class="nav__link">Review</a></li>
+                    <!--<li class="nav__item"><a href="#" class="nav__link">#CeritaMereka</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link">Review</a></li>-->
                     <li class="nav__item"><a href="#" class="nav__link">Kegiatan Kami</a></li>
-                    <li class="nav__item"><a href="/login" class="nav__link">Login</a></li> 
+                    <?php
+                        if ($session->logged_in == true) {
+                            $logout = base_url('logout');
+                            $admin_page = base_url('artikel-admin');
+                            echo "<li class='nav__item dropdown' >
+                                    <a href='#' class='nav__link dropdown__link' id='dropdown'>$session->name <i class='bx bx-chevron-down dropdown__icon' id='drop-icon'></i></a>
+                                    <ul class='dropdown__menu' id='dropdown-menu'>
+                                        <li class='dropdown__item'><a href='$admin_page' class='nav__link'>Admin</a></li>
+                                        <li class='dropdown__item'><a href='$logout' class='nav__link'>Logout</a></li>
+                                    </ul>
+                                </li>";
+                        }else {
+                            echo '<li class="nav__item"><a href="/login" class="nav__link">Login</a></li> ';
+                        }
+                    ?>
+                    
                 </ul>
             </div>
         </nav>

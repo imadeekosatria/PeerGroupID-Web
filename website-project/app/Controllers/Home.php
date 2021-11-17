@@ -40,7 +40,7 @@ class Home extends BaseController
     //Halaman Artikel
     public function artikel($e){
         if ($e == 'self') {
-            $getartikel = $this->get->getdataartikel('self-development');
+            $getartikel = $this->get->getdataartikel('self development');
             $data = [
                 'title' => 'Artikel',
                 'kategori' => 'Self Development',

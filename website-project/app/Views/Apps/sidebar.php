@@ -26,9 +26,11 @@
 
     <a href="<?php echo base_url('artikel-admin'); ?>">Artikel</a>
     <a href="<?php echo base_url('kegiatan-admin'); ?>">Kegiatan</a>
-    <a href="<?php echo base_url('profile/dgdgd'); ?>">#CeritaMereka</a>
+    <a href="<?php echo base_url('profile'); ?>">#CeritaMereka</a>
     <a href="<?php echo base_url('profile'); ?>">Review</a>
     <a href="<?php echo base_url('profile'); ?>">Profil</a>
+    <a href="<?php echo base_url(); ?>">Beranda</a>
+
   </div>
 
   <div class="main">
