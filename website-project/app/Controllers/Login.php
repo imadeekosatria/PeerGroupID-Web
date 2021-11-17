@@ -71,8 +71,10 @@ class Login extends BaseController
     //Management Konten
     //Global Constructor Artikel
     protected $get;
+    protected $user;
     public function __construct(){
         $this->get = new ArtikelModel();
+        $this->user = new LoginModel();
     }
     public function artikel(){
         $session = session();
@@ -107,33 +109,43 @@ class Login extends BaseController
     }
 
     public function tambah_artikel(){
+        $penulis = $this->user->penulis();
         $data = [
             'title' => 'Tambah Artikel',
+            'penulis' => $penulis,
             'validation' => \Config\Services::validation()
         ];
 
-        return view('Apps/form_artikel');
+        return view('Apps/form_artikel', $data);
     }
 
     public function simpan(){
         //Validation
         if (!$this->validate([
-            'judul' => 'required|is_unique[artikel.judul]',
+            'title' => 'required|is_unique[artikel.judul]',
+            'cover' => 'required',
+            'sumber_cover' => 'required',
+            'deskripsi' => 'required',
+            'penulis' => 'required',
             'kategori' => 'required',
+            'isi' => 'required'
+
             
         ])) {
             $validation = \Config\Services::validation();
             return redirect()->to('/tambah-artikel')->withInput()->with('validation',$validation);
+            // return redirect()->to('/tambah-artikel')->withInput();
         }
 		
-        $kategori =$this->request->getVar('kategori');
-		$this->list->save([
-			'judul' => $this->request->getVar('judul'),
-			'alat' => $this->request->getVar('alat'),
-			'petunjuk' => $this->request->getVar('petunjuk'),
-            'rating' => $this->request->getVar('rating'),
-            'kategori' => $kategori,
-            'cover' => 'undraw_under_construction_46pa.svg',
+        
+		$this->get->save([
+			'judul' => $this->request->getVar('title'),
+            'cover' => $this->request->getVar('cover'),
+            'sumber_cover' => $this->request->getVar('sumber_cover'),
+            'deskripsi' => $this->request->getVar('deskripsi'),
+			'penulis' => $this->request->getVar('name'),
+			'kategori' => $this->request->getVar('kategori'),
+            'isi' => $this->request->getVar('content')
 		]);
 	}
     

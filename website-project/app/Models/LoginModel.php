@@ -15,4 +15,9 @@ class LoginModel extends Model
         $query = $this->db->query("SELECT * FROM user Where username = '$data'");
         return $query;
     }
+
+    public function penulis(){
+        $query = $this->db->query("SELECT nama FROM user ");
+        return $query;
+    }
 }
