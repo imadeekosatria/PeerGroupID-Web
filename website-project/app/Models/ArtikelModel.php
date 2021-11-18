@@ -31,7 +31,7 @@ class ArtikelModel extends Model
     }
 
     public function getadminartikel(){
-        $query = $this->db->query("SELECT * FROM artikel");
+        $query = $this->db->query("SELECT * FROM artikel ORDER BY created_at DESC");
         return $query;
     }
 
