@@ -161,3 +161,11 @@ body {
     font-weight: bold;
   }
   
+.button-delete{
+  display: contents;
+}
+
+.img-delete{
+  width: 2rem;
+  cursor: pointer;
+}

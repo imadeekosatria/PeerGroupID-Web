@@ -14,13 +14,14 @@
       </div>
       <div class="form">
         <form action="/Login/simpan" method="post">
+          <?=csrf_field();?>
           <h1>Ketikkan Artikel Disini </h1>
           <p>
             <label for="title">Judul</label>
-            <input type="text" name="title" id="title" class="form-input">
+            <input type="text" name="title" id="title" class="form-input" required>
           </p>
           <p><?= $validation->getError('title')?></p>
-          <select name="kategori">
+          <select name="kategori" required>
             <option value="">Pilih Kategori</option>
             <option value="self development">Self Development</option>
             <option value="karir">Karir</option>
@@ -39,13 +40,13 @@
           </p>
           <p>
             <label for="deskripsi">Deskripsi</label>
-            <textarea name="deskripsi" id="deskripsi" rows="5"></textarea>
+            <textarea name="deskripsi" id="deskripsi" rows="5" required></textarea>
             <p><?= $validation->getError('deskripsi')?></p>
           </p>
           <p>
             <label for="name">Nama Penulis</label>
             <!--<input type="text" name="name" id="name" class="form-input">-->
-            <select name="penulis">
+            <select name="penulis" required>
               <option value="">Pilih Penulis</option>
               <?php
                 foreach ($penulis->getResultArray() as $user):
@@ -61,7 +62,7 @@
           </p> -->
           <p>
             <label for="content">Isi Konten</label>
-            <textarea name="content" id="content" rows="15"></textarea>
+            <textarea name="content" id="content" rows="15" required></textarea>
             <p><?= $validation->getError('content')?></p>
           </p>
           <p>

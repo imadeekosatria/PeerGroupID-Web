@@ -105,7 +105,7 @@ class Login extends BaseController
 
     public function hapus_artikel($id){
         $this->get->delete($id);
-		    return redirect()->to('/artikel-admin');
+		    return redirect()->back();
     }
 
     public function tambah_artikel(){
@@ -120,21 +120,20 @@ class Login extends BaseController
     }
 
     public function simpan(){
+        // dd($this->request->getVar());
         //Validation
         if (!$this->validate([
             'title' => 'required|is_unique[artikel.judul]',
-            'cover' => 'required',
-            'sumber_cover' => 'required',
             'deskripsi' => 'required',
             'penulis' => 'required',
-            'kategori' => 'required',
-            'isi' => 'required'
+            'kategori' => 'required'
+            
 
             
         ])) {
-            $validation = \Config\Services::validation();
-            return redirect()->to('/tambah-artikel')->withInput()->with('validation',$validation);
-            // return redirect()->to('/tambah-artikel')->withInput();
+            // $validation = \Config\Services::validation();
+            // return redirect()->to('/tambah-artikel')->withInput()->with('validation',$validation);
+            return redirect()->to('/tambah-artikel')->withInput();
         }
 		
         
@@ -143,10 +142,11 @@ class Login extends BaseController
             'cover' => $this->request->getVar('cover'),
             'sumber_cover' => $this->request->getVar('sumber_cover'),
             'deskripsi' => $this->request->getVar('deskripsi'),
-			'penulis' => $this->request->getVar('name'),
+			'penulis' => $this->request->getVar('penulis'),
 			'kategori' => $this->request->getVar('kategori'),
             'isi' => $this->request->getVar('content')
 		]);
+        return redirect()->to('artikel_admin');
 	}
     
 }

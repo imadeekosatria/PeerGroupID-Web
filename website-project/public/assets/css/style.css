@@ -839,6 +839,7 @@ position: absolute;
 
 .title-thumbnail a{
   color: var(--primary-color);
+  text-transform: capitalize;
 }
 
 .penulis { grid-area: 2 / 1 / 3 / 2; }

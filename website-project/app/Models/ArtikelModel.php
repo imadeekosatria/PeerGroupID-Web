@@ -7,7 +7,7 @@ use CodeIgniter\Model;
 class ArtikelModel extends Model
 {
     protected $table = 'artikel';
-    protected $allowedFields = ['judul', 'penulis', 'text', 'cover', 'sumber_cover'];
+    protected $allowedFields = ['judul', 'kategori','penulis', 'deskripsi', 'text', 'cover', 'sumber_cover', 'created_at'];
     protected $db;
     public function __construct(){
         $this->db = db_connect();
