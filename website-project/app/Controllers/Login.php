@@ -146,7 +146,7 @@ class Login extends BaseController
 			'kategori' => $this->request->getVar('kategori'),
             'isi' => $this->request->getVar('content')
 		]);
-        return redirect()->to('artikel_admin');
+        return redirect()->to('artikel-admin');
 	}
     
 }

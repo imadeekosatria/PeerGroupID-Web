@@ -18,7 +18,7 @@
           <h1>Ketikkan Artikel Disini </h1>
           <p>
             <label for="title">Judul</label>
-            <input type="text" name="title" id="title" class="form-input" required>
+            <input type="text" name="title" id="title" class="form-input" required <?=$validation->hasError('title')?>>
           </p>
           <p><?= $validation->getError('title')?></p>
           <select name="kategori" required>
