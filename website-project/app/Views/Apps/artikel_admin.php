@@ -17,7 +17,7 @@
           <?php
               if ($data['cover'] != NULL) {
                 $cover = $data['cover'];
-                echo "<img src='/assets/images/$cover' alt='' class='img-tabel'>";
+                echo "<img src='/assets/images/artikel/$cover' alt='' class='img-tabel'>";
               }
           ?> 
           
@@ -30,7 +30,12 @@
         </td>
         <td>
             <a href="/detail-artikel/<?php echo $data['id']?>"><img src="/assets/images/launch.png" alt="" class="img-ikon"></a> <br>
-            <a href="/admin-artikel/edit-artikel/<?php echo $data['id']?>"><img src="/assets/images/edit.png" alt="" class="img-ikon"></a> <br>
+            <!-- <a href="/admin-artikel/edit/<?php //echo $data['id']?>"><img src="/assets/images/edit.png" alt="" class="img-ikon"></a> <br> -->
+            <form action="/admin-artikel/edit/<?=$data['id']?>" method="post">
+              <?csrf_field();?>
+              <input type="hidden" name="_method" value="PUT">
+              <button type="submit" class="button-delete"><img src="/assets/images/edit.png" alt="" class="img-ikon"></button>
+            </form>
             <form action="/admin-artikel/hapus/<?=$data['id']?>" method="post">
               <?csrf_field();?>
               <input type="hidden" name="_method" value="DELETE">

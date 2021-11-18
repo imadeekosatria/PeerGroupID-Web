@@ -24,6 +24,7 @@ class Login extends BaseController
                 $session->set([
                     'username' => $dataUser->username,
                     'name' => $dataUser->nama,
+                    'foto' => $dataUser->foto,
                     'logged_in' => TRUE
                 ]);
                 return redirect()->to('/artikel-admin');
@@ -56,7 +57,9 @@ class Login extends BaseController
             'username' => $dataUser->username,
             'password' => $dataUser->password,
             'nama' => $dataUser->nama,
-            'id' => $dataUser->id_user 
+            'id' => $dataUser->id_user,
+            'gender' => $dataUser->gender,
+            'foto' => $dataUser->foto 
         ];
 
         return view('Apps/profil_admin', $data);
@@ -123,30 +126,96 @@ class Login extends BaseController
         // dd($this->request->getVar());
         //Validation
         if (!$this->validate([
-            'title' => 'required|is_unique[artikel.judul]',
-            'deskripsi' => 'required',
-            'penulis' => 'required',
-            'kategori' => 'required'
+            'title' => [
+                'rules'=>'required|is_unique[artikel.judul]',
+                'error' =>[
+                    'is_unique' => '{field} Judul sudah ada'
+                ]
+            ],
+            'cover' => [
+                'rules' => 'max_size[cover,1024]|is_image[cover]|mime_in[cover,image/jpg,image/jpeg,image/png,image/svg]',
+                'error' => [
+                    
+                    'max_size' => 'Upload maksimal 1 MB',
+                    'is_image' => 'Yang anda upload bukan gambar',
+                    'mime_in' => 'Yang anda upload bukan gambar'
+                ]
+            ]
             
 
             
         ])) {
-            // $validation = \Config\Services::validation();
-            // return redirect()->to('/tambah-artikel')->withInput()->with('validation',$validation);
-            return redirect()->to('/tambah-artikel')->withInput();
+            $validation = \Config\Services::validation();
+            return redirect()->to('/tambah-artikel')->withInput()->with('validation',$validation);
+            // return redirect()->to('/tambah-artikel')->withInput();
         }
 		
+        //Ambil gambar
+        $fileCover = $this->request->getFile('cover');
+        // dd($fileCover);
+
+        //Check gambar apakah di upload
+        if ($fileCover->getError() == 4) {
+            $coverName = 'default.svg';
+        }else {
+            //Pindah gambar
+            $fileCover->move('assets/images/artikel');
+            //Ambil nama gambar
+            $coverName = $fileCover->getName();
+        }
         
+        //Slug if needed
+        // $slug = url_title($this->request->getVar('title'), '-', true);
+
+        //Simpan
 		$this->get->save([
 			'judul' => $this->request->getVar('title'),
-            'cover' => $this->request->getVar('cover'),
+            'cover' => $coverName,
             'sumber_cover' => $this->request->getVar('sumber_cover'),
             'deskripsi' => $this->request->getVar('deskripsi'),
 			'penulis' => $this->request->getVar('penulis'),
 			'kategori' => $this->request->getVar('kategori'),
-            'isi' => $this->request->getVar('content')
+            'text' => $this->request->getVar('content')
 		]);
         return redirect()->to('artikel-admin');
 	}
+
+    public function edit_artikel($id) {
+        $edit = $this->get->getartikel($id);
+        
+        $data = [
+			'title' => 'Edit Artikel',
+			'tampil' => $edit,
+            
+            'validation' => \Config\Services::validation()
+		];
+
+		return view('Apps/edit_form', $data);
+    }
     
+    public function update($id){
+        //Ambil gambar
+        $fileCover = $this->request->getFile('cover');
+        // dd($fileCover);
+
+        //Check gambar apakah di upload
+        if ($fileCover->getError() == 4) {
+            $coverName = 'default.svg';
+        }else {
+            //Pindah gambar
+            $fileCover->move('assets/images/artikel');
+            //Ambil nama gambar
+            $coverName = $fileCover->getName();
+        }
+        $this->get->save([
+            'id' => $id,
+			'judul' => $this->request->getVar('title'),
+            'cover' => $coverName,
+            'sumber_cover' => $this->request->getVar('sumber_cover'),
+            'deskripsi' => $this->request->getVar('deskripsi'),
+			'kategori' => $this->request->getVar('kategori'),
+            'text' => $this->request->getVar('content')
+		]);
+        return redirect()->to('artikel-admin');
+    }
 }

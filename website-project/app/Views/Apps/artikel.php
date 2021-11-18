@@ -18,7 +18,7 @@
                             ?>
                             <div class="box">
                                 <div class="img-thumbnail">
-                                    <img src="/assets/images/<?php echo $data['cover']?>" alt="">
+                                    <img src="/assets/images/artikel/<?php echo $data['cover']?>" alt="">
                                 </div>
                                 <div class="text-list">
                                     <div class="title-thumbnail">
@@ -44,19 +44,19 @@
                                     <div class="left">
                                         <div class="konten">
                                             <div class="rekomen-img">
-                                                <img src="/assets/images/header artikel.jpg" alt="">
+                                                <img src="/assets/images/artikel/header artikel.jpg" alt="">
                                             </div>
                                             <p class="text-rekomen">Yuk, Belajar Memulai Karir di Dunia Startup</p>
                                         </div>
                                         <div class="konten">
                                             <div class="rekomen-img">
-                                                <img src="/assets/images/header artikel.jpg" alt="">
+                                                <img src="/assets/images/artikel/header artikel.jpg" alt="">
                                             </div>
                                             <p class="text-rekomen">Yuk, Belajar Memulai Karir di Dunia Startup</p>
                                         </div>
                                         <div class="konten">
                                             <div class="rekomen-img">
-                                                <img src="/assets/images/header artikel.jpg" alt="">
+                                                <img src="/assets/images/artikel/header artikel.jpg" alt="">
                                             </div>
                                             <p class="text-rekomen">Yuk, Belajar Memulai Karir di Dunia Startup</p>
                                         </div>
@@ -64,19 +64,19 @@
                                     <div class="right">
                                         <div class="konten">
                                             <div class="rekomen-img">
-                                                <img src="/assets/images/header artikel.jpg" alt="">
+                                                <img src="/assets/images/artikel/header artikel.jpg" alt="">
                                             </div>
                                             <p class="text-rekomen">Yuk, Belajar Memulai Karir di Dunia Startup</p>
                                         </div>
                                         <div class="konten">
                                             <div class="rekomen-img">
-                                                <img src="/assets/images/header artikel.jpg" alt="">
+                                                <img src="/assets/images/artikel/header artikel.jpg" alt="">
                                             </div>
                                             <p class="text-rekomen">Yuk, Belajar Memulai Karir di Dunia Startup</p>
                                         </div>
                                         <div class="konten">
                                             <div class="rekomen-img">
-                                                <img src="/assets/images/header artikel.jpg" alt="">
+                                                <img src="/assets/images/artikel/header artikel.jpg" alt="">
                                             </div>
                                             <p class="text-rekomen">Yuk, Belajar Memulai Karir di Dunia Startup</p>
                                         </div>

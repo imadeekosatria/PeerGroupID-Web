@@ -17,7 +17,7 @@
           <?php
               if ($data['cover'] != NULL) {
                 $cover = $data['cover'];
-                echo "<img src='/assets/images/$cover' alt='' class='img-tabel'>";
+                echo "<img src='/assets/images/kegiatan/$cover' alt='' class='img-tabel'>";
               }
           ?>  
         </td>

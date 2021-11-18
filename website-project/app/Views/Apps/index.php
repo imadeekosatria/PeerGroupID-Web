@@ -61,7 +61,7 @@
                 <div class=kategori>
                     <h3 class="text-artikel">Self Development</h3>
                 <div class="artikel-content">
-                    <img src="/assets/images/header artikel.jpg" alt="">
+                    <img src="/assets/images/artikel/header artikel.jpg" alt="">
                     <p class="home-artikel-judul"><?php echo $stitle?></p>
                     <p class="text-isi-artikel"><?php echo $sdeskripsi?></p>
                 </div>
@@ -71,7 +71,7 @@
                 <div class=kategori>
                     <h3 class="text-artikel">Jurusan</h3>
                 <div class="artikel-content">
-                    <img src="/assets/images/header artikel.jpg" alt="">
+                    <img src="/assets/images/artikel/header artikel.jpg" alt="">
                     <p class="home-artikel-judul"><?php echo $jtitle?></p>
                     <p class="text-isi-artikel"><?php echo $jdeskripsi?></p>
                 </div>
@@ -81,7 +81,7 @@
                 <div class=kategori>
                     <h3 class="text-artikel">Karir</h3>
                 <div class="artikel-content">
-                    <img src="/assets/images/header artikel.jpg" alt="">
+                    <img src="/assets/images/artikel/header artikel.jpg" alt="">
                     <p class="home-artikel-judul"><?php echo $ktitle?></p>
                     <p class="text-isi-artikel"><?php echo $kdeskripsi ?></p>
                 </div>

@@ -608,8 +608,6 @@
 /*Grid*/
 .artikel { 
   grid-area: artikel; 
-  display: grid;
-  align-content: space-between;
 }
 
 .rekomendasi { 

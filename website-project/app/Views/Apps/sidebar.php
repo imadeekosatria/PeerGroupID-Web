@@ -36,7 +36,8 @@
   <div class="main">
       <div class="header">
           <p><?php echo $session->name?></p>
-          <img src="/assets/images/user.png" alt="" class="img-user">
+
+          <img src="/assets/images/profile/default.png" alt="" class="img-user">
           <a href="<?php echo base_url('logout')?>"><img src="/assets/images/input.png" alt="" class="img-input"></a>
       </div>
 

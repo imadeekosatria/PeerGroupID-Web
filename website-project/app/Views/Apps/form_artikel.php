@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Registrasion Form</title>
+    <title><?=$title?></title>
     <link rel="stylesheet" href="/assets/css/form_artikel.css">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
     <link rel="shortcut icon" href="/assets/images/Logo Peer Group.jpg" type="image/x-icon">
@@ -13,14 +13,16 @@
       <img src="/assets/images/Logo Peer Group Transparan.png" alt="" class="img">
       </div>
       <div class="form">
-        <form action="/Login/simpan" method="post">
+        <form action="/Login/simpan" method="post" enctype="multipart/form-data">
           <?=csrf_field();?>
           <h1>Ketikkan Artikel Disini </h1>
           <p>
             <label for="title">Judul</label>
             <input type="text" name="title" id="title" class="form-input" required <?=$validation->hasError('title')?>>
           </p>
-          <p><?= $validation->getError('title')?></p>
+          <div>
+            <?= $validation->getError('title')?>
+          </div>
           <select name="kategori" required>
             <option value="">Pilih Kategori</option>
             <option value="self development">Self Development</option>
@@ -30,11 +32,11 @@
           <p><?= $validation->getError('kategori')?></p>
           <p>
               <label for="cover">Upload Cover</label>
-              <input type="file" name="cover" id="">
+              <input type="file" name="cover" id="cover">
               <p><?= $validation->getError('cover')?></p>
           </p>
           <p>
-            <label for="title">Sumber Cover</label>
+            <label for="sumber_cover">Sumber Cover</label>
             <input type="text" name="sumber_cover" id="sumber_cover" class="form-input">
             <p><?= $validation->getError('sumber_cover')?></p>
           </p>

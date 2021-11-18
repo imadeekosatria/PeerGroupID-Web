@@ -42,7 +42,7 @@ $routes->get('/artikel-admin', 'Login::artikel');
 $routes->get('/kegiatan-admin', 'Login::kegiatan');
 $routes->get('/profile', 'Login::profile');
 $routes->get('/update/profile/(:num)', 'Login::update_profile/$1');
-$routes->get('/admin-artikel/edit/(:num)', 'Login::edit_artikel/$1');
+$routes->put('/admin-artikel/edit/(:num)', 'Login::edit_artikel/$1');
 $routes->delete('/admin-artikel/hapus/(:num)', 'Login::hapus_artikel/$1');
 $routes->get('/tambah-artikel', 'Login::tambah_artikel');
 
