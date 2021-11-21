@@ -4,7 +4,7 @@
 <div class="aboutcontent">
         <div class="abouttitle">
             <h1 style="color: rgb(63, 63, 155);" class="aboutsiapa">Siapa </h1>
-            <h1 style="color: rgb(182, 149, 41);" class="aboutkita"> Kita?</h1>
+            <h1 style="color: rgb(182, 149, 41);" class="aboutkita"> &nbsp; Kita?</h1>
         </div>
         <div class="descContent">
             <h2 style="color: rgb(182, 149, 41);">Peer Group ID</h2>

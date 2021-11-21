@@ -14,7 +14,8 @@
   <script type="text/javascript" language="javascript" src="path-to/jquery.dataTables.min.js"></script>
   <!-- Bootstrap Javascript -->
   <script type="text/javascript" language="javascript" src="path-to/dataTables.bootstrap.js"></script>
-  <link rel="shortcut icon" href="/assets/images/Logo Peer Group.jpg" type="image/x-icon">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
   <title><?=$title?></title>
 </head>
 <body>
@@ -24,12 +25,14 @@
       <img src="/assets/images/Logo Peer Group Transparan.png" alt="" class="img">
     </div>
 
-    <a href="<?php echo base_url('artikel-admin'); ?>">Artikel</a>
-    <a href="<?php echo base_url('kegiatan-admin'); ?>">Kegiatan</a>
-    <a href="<?php echo base_url('profile'); ?>">#CeritaMereka</a>
-    <a href="<?php echo base_url('profile'); ?>">Review</a>
-    <a href="<?php echo base_url('profile'); ?>">Profil</a>
-    <a href="<?php echo base_url(); ?>">Beranda</a>
+    <ul class="nav">
+      <li class="menuTitle"><a href="<?php echo base_url('artikel-admin'); ?>">Artikel</a></li>
+      <li class="menuTitle"><a href="<?php echo base_url('kegiatan-admin'); ?>">Kegiatan</a></li>
+      <li class="menuTitle"><a href="<?php echo base_url('profile'); ?>">#CeritaMereka</a></li>
+      <li class="menuTitle"><a href="<?php echo base_url('profile'); ?>">Review</a></li>
+      <li class="menuTitle"><a href="<?php echo base_url('profile'); ?>">Profil</a></li>
+      <li class="menuTitle"><a href="<?php echo base_url(); ?>">Beranda</a></li>
+    </ul>
 
   </div>
 
@@ -48,6 +51,11 @@
       $(document).ready(function() {
     $('.table-paginate').dataTable();
   } );
+  
+ $(".nav a").on("click", function() {
+    $(".nav ").find(".active").removeClass("active");
+    $(this).parent().addClass("active");
+  });
   </script>
 </body>
 </html> 

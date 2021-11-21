@@ -22,11 +22,11 @@
           ?> 
           
         </td>
-        <td> <span style="color: #1E435B; font-weight: bold; font-size: 18px; text-transform: capitalize;"><?php echo $data['judul']?> </span> <br> <br>
-        <span style="color: #526260; font-style: italic; font-size: 14px; text-transform: capitalize;"> <?php echo $data['penulis']?> </span><br> <br>
-        <span style="color: #030402; font-size: 16px;"> <?php echo $data['deskripsi']?>
+        <td> <span style="color: #1E435B; font-weight: bold; font-size: 18px; display: flex; margin-bottom: 5px; text-transform: capitalize;"><?php echo $data['judul']?> </span>
+        <span style="color: #526260; font-style: italic; font-size: 14px; margin-bottom: 5px; text-transform: capitalize;"> <?php echo $data['penulis']?> </span> <span style="color: #526260; font-size: 14px; margin-bottom: 5px;">  &nbsp;  &nbsp;  27 Oktober 2021 </span>
+        <span style="color: #030402; font-size: 16px; display: flex; margin-bottom: 1rem; margin-top: 5px;"> <?php echo $data['deskripsi']?>
         </span>
-        <br>
+        <span style="color: #FFFFFF; font-size: 13px; background-color: #C4C4C4; padding: 8px 6px; border-radius: 5px;"> Self Development </span>
         </td>
         <td>
             <a href="/detail-artikel/<?php echo $data['id']?>"><img src="/assets/images/launch.png" alt="" class="img-ikon"></a> <br>

@@ -21,13 +21,12 @@
               }
           ?>  
         </td>
-        <td> <span style="color: #1E435B; font-weight: bold; font-size: 18px;"><?=$data['judul']?> </span> <br> <br>
-        <span style="color: #526260; font-style: italic; font-size: 14px;"> <?=$data['penulis']?></span><br> <br>
-        <span style="color: #030402; font-size: 16px;"> Perusahaan startup (perusahaan rintisan) sedang populer 
+        <td> <span style="color: #1E435B; font-weight: bold; font-size: 18px; display: flex; margin-bottom: 5px";><?=$data['judul']?> </span>
+        <span style="color: #526260; font-style: italic; font-size: 14px; margin-bottom: 5px;"> <?=$data['penulis']?></span> <span style="color: #526260; font-size: 14px; margin-bottom: 5px;">  &nbsp;  &nbsp;  27 Oktober 2021 </span>
+        <span style="color: #030402; font-size: 16px; display: flex; margin-bottom: 1rem; margin-top: 5px;"> Perusahaan startup (perusahaan rintisan) sedang populer 
         belakangan ini. Karena, perusahaan rintisan berbasis tekonologi 
         dan digital ini menyediakan ragam aplikasi dan layanan yang memudahkan kehidupan masyarakat.
         </span>
-        <br>
         </td>
         <td>
             <a href=""><img src="/assets/images/launch.png" alt="" class="img-ikon"></a> <br>
