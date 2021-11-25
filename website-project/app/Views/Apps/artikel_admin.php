@@ -18,6 +18,8 @@
               if ($data['cover'] != NULL) {
                 $cover = $data['cover'];
                 echo "<img src='/assets/images/artikel/$cover' alt='' class='img-tabel'>";
+              }else {
+                echo "<img src='/assets/images/artikel/default.svg' alt='' class='img-tabel'>";
               }
           ?> 
           
