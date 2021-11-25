@@ -43,9 +43,7 @@
   html{
     scroll-behavior: smooth;
   }
-  h5{
-    font-size: 1.5em;
-  }
+  
   body{
     margin: var(--header-height) 0 0 0;
     padding: 0;
@@ -616,7 +614,7 @@
 
 .artikel__container{
   display: grid;
-  grid-template-columns: 1.5fr 0.5fr;
+  grid-template-columns: 1fr 0.5fr;
   grid-template-rows: 1fr;
   gap: 0px 2rem;
   grid-auto-flow: row;
@@ -653,7 +651,7 @@
 }
 
 .arti-image img {
-  width: 100%;
+  width: 100rem;
   height: 100%;
   border-radius: 20px;
 }
@@ -664,11 +662,10 @@
 }
 
 .text{
-  margin-left: auto;
   margin-right: auto;
-  width: 800px;
   text-align: justify;
   margin-top: 1rem;
+  line-height: 2.5rem;
 }
 
 .text, .header-artikel{
@@ -871,3 +868,18 @@ position: absolute;
 .tanggal-artikel-home{
   color: rgba(0, 0, 0, 0.5);
 } 
+
+.share{
+  display: flex;
+  margin-bottom: 2rem;
+  align-items: center;
+}
+.share img{
+  width: 30px;
+  margin-left: 1rem;
+}
+
+.animation{
+  display: flex;
+  justify-content: center;
+}

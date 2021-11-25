@@ -21,6 +21,13 @@
                         <div class="author">
                             <p><span style="font-weight: var(--font-bold);">Penulis</span>  : <span class="author-name"><?php echo $penulis?></span> - <span class="date"><?php echo $date ?></span></p>
                         </div>
+                        <div class="share">
+                            <span>Share</span> 
+                            <img src="/assets/images/facebook.svg" alt="facebook">
+                            <img src="/assets/images/twitter.svg" alt="twitter">
+                            <img src="/assets/images/whatsapp.svg" alt="whatsapp">
+                            <img src="/assets/images/telegram-plane.svg" alt="telegram">
+                        </div>
                         <?php
                             if ($cover != NULL) {
                                 echo "<div class='arti-image'>
@@ -34,6 +41,10 @@
                     </div>
                     <div class="text">
                         <?php echo $text?>
+                    </div>
+                    <div class="animation">
+                        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+                        <lottie-player src="https://assets4.lottiefiles.com/packages/lf20_kmfssxfk.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop  autoplay></lottie-player>
                     </div>
                 </div>
                 <!--Area Rekomendasi-->
