@@ -4,8 +4,8 @@
         <p>Kegiatan Kami</p>
     </div>
 
-    <div>
-        <a href="/tambah-data" class="tambah">Tambah</a>
+    <div class="tambah">
+        <a href="/tambah-data">Tambah</a>
     </div>
 
     <table class="table-paginate">
