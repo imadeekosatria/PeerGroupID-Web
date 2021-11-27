@@ -36,8 +36,13 @@ class Home extends BaseController
     //Detail Artikel
     public function detart($id){
         $list = $this->get->getartikel($id);
+        $deskripsi = $this->get->getmetadeskripsiartikel($id);
+        foreach ($deskripsi->getResult() as $meta) {
+            $desk = $meta->deskripsi;
+        }
         $data = [
             'title' => 'Detail Artikel',
+            'deskripsi' => $desk,
             'artikel' => $list
         ];
         return view('Apps/detail artikel', $data);

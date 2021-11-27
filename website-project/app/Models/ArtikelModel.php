@@ -18,6 +18,11 @@ class ArtikelModel extends Model
         $query = $this->db->query("SELECT * FROM artikel Where slug = '$slug'");
         return $query;
     }
+    //Get deskripsi artikel for meta tags
+    public function getmetadeskripsiartikel($slug) {
+        $query = $this->db->query("SELECT deskripsi FROM artikel WHERE slug = '$slug'");
+        return $query;
+    }
 
     //Get Artikel
     public function getdataartikel($kategori){
