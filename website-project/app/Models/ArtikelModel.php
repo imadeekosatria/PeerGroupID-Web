@@ -7,15 +7,15 @@ use CodeIgniter\Model;
 class ArtikelModel extends Model
 {
     protected $table = 'artikel';
-    protected $allowedFields = ['judul', 'kategori','penulis', 'deskripsi', 'text', 'cover', 'sumber_cover', 'created_at'];
+    protected $allowedFields = ['judul', 'slug','kategori','penulis', 'deskripsi', 'text', 'cover', 'sumber_cover', 'created_at'];
     protected $db;
     public function __construct(){
         $this->db = db_connect();
     }
 
     //Get data artikel
-    public function getartikel($id) {
-        $query = $this->db->query("SELECT * FROM artikel Where id = $id");
+    public function getartikel($slug) {
+        $query = $this->db->query("SELECT * FROM artikel Where slug = '$slug'");
         return $query;
     }
 
@@ -32,11 +32,6 @@ class ArtikelModel extends Model
 
     public function getadminartikel(){
         $query = $this->db->query("SELECT * FROM artikel ORDER BY created_at DESC");
-        return $query;
-    }
-
-    public function getadminkegiatan(){
-        $query = $this->db->query("SELECT * FROM kegiatan");
         return $query;
     }
 }

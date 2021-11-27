@@ -17,17 +17,19 @@ body {
 .nav a {
   padding: 15px 0 15px 0;
   text-decoration: none;
-  font-size: 25px;
+  font-size: 1.5rem;
   color: #f1f1f1;
   display: block;
 }
 
 .nav {
-  padding-left: 0;
+ padding-left: 0;
 }
 
 .menuTitle {
-  padding-left: 20%; 
+  display: flex;
+  justify-content: center;
+  width: 100%; 
 }
 
 li {
@@ -38,7 +40,7 @@ li {
   background: #306181;
 }
 
-.nav li.active {
+.nav li:active {
   background: #306181;
 }
 
@@ -53,7 +55,7 @@ li {
 
 .header{
     display: flex;
-    margin: 1rem 1rem 0 53rem;
+    justify-content: flex-end;
 }
 
 .header p{
@@ -61,10 +63,15 @@ li {
     font-weight: bold;
 }
 
+.header img{
+  height: 45px;
+  width: 45px;
+}
+
 .img-user{
-    height: 45px;
-    width: 45px;
-    margin-left: 10px;
+  margin-left: 10px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 .img-input{
@@ -112,16 +119,21 @@ td {
 }
 
 .tambah{
-    text-decoration: none;
-    margin-left: 55rem;
-    background-color: #1E435B;
-    color: #B9E5E6;
-    padding: 10px 18px;
-    border-radius: 10px;
-    font-size: 15px;
-
+    width: calc(100% - 14.5rem);
+    display: flex;
+    justify-content: flex-end;
+    margin-left: auto;
+    margin-right: auto;
 }
 
+.tambah a{
+  padding: 10px 18px;
+  border-radius: 10px;
+  background-color: #1E435B;
+  text-decoration: none;
+  width: fit-content;
+  color: #B9E5E6;
+}
 .img-tabel{
     height: 9rem;
     width: 10rem;
@@ -134,16 +146,26 @@ td {
 }
 
 .content{
-  display: flex;
-  margin-left: 10rem;
+  display: grid; 
+  grid-auto-columns: 1fr; 
+  grid-template-columns: 1fr 1fr; 
+  gap: 0px 0px;
+  max-width: 1024px; 
+  margin-left: auto;
+  margin-right: auto;
   font-weight: bold;
 }
+
+.foto { grid-area: 1 / 1 / 2 / 2; }
+.form { grid-area: 1 / 2 / 2 / 3; }
+
 
 .img-profil{
   height: 15rem;
   width: 15rem;
   margin-top: 15px;
   margin-right: 30px;
+  object-fit: cover;
 }
 
 label{
@@ -152,7 +174,7 @@ label{
 }
 
 form{
-  width: 40%;
+  width: 60%;
 }
 
 .form-input{
@@ -181,4 +203,9 @@ form{
 .img-delete{
   width: 2rem;
   cursor: pointer;
+}
+
+.upload-foto{
+  display: flex;
+  flex-direction: column;
 }

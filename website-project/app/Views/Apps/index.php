@@ -31,75 +31,117 @@
                 </div>                                   
             </div>
         </section>
-
             <!--Artikel-->
             <section class="artikel section" id="artikel">
             <h2 class="section-title">Artikel</h2>
             <div class= "artikel-container">
                 <!--Get data from new artikel-->
                 <?php
-                    foreach($selfdev->getResult() as $self) {
-                        $sid =$self->id;
-                        $stitle = $self->judul;
-                        $scover = $self->cover;
-                        $sdeskripsi = $self->deskripsi;
+                    // Self Development
+                    if($selfdev){
+                        foreach($selfdev->getResult() as $self) {
+                            $sslug =$self->slug;
+                            $stitle = $self->judul;
+                            $scover = $self->cover;
+                            $sdeskripsi = $self->deskripsi;
+                        }
+                        if ($scover) {
+                            echo "<div class='kategori'>
+                                        <h3 class='text-artikel'>Self Development</h3>
+                                    <div class='artikel-content'>
+                                        <img src='/assets/images/artikel/$scover' alt=''>
+                                        <p class='home-artikel-judul'>$stitle</p>
+                                        <p class='text-isi-artikel'>$sdeskripsi</p>
+                                    </div>
+                                        <a href='/detail-artikel/$sslug' class='selengkapnya-artikel'>Selengkapnya<i class='bx bx-arrow-back bx-flip-horizontal' ></i></a>
+                                    </div>";
+                        }else{
+                            echo "<div class='kategori'>
+                                        <h3 class='text-artikel'>Self Development</h3>
+                                    <div class='artikel-content'>
+                                        <img src='/assets/images/artikel/default.svg' alt=''>
+                                        <p class='home-artikel-judul'>$stitle</p>
+                                        <p class='text-isi-artikel'>$sdeskripsi</p>
+                                    </div>
+                                        <a href='/detail-artikel/$sslug' class='selengkapnya-artikel'>Selengkapnya<i class='bx bx-arrow-back bx-flip-horizontal' ></i></a>
+                                    </div>";
+                        }
                     }
-                    foreach($karir->getResult() as $k) {
-                        $kid =$k->id;
-                        $ktitle = $k->judul;
-                        $kcover = $k->cover;
-                        $kdeskripsi = $k->deskripsi;
+                    // Karir
+                    if ($karir) {
+                        foreach($karir->getResult() as $k) {
+                            $kslug =$k->slug;
+                            $ktitle = $k->judul;
+                            $kcover = $k->cover;
+                            $kdeskripsi = $k->deskripsi;
+                        }
+                        if ($kcover) {
+                            echo "<div class='kategori'>
+                                    <h3 class='text-artikel'>Karir</h3>
+                                <div class='artikel-content'>
+                                    <img src='/assets/images/artikel/$kcover' alt=''>
+                                    <p class='home-artikel-judul'>$ktitle</p>
+                                    <p class='text-isi-artikel'>$kdeskripsi</p>
+                                </div>
+                                    <a href='/detail-artikel/$kslug' class='selengkapnya-artikel'>Selengkapnya<i class='bx bx-arrow-back bx-flip-horizontal' ></i></a>
+                                </div>";
+                        } else {
+                            echo "<div class='kategori'>
+                                    <h3 class='text-artikel'>Karir</h3>
+                                <div class='artikel-content'>
+                                    <img src='/assets/images/artikel/default.svg' alt=''>
+                                    <p class='home-artikel-judul'>$ktitle</p>
+                                    <p class='text-isi-artikel'>$kdeskripsi</p>
+                                </div>
+                                    <a href='/detail-artikel/$kslug' class='selengkapnya-artikel'>Selengkapnya<i class='bx bx-arrow-back bx-flip-horizontal' ></i></a>
+                                </div>";
+                        }
+                        
                     }
-                    foreach($jurusan->getResult() as $j) {
-                        $jid =$j->id;
-                        $jtitle = $j->judul;
-                        $jcover = $j->cover;
-                        $jdeskripsi = $j->deskripsi;
+                    // Jurusan
+                    if ($jurusan) {
+                        foreach($jurusan->getResult() as $j) {
+                            $jslug =$j->slug;
+                            $jtitle = $j->judul;
+                            $jcover = $j->cover;
+                            $jdeskripsi = $j->deskripsi;
+                        }
+                        if ($jcover) {
+                            echo "<div class='kategori'>
+                                        <h3 class='text-artikel'>Jurusan</h3>
+                                    <div class='artikel-content'>
+                                        <img src='/assets/images/artikel/$jcover' alt=''>
+                                        <p class='home-artikel-judul'>$jtitle</p>
+                                        <p class='text-isi-artikel'>$jdeskripsi</p>
+                                    </div>
+                                        <a href='/detail-artikel/$jslug' class='selengkapnya-artikel'>Selengkapnya<i class='bx bx-arrow-back bx-flip-horizontal' ></i></a>
+                                    </div>";  
+                        }else {
+                            echo "<div class='kategori'>
+                                        <h3 class='text-artikel'>Jurusan</h3>
+                                    <div class='artikel-content'>
+                                        <img src='/assets/images/artikel/default.svg' alt=''>
+                                        <p class='home-artikel-judul'>$jtitle</p>
+                                        <p class='text-isi-artikel'>$jdeskripsi</p>
+                                    </div>
+                                        <a href='/detail-artikel/$jslug' class='selengkapnya-artikel'>Selengkapnya<i class='bx bx-arrow-back bx-flip-horizontal' ></i></a>
+                                    </div>"; 
+                        } 
                     }
+                    
                 ?>
-                <!--Self Development-->
-                <div class=kategori>
-                    <h3 class="text-artikel">Self Development</h3>
-                <div class="artikel-content">
-                    <img src="/assets/images/artikel/header artikel.jpg" alt="">
-                    <p class="home-artikel-judul"><?php echo $stitle?></p>
-                    <p class="text-isi-artikel"><?php echo $sdeskripsi?></p>
-                </div>
-                    <a href="/detail-artikel/<?php echo $sid?>" class="selengkapnya-artikel">Selengkapnya<i class='bx bx-arrow-back bx-flip-horizontal' ></i></a>
-                </div>
-                <!--Jurusan-->
-                <div class=kategori>
-                    <h3 class="text-artikel">Jurusan</h3>
-                <div class="artikel-content">
-                    <img src="/assets/images/artikel/header artikel.jpg" alt="">
-                    <p class="home-artikel-judul"><?php echo $jtitle?></p>
-                    <p class="text-isi-artikel"><?php echo $jdeskripsi?></p>
-                </div>
-                    <a href="/detail-artikel/<?php echo $jid?>" class="selengkapnya-artikel">Selengkapnya<i class='bx bx-arrow-back bx-flip-horizontal' ></i></a>
-                </div>
-                <!--Karir-->
-                <div class=kategori>
-                    <h3 class="text-artikel">Karir</h3>
-                <div class="artikel-content">
-                    <img src="/assets/images/artikel/header artikel.jpg" alt="">
-                    <p class="home-artikel-judul"><?php echo $ktitle?></p>
-                    <p class="text-isi-artikel"><?php echo $kdeskripsi ?></p>
-                </div>
-                    <a href="/detail-artikel/<?php echo $kid?>" class="selengkapnya-artikel">Selengkapnya<i class='bx bx-arrow-back bx-flip-horizontal' ></i></a>
-                </div>
             </div>
         </section>
 
-        <!-- KEGIATAN KAMI 
+        <!-- KEGIATAN KAMI--> 
         <section class="kegiatan-kami section" id="kegiatan-kami">
         <h2 class="section-title">Kegiatan Kami</h2>
         <div class="activity-container">
             <div class="activity">
             <img src="/assets/images/gambar1.png" class="img-activity" alt="">
                 <div class="activity-description">
-                    <h5 class="title-activity">LOREM IPSUM</h5>
+                    <a href="#"><h5 class="title-activity">LOREM IPSUM</h5></a>
                     <p class="text-activity">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam</p>
-                    <a href="" class="button-activity">Detail <i class='bx bx-arrow-back bx-rotate-180' ></i></a>
                 </div>
             </div>
             <div class="activity">
@@ -126,7 +168,7 @@
                 </div>
             </div>
         </div>
-        </section>-->
+        </section>
 
         <!-- KONTAK -->
         <section class="kontak section" id="kontak">

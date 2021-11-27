@@ -46,11 +46,9 @@
         }
 
         .form-input, select {
-            padding: 0;
             width: 100%;
-            padding: 2% 0;
+            padding: 2% 1rem;
             border: 2px solid #1E435B;
-            box-sizing: border-box;
             border-radius: 100px;
             margin-bottom: 10px;
         }

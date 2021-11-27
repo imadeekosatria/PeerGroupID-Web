@@ -28,6 +28,7 @@
             <option value="self development">Self Development</option>
             <option value="karir">Karir</option>
             <option value="jurusan">Jurusan</option>
+            <option value="jurusan">Kegiatan Kami</option>
           </select>
           <p><?= $validation->getError('kategori')?></p>
           <p>

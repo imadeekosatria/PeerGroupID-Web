@@ -32,19 +32,24 @@ $routes->setAutoRoute(true);
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
-$routes->get('/detail-artikel/(:num)', 'Home::detart/$1');
+$routes->get('/detail-artikel/(:any)', 'Home::detart/$1');
 $routes->get('/artikel/(:segment)', 'Home::artikel/$1');
+$routes->get('/about', 'Home::about');
+//Bagian login
 $routes->get('/login', 'Login::index');
 $routes->post('/process', 'Login::process');
 $routes->get('/logout', 'Login::logout');
-$routes->get('/about', 'Home::about');
+//Bagian Admin Artikel
 $routes->get('/artikel-admin', 'Login::artikel');
+$routes->put('/admin-artikel/edit/(:any)', 'Login::edit_artikel/$1');
+$routes->delete('/admin-artikel/hapus/(:num)', 'Login::hapus_artikel/$1');
+//Bagian Admin Kegiatan
 $routes->get('/kegiatan-admin', 'Login::kegiatan');
+//Bagian Admin Tambah Data
+$routes->get('/tambah-data', 'Login::tambah_data');
+//Bagian Admin Profile Data
 $routes->get('/profile', 'Login::profile');
 $routes->get('/update/profile/(:num)', 'Login::update_profile/$1');
-$routes->put('/admin-artikel/edit/(:num)', 'Login::edit_artikel/$1');
-$routes->delete('/admin-artikel/hapus/(:num)', 'Login::hapus_artikel/$1');
-$routes->get('/tambah-artikel', 'Login::tambah_artikel');
 
 
 

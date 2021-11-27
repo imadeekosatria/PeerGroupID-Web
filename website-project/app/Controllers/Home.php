@@ -3,13 +3,16 @@
 namespace App\Controllers;
 
 use App\Models\ArtikelModel;
+use App\Models\KegiatanModel;
 
 class Home extends BaseController
 {
     //Global Constructor
     protected $get;
+    protected $getkegiatan;
     public function __construct(){
         $this->get = new ArtikelModel();
+        $this->getkegiatan = new KegiatanModel();
     }
 
     //Index
@@ -18,11 +21,13 @@ class Home extends BaseController
         $selfdev = $this->get->getnewartikel('self development');
         $karir = $this->get->getnewartikel('karir');
         $jurusan = $this->get->getnewartikel('jurusan');
+        $kegiatan = $this->getkegiatan->getdatakegiatan();
         $data = [
             'title' => 'Peer Group ID',
             'selfdev' => $selfdev,
             'karir' => $karir,
-            'jurusan' => $jurusan
+            'jurusan' => $jurusan,
+            'kegiatan' => $kegiatan
         ];
         return view('Apps/index', $data);
     }

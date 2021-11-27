@@ -5,12 +5,12 @@
     </div>
 
     <div>
-        <a href="/tambah-kegiatan" class="tambah">Tambah</a>
+        <a href="/tambah-data" class="tambah">Tambah</a>
     </div>
 
     <table class="table-paginate">
       <?php
-          foreach ($artikel->getResultArray() as $data):
+          foreach ($kegiatan->getResultArray() as $data):
       ?>
       <tr>
         <td>

@@ -4,19 +4,29 @@ namespace App\Controllers;
  
 use App\Models\LoginModel;
 use App\Models\ArtikelModel;
+use App\Models\KegiatanModel;
 class Login extends BaseController
 {
     public function index()
     {
         return view('Apps/login');
     }
-
+    
+    //Global Constructor
+    protected $get;
+    protected $user;
+    protected $kegiatan;
+    public function __construct(){
+        $this->get = new ArtikelModel();
+        $this->user = new LoginModel();
+        $this->kegiatan = new KegiatanModel();
+    }
+    
     public function process()
     {
-        $users = new LoginModel();
         $username = $this->request->getPost('username');
         $password = $this->request->getPost('password');
-        $dataUser = $users->where(['username' => $username])->first();
+        $dataUser = $this->user->where(['username' => $username])->first();
 
         if ($dataUser) {
             if ($password === $dataUser->password) {
@@ -44,14 +54,15 @@ class Login extends BaseController
         return redirect()->to('/login');
     }
 
+
+    //Profil Admin
     public function profile(){
-        $model = new LoginModel();
         $session = session();
         if ($session->logged_in != TRUE) {
             return redirect()->to('/login');
         }
         $user = $session->username;
-        $dataUser = $model->where(['username' => $user])->first();
+        $dataUser = $this->user->where(['username' => $user])->first();
         $data = [
             'title' => 'Profile',
             'username' => $dataUser->username,
@@ -67,18 +78,43 @@ class Login extends BaseController
 
 
     public function update_profile($id){
-        $model = new LoginModel();
+        //Ambil gambar
+        $fileFoto = $this->request->getFile('foto');
+        // dd($fileFoto);
+
+        //Check gambar apakah di upload
+        if ($fileFoto->getError() == 4) {
+            $profile = 'default.png';
+        }else {
+            //Pindah gambar
+            $fileFoto->move('assets/images/profile');
+            //Ambil nama gambar
+            $profile = $fileFoto->getName();
+        }
         
+        //Slug if needed
+        // $slug = url_title($this->request->getVar('title'), '-', true);
+        //Simpan
+        // dd($this->request->getVar());
+		$this->user->save([
+            'id_user' => $id,
+			'username' => $this->request->getVar('username'),
+            'password' => $this->request->getVar('password'),
+            'nama' => $this->request->getVar('name'),
+            'gender' => $this->request->getVar('gender'),
+            'foto' => $profile
+		]);
+        $session = session();
+        $session->set([
+            'username' => $this->request->getVar('username'),
+            'name' => $this->request->getVar('name'),
+            'foto' => $profile
+        ]);
+        return redirect()->to('profile');
     }
 
     //Management Konten
-    //Global Constructor Artikel
-    protected $get;
-    protected $user;
-    public function __construct(){
-        $this->get = new ArtikelModel();
-        $this->user = new LoginModel();
-    }
+    //Artikel
     public function artikel(){
         $session = session();
         if ($session->logged_in != TRUE) {
@@ -93,25 +129,12 @@ class Login extends BaseController
         return view('Apps/artikel_admin', $data);
     }
 
-    public function kegiatan(){
-        $session = session();
-        if ($session->logged_in != TRUE) {
-            return redirect()->to('/login');
-        }
-        $artikel = $this->get->getadminkegiatan();
-        $data = [
-            'title' => 'Kegiatan Admin',
-            'artikel' => $artikel
-        ];
-        return view('Apps/kegiatan_admin', $data);
-    }
-
     public function hapus_artikel($id){
         $this->get->delete($id);
 		    return redirect()->back();
     }
 
-    public function tambah_artikel(){
+    public function tambah_data(){
         $penulis = $this->user->penulis();
         $data = [
             'title' => 'Tambah Artikel',
@@ -165,11 +188,11 @@ class Login extends BaseController
         }
         
         //Slug if needed
-        // $slug = url_title($this->request->getVar('title'), '-', true);
-
+        $slug = url_title($this->request->getVar('title'), '-', true);
         //Simpan
 		$this->get->save([
 			'judul' => $this->request->getVar('title'),
+            'slug' => $slug,
             'cover' => $coverName,
             'sumber_cover' => $this->request->getVar('sumber_cover'),
             'deskripsi' => $this->request->getVar('deskripsi'),
@@ -217,5 +240,19 @@ class Login extends BaseController
             'text' => $this->request->getVar('content')
 		]);
         return redirect()->to('artikel-admin');
+    }
+
+    //Kegiatan
+    public function kegiatan(){
+        $session = session();
+        if ($session->logged_in != TRUE) {
+            return redirect()->to('/login');
+        }
+        $getkegiatan = $this->kegiatan->getadminkegiatan();
+        $data = [
+            'title' => 'Kegiatan Admin',
+            'kegiatan' => $getkegiatan
+        ];
+        return view('Apps/kegiatan_admin', $data);
     }
 }

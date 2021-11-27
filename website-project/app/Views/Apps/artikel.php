@@ -22,10 +22,10 @@
                                 </div>
                                 <div class="text-list">
                                     <div class="title-thumbnail">
-                                        <a href="/detail-artikel/<?php echo $data['id']?>"><?php echo $data['judul']?></a>
+                                        <a href="/detail-artikel/<?php echo $data['slug']?>"><?php echo $data['judul']?></a>
                                     </div>
                                     <div class="penulis">
-                                        <p class="penulis-artikel-home"><?php echo $data['penulis']  ?> <span class="tanggal-artikel-home"><?php echo $data['created_at']?></span></p>
+                                        <p class="penulis-artikel-home"><?php echo $data['penulis']  ?> <span class="tanggal-artikel-home"><?php echo strftime('%e %B %G', strtotime($data['created_at']));?></span></p>
                                     </div>
                                     <div class="thumbnail-description">
                                         <p><?php echo $data['deskripsi']?></p>
