@@ -20,15 +20,14 @@
     <!-- <meta property="og:site_name" content="peergroupid.org"> -->
     <!-- <meta property="og:url" content="https://www.peergroupid.org"> -->
     <!-- <meta rel="canonical" herf="https://peergroupid.org"> -->
-    <meta property="og:description" content="<?php echo $deskripsi?>">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="language" content="id">
     <meta name="geo.country" content="id">
     <meta name="geo.placename" content="Indonesia">
     <meta>
     <!--  Non-Essential, But Recommended -->
-    <!-- <meta property="og:description" content="Offering tour packages for individuals or groups.">
-    <meta property="og:site_name" content="European Travel, Inc.">
+    <meta property="og:description" content="<?php echo $deskripsi?>">
+    <!-- <meta property="og:site_name" content="European Travel, Inc.">
     <meta name="twitter:image:alt" content="Alt text for image"> -->
 
     <!--  Non-Essential, But Required for Analytics -->
