@@ -24,6 +24,7 @@ class Home extends BaseController
         $kegiatan = $this->getkegiatan->getdatakegiatan();
         $data = [
             'title' => 'Peer Group ID',
+            'deskripsi' => 'Peer Group ID merupakan platform paling tepat bagi para pemuda yang ingin mengembangkan diri lewat potensi yang dimiliki dengan berbagai kegiatan menarik berbasis pembinaan, pendampingan, dan konseling. Bersama kami, kamu bisa temukan, kembangkan, dan menjadi hebat dengan potensimu',
             'selfdev' => $selfdev,
             'karir' => $karir,
             'jurusan' => $jurusan,
