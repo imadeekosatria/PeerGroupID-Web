@@ -6,7 +6,7 @@
             <div class="home__container bd-grid">
                 <div class="content">
                     <h2 class="title">Self-development bukan hanya pengetahuan, tetapi kebutuhan.</h2>
-                    <p class="desc">Yuk, bergabung bersama pemuda lainnya untuk temukan potensimu, belajar fokus pada kelebihanmu, dan menjadi unik versi dirimu. Bersama kami, mari belajar menjadi pribadi yang cemerlang!</p>
+                    <p class="desc" id="header">Yuk, bergabung bersama pemuda lainnya untuk temukan potensimu, belajar fokus pada kelebihanmu, dan menjadi unik versi dirimu. Bersama kami, mari belajar menjadi pribadi yang cemerlang!</p>
                     <a href="#about" class="button-link kepoin">Kepoin Yuk <i class='bx bx-arrow-back bx-rotate-270' ></i></a>
                 </div>
                 <div class="home__img">
@@ -18,7 +18,7 @@
 
         <!--Siapa Kita-->
         <section class="about section " id="about">
-            <h2 class="section-title">Siapa Kita ?</h2>
+            <h2 class="section-title" id="siapa-kita">Siapa Kita ?</h2>
 
             <div class="about__container bd-grid">
                 <div class="about__img">
@@ -26,14 +26,14 @@
                 </div>
                 
                 <div>
-                    <p class="about__text">Peer Group ID merupakan platform paling tepat bagi para pemuda yang ingin mengembangkan diri lewat potensi yang dimiliki dengan berbagai kegiatan menarik berbasis pembinaan, pendampingan, dan konseling. Bersama kami, kamu bisa temukan, kembangkan, dan menjadi hebat dengan potensimu.</p>     
+                    <p class="about__text" id="siapa">Peer Group ID merupakan platform paling tepat bagi para pemuda yang ingin mengembangkan diri lewat potensi yang dimiliki dengan berbagai kegiatan menarik berbasis pembinaan, pendampingan, dan konseling. Bersama kami, kamu bisa temukan, kembangkan, dan menjadi hebat dengan potensimu.</p>     
                         <a href="about" class="button-link siapa">Kepoin Yuk <i class='bx bx-arrow-back bx-flip-horizontal' ></i></a>     
                 </div>                                   
             </div>
         </section>
             <!--Artikel-->
             <section class="artikel section" id="artikel">
-            <h2 class="section-title">Artikel</h2>
+            <h2 class="section-title" id="artikel-title">Artikel</h2>
             <div class= "artikel-container">
                 <!--Get data from new artikel-->
                 <?php
@@ -52,7 +52,7 @@
                                         <img src='/assets/images/artikel/$scover' alt=''>
                                         <p class='home-artikel-judul'>$stitle</p>
                                         <p class='text-isi-artikel'>$sdeskripsi</p>
-                                    </div>
+                                    </div id='self'>
                                         <a href='/detail-artikel/$sslug' class='selengkapnya-artikel'>Selengkapnya<i class='bx bx-arrow-back bx-flip-horizontal' ></i></a>
                                     </div>";
                         }else{
@@ -62,8 +62,8 @@
                                         <img src='/assets/images/artikel/default.svg' alt=''>
                                         <p class='home-artikel-judul'>$stitle</p>
                                         <p class='text-isi-artikel'>$sdeskripsi</p>
-                                    </div>
-                                        <a href='/detail-artikel/$sslug' class='selengkapnya-artikel'>Selengkapnya<i class='bx bx-arrow-back bx-flip-horizontal' ></i></a>
+                                    </div id='self'>
+                                        <a href='/detail-artikel/$sslug' class='selengkapnya-artikel' >Selengkapnya<i class='bx bx-arrow-back bx-flip-horizontal' ></i></a>
                                     </div>";
                         }
                     }
@@ -77,7 +77,7 @@
                         }
                         if ($kcover) {
                             echo "<div class='kategori'>
-                                    <h3 class='text-artikel'>Karir</h3>
+                                    <h3 class='text-artikel' id='karir'>Karir</h3>
                                 <div class='artikel-content'>
                                     <img src='/assets/images/artikel/$kcover' alt=''>
                                     <p class='home-artikel-judul'>$ktitle</p>
@@ -87,7 +87,7 @@
                                 </div>";
                         } else {
                             echo "<div class='kategori'>
-                                    <h3 class='text-artikel'>Karir</h3>
+                                    <h3 class='text-artikel' id='karir'>Karir</h3>
                                 <div class='artikel-content'>
                                     <img src='/assets/images/artikel/default.svg' alt=''>
                                     <p class='home-artikel-judul'>$ktitle</p>
@@ -108,7 +108,7 @@
                         }
                         if ($jcover) {
                             echo "<div class='kategori'>
-                                        <h3 class='text-artikel'>Jurusan</h3>
+                                        <h3 class='text-artikel' id='jurusan'>Jurusan</h3>
                                     <div class='artikel-content'>
                                         <img src='/assets/images/artikel/$jcover' alt=''>
                                         <p class='home-artikel-judul'>$jtitle</p>
@@ -118,7 +118,7 @@
                                     </div>";  
                         }else {
                             echo "<div class='kategori'>
-                                        <h3 class='text-artikel'>Jurusan</h3>
+                                        <h3 class='text-artikel' id='jurusan'>Jurusan</h3>
                                     <div class='artikel-content'>
                                         <img src='/assets/images/artikel/default.svg' alt=''>
                                         <p class='home-artikel-judul'>$jtitle</p>

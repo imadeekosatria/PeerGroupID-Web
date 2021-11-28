@@ -927,6 +927,10 @@ body.dark{
   background: #06263A;
 }
 
-.desc.dark, .section-title.dark, .about__text.dark{
+.desc.dark, .section-title.dark, .about__text.dark, .text-artikel.dark, .selengkapnya-artikel.dark, .text-activity.dark{
   color: var(--light-theme);
+}
+
+.title-activity.dark{
+  color: #B9E5E6;
 }
