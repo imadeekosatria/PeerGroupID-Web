@@ -55,6 +55,7 @@ class Home extends BaseController
             $data = [
                 'title' => 'Artikel',
                 'kategori' => 'Self Development',
+                'deskripsi' => 'Peer Group ID merupakan platform paling tepat bagi para pemuda yang ingin mengembangkan diri lewat potensi yang dimiliki dengan berbagai kegiatan menarik berbasis pembinaan, pendampingan, dan konseling. Bersama kami, kamu bisa temukan, kembangkan, dan menjadi hebat dengan potensimu',
                 'artikel' => $getartikel
             ];
         }elseif ($e == 'jurusan') {
@@ -62,6 +63,7 @@ class Home extends BaseController
             $data = [
                 'title' => 'Artikel',
                 'kategori' => 'Jurusan',
+                'deskripsi' => 'Peer Group ID merupakan platform paling tepat bagi para pemuda yang ingin mengembangkan diri lewat potensi yang dimiliki dengan berbagai kegiatan menarik berbasis pembinaan, pendampingan, dan konseling. Bersama kami, kamu bisa temukan, kembangkan, dan menjadi hebat dengan potensimu',
                 'artikel' => $getartikel
             ];
         }elseif ($e == 'karir') {
@@ -69,7 +71,8 @@ class Home extends BaseController
             $data = [
                 'title' => 'Artikel',
                 'kategori' => 'Karir',
-                'artikel' => $getartikel
+                'artikel' => $getartikel,
+                'deskripsi' => 'Peer Group ID merupakan platform paling tepat bagi para pemuda yang ingin mengembangkan diri lewat potensi yang dimiliki dengan berbagai kegiatan menarik berbasis pembinaan, pendampingan, dan konseling. Bersama kami, kamu bisa temukan, kembangkan, dan menjadi hebat dengan potensimu'
             ];
         }
         
@@ -79,7 +82,8 @@ class Home extends BaseController
     //About
     public function about(){
         $data = [
-            'title' => 'Siapa Kita ?'
+            'title' => 'Siapa Kita ?',
+            'deskripsi' => 'Peer Group ID merupakan platform paling tepat bagi para pemuda yang ingin mengembangkan diri lewat potensi yang dimiliki dengan berbagai kegiatan menarik berbasis pembinaan, pendampingan, dan konseling. Bersama kami, kamu bisa temukan, kembangkan, dan menjadi hebat dengan potensimu'
         ];
 
         return view('Apps/about', $data);
