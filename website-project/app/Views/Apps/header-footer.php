@@ -33,7 +33,7 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://ujicoba-peergroupid.000webhostapp.com/">
     <meta property="og:title" content="<?= $title?>">
-    <meta property="og:description" content="<?$deskripsi?>">
+    <meta property="og:description" content="<?=$deskripsi?>">
     <meta property="og:image" content="https://ujicoba-peergroupid.000webhostapp.com/assets/images/Logo Peer Group.jpg">
     <!-- <meta property="og:site_name" content="Peer Group ID"> -->
     
