@@ -34,7 +34,7 @@
     <meta property="og:url" content="https://ujicoba-peergroupid.000webhostapp.com/">
     <meta property="og:title" content="<?= $title?>">
     <meta property="og:description" content="<?$deskripsi?>">
-    <meta property="og:image" content="/assets/images/Logo Peer Group.jpg">
+    <meta property="og:image" content="https://ujicoba-peergroupid.000webhostapp.com/assets/images/Logo Peer Group.jpg">
     <!-- <meta property="og:site_name" content="Peer Group ID"> -->
     
     <!-- Twitter -->
@@ -42,7 +42,7 @@
     <meta property="twitter:url" content="https://ujicoba-peergroupid.000webhostapp.com/">
     <meta property="twitter:title" content="<?=$title?>">
     <meta property="twitter:description" content="<?=$deskripsi?>">
-    <meta property="twitter:image" content="/assets/images/Logo Peer Group.jpg">
+    <meta property="twitter:image" content="https://ujicoba-peergroupid.000webhostapp.com/assets/images/Logo Peer Group.jpg">
     <!-- <meta name="twitter:image:alt" content="Alt text for image"> -->
 </head>
 <body>
