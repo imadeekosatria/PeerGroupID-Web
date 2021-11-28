@@ -21,6 +21,21 @@ closeMenu.addEventListener('click', ()=>{
     navMenu.classList.remove('show')
 })
 
+//Darkmode Toggle Button
+const chk = document.getElementById('chk');
+const header = document.getElementById('header');
+const siapa_title = document.getElementById('siapa-kita');
+const siapa_desc = document.getElementById('siapa');
+const artikel = document.getElementById('artikel-title');
+
+chk.addEventListener('change', () => {
+	document.body.classList.toggle('dark');
+    header.classList.toggle('dark');
+    siapa_title.classList.toggle('dark');
+    siapa_desc.classList.toggle('dark');
+    artikel.classList.toggle('dark');
+});
+
 
 
 

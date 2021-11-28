@@ -89,7 +89,16 @@
                             echo '<li class="nav__item"><a href="/login" class="nav__link">Login</a></li> ';
                         }
                     ?>
-                    
+                    <li class="nav__item">
+                        <div>
+                            <input type="checkbox" class="checkbox" id="chk" />
+                            <label class="label" for="chk">
+                                <i class='bx bxs-moon' ></i>
+                                <i class='bx bxs-sun' ></i>
+                                <div class="ball"></div>
+                            </label>
+                        </div>
+                    </li>
                 </ul>
             </div>
         </nav>

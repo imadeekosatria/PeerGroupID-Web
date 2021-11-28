@@ -50,3 +50,19 @@ gsap.from('.home__img', {opacity: 0, duration: 1, delay:1.3, y: 30})
 
 //Login Form
 gsap.from('.card', {opacity: 0, duration: 1, delay:1.6, y: 30})
+
+
+//Darkmode Toggle Button
+const chk = document.getElementById('chk');
+const header = document.getElementById('header');
+const siapa_title = document.getElementById('siapa-kita');
+const siapa_desc = document.getElementById('siapa');
+const artikel = document.getElementById('artikel-title');
+
+chk.addEventListener('change', () => {
+	document.body.classList.toggle('dark');
+    header.classList.toggle('dark');
+    siapa_title.classList.toggle('dark');
+    siapa_desc.classList.toggle('dark');
+    artikel.classList.toggle('dark');
+});
