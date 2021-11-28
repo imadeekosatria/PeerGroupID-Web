@@ -10,9 +10,11 @@ class Home extends BaseController
     //Global Constructor
     protected $get;
     protected $getkegiatan;
+    protected $deskripsi;
     public function __construct(){
         $this->get = new ArtikelModel();
         $this->getkegiatan = new KegiatanModel();
+        $this->deskripsi = 'Peer Group ID merupakan platform paling tepat bagi para pemuda yang ingin mengembangkan diri lewat potensi yang dimiliki dengan berbagai kegiatan menarik berbasis pembinaan, pendampingan, dan konseling. Bersama kami, kamu bisa temukan, kembangkan, dan menjadi hebat dengan potensimu';
     }
 
     //Index
@@ -24,7 +26,7 @@ class Home extends BaseController
         $kegiatan = $this->getkegiatan->getdatakegiatan();
         $data = [
             'title' => 'Peer Group ID',
-            'deskripsi' => 'Peer Group ID merupakan platform paling tepat bagi para pemuda yang ingin mengembangkan diri lewat potensi yang dimiliki dengan berbagai kegiatan menarik berbasis pembinaan, pendampingan, dan konseling. Bersama kami, kamu bisa temukan, kembangkan, dan menjadi hebat dengan potensimu',
+            'deskripsi' => $this->deskripsi,
             'selfdev' => $selfdev,
             'karir' => $karir,
             'jurusan' => $jurusan,
@@ -36,12 +38,13 @@ class Home extends BaseController
     //Detail Artikel
     public function detart($id){
         $list = $this->get->getartikel($id);
-        $deskripsi = $this->get->getmetadeskripsiartikel($id);
-        foreach ($deskripsi->getResult() as $meta) {
+        // $deskripsi = $this->get->getmetadeskripsiartikel($id);
+        foreach ($list->getResult() as $meta) {
             $desk = $meta->deskripsi;
+            $title = $meta->judul;
         }
         $data = [
-            'title' => 'Detail Artikel',
+            'title' => $title,
             'deskripsi' => $desk,
             'artikel' => $list
         ];
@@ -53,26 +56,26 @@ class Home extends BaseController
         if ($e == 'self') {
             $getartikel = $this->get->getdataartikel('self development');
             $data = [
-                'title' => 'Artikel',
+                'title' => 'Artikel Self Development',
                 'kategori' => 'Self Development',
-                'deskripsi' => 'Peer Group ID merupakan platform paling tepat bagi para pemuda yang ingin mengembangkan diri lewat potensi yang dimiliki dengan berbagai kegiatan menarik berbasis pembinaan, pendampingan, dan konseling. Bersama kami, kamu bisa temukan, kembangkan, dan menjadi hebat dengan potensimu',
+                'deskripsi' => $this->deskripsi,
                 'artikel' => $getartikel
             ];
         }elseif ($e == 'jurusan') {
             $getartikel = $this->get->getdataartikel($e);
             $data = [
-                'title' => 'Artikel',
+                'title' => 'Artikel Jurusan',
                 'kategori' => 'Jurusan',
-                'deskripsi' => 'Peer Group ID merupakan platform paling tepat bagi para pemuda yang ingin mengembangkan diri lewat potensi yang dimiliki dengan berbagai kegiatan menarik berbasis pembinaan, pendampingan, dan konseling. Bersama kami, kamu bisa temukan, kembangkan, dan menjadi hebat dengan potensimu',
+                'deskripsi' => $this->deskripsi,
                 'artikel' => $getartikel
             ];
         }elseif ($e == 'karir') {
             $getartikel = $this->get->getdataartikel($e);
             $data = [
-                'title' => 'Artikel',
+                'title' => 'Artikel Karir',
                 'kategori' => 'Karir',
                 'artikel' => $getartikel,
-                'deskripsi' => 'Peer Group ID merupakan platform paling tepat bagi para pemuda yang ingin mengembangkan diri lewat potensi yang dimiliki dengan berbagai kegiatan menarik berbasis pembinaan, pendampingan, dan konseling. Bersama kami, kamu bisa temukan, kembangkan, dan menjadi hebat dengan potensimu'
+                'deskripsi' => $this->deskripsi
             ];
         }
         
@@ -83,7 +86,7 @@ class Home extends BaseController
     public function about(){
         $data = [
             'title' => 'Siapa Kita ?',
-            'deskripsi' => 'Peer Group ID merupakan platform paling tepat bagi para pemuda yang ingin mengembangkan diri lewat potensi yang dimiliki dengan berbagai kegiatan menarik berbasis pembinaan, pendampingan, dan konseling. Bersama kami, kamu bisa temukan, kembangkan, dan menjadi hebat dengan potensimu'
+            'deskripsi' => $this->deskripsi
         ];
 
         return view('Apps/about', $data);

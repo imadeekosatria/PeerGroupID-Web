@@ -8,32 +8,42 @@
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <link rel="shortcut icon" href="/assets/images/Logo Peer Group.jpg" type="image/x-icon">
     <link rel="stylesheet" href="/assets/css/style.css">
-    <link rel="stylesheet" type="text/css" href="/assets/css/about.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/about.css"> 
     <!--  Essential META Tags -->
-    <meta name="description" content="<?php echo $deskripsi; ?>" />
     <meta name="application-name" content="Web Peer Group ID">
     <meta name="author" content="Web Development Team Peer Group ID">
     <meta name="keywords" content="Self Development, Karir, Jurusan">
-    <meta property="og:title" content="Peer Group ID">
-    <meta property="og:type" content="article" />
-    <meta property="og:image" content="/assets/images/Logo Peer Group.jpg">
-    <!-- <meta property="og:site_name" content="peergroupid.org"> -->
-    <!-- <meta property="og:url" content="https://www.peergroupid.org"> -->
     <!-- <meta rel="canonical" herf="https://peergroupid.org"> -->
-    <meta name="twitter:card" content="summary_large_image">
     <meta name="language" content="id">
     <meta name="geo.country" content="id">
     <meta name="geo.placename" content="Indonesia">
-    <meta>
-    <!--  Non-Essential, But Recommended -->
-    <meta property="og:description" content="<?php echo $deskripsi?>">
-    <!-- <meta property="og:site_name" content="European Travel, Inc.">
-    <meta name="twitter:image:alt" content="Alt text for image"> -->
 
-    <!--  Non-Essential, But Required for Analytics -->
+    <!--  Non-Essential, But Recommended -->
+    <!-- <meta property="og:site_name" content="European Travel, Inc.">-->
+    <!-- Non-Essential, But Required for Analytics -->
     <!-- <meta property="fb:app_id" content="your_app_id" />
     <meta name="twitter:site" content="@website-username"> -->
+    
+    <!-- Primary Meta Tags -->
     <title><?=$title?></title>
+    <meta name="title" content="<?=$title?>">
+    <meta name="description" content="<?php echo $deskripsi; ?>">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ujicoba-peergroupid.000webhostapp.com/">
+    <meta property="og:title" content="<?= $title?>">
+    <meta property="og:description" content="<?$deskripsi?>">
+    <meta property="og:image" content="/assets/images/Logo Peer Group.jpg">
+    <!-- <meta property="og:site_name" content="Peer Group ID"> -->
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://ujicoba-peergroupid.000webhostapp.com/">
+    <meta property="twitter:title" content="<?=$title?>">
+    <meta property="twitter:description" content="<?=$deskripsi?>">
+    <meta property="twitter:image" content="/assets/images/Logo Peer Group.jpg">
+    <!-- <meta name="twitter:image:alt" content="Alt text for image"> -->
 </head>
 <body>
     <!--Header-->
