@@ -3,12 +3,12 @@
 <main class="l-main">
 <div class="aboutcontent">
         <div class="abouttitle">
-            <h1 style="color: rgb(63, 63, 155);" class="aboutsiapa">Siapa </h1>
+            <h1 class="aboutsiapa">Siapa </h1>
             <h1 style="color: rgb(182, 149, 41);" class="aboutkita"> &nbsp; Kita?</h1>
         </div>
         <div class="descContent">
             <h2 style="color: rgb(182, 149, 41);">Peer Group ID</h2>
-            <p>Peer Group ID merupakan platform paling tepat bagi para pemuda yang ingin mengembangkan diri lewat potensi yang dimiliki dengan berbagai kegiatan menarik berbasis pembinaan, pendampingan, dan konseling. Bersama kami, kamu bisa temukan, kembangkan, dan menjadi hebat dengan potensimu.</p>
+            <p id="header">Peer Group ID merupakan platform paling tepat bagi para pemuda yang ingin mengembangkan diri lewat potensi yang dimiliki dengan berbagai kegiatan menarik berbasis pembinaan, pendampingan, dan konseling. Bersama kami, kamu bisa temukan, kembangkan, dan menjadi hebat dengan potensimu.</p>
         </div>
         <div class="imgContent">
             <img class="imgsiapakita" src="/assets/images/Siapakita.svg" alt="">
@@ -37,4 +37,5 @@
     </div>
     </main>
     <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="/assets/js/about.js"></script>
     <?= $this->endsection();?>

@@ -559,16 +559,30 @@
 
 /* KONTAK */
 .kontak-container{
-  display: flex;
-  background-color: #B9E5E6;
+  display: grid; 
+  grid-auto-columns: 1fr; 
+  grid-auto-rows: 1fr; 
+  grid-template-columns: 1fr 1.3fr; 
+  gap: 0em 0em; 
+  width: 60%;
+  background-color: #BFCEF4;
   border: 1px solid #B9E5E6;
   border-radius: 30px;
-  margin: 1rem 15rem;
-  width: 62vw;
+  margin-left: auto;
+  margin-right: auto;
+  justify-items: center;
 }
 
-.kontak-description{
-  width: 50%;
+
+
+.sosmed{
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-auto-rows: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0em 0em;
+  height: 100%;
+  padding: 5rem 0 5rem 0;
 }
 
 .img-kontak{
@@ -578,7 +592,6 @@
 
 .sosial-media{
   display: flex;
-  margin: 3rem 0 0 0;
   font-size: 1.5rem;
   align-items: center;
 }
@@ -614,15 +627,7 @@
   grid-area: rekomendasi; 
 }
 
-.artikel__container{
-  display: grid;
-  grid-template-columns: 1fr 0.5fr;
-  grid-template-rows: 1fr;
-  gap: 0px 2rem;
-  grid-auto-flow: row;
-  grid-template-areas:
-    "artikel rekomendasi";
-}
+
 
 .detail{
   margin-top: 4rem;
@@ -705,13 +710,16 @@
 }
 
 /*Rekomendasi*/
-.Rekomendasi{
-  margin-right: 2rem;
-}
+
 .rekomendasi-container{
   width: 100%;
   height: 617px;
   border-radius: 5px;
+  display: grid; 
+  grid-auto-columns: 1fr; 
+  grid-auto-rows: 1fr; 
+  grid-template-rows: 0.2fr 2.8fr; 
+  gap: 0em 0em; 
 }
 
 .header-rekomendasi{
@@ -728,33 +736,31 @@
 }
 
 .rekomen-fill {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  gap: 3em 1rem;
-  grid-auto-flow: row;
-  grid-template-areas:
-    "left right"
-    "left right"
-    "left right";
+  margin-top: .5rem;
+  display: grid; 
+  grid-auto-columns: 1fr; 
+  grid-auto-rows: 1fr; 
+  grid-template-columns: 1fr 1fr; 
+  grid-template-rows: 1fr 1fr 1fr; 
+  gap: 1em 2em; 
+  grid-template-areas: 
+    ". ."
+    ". ."
+    ". ."; 
 }
 
-.left, .right{
-  margin-top: 1rem;
-}
-
-.left { 
-  grid-area: left; 
-}
-
-.right { 
-  grid-area: right; 
-}
 
 .konten{
-  width: 10rem;
-  margin-bottom: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 0.5fr;
+  grid-template-rows: 1fr;
+  gap: 0px 2rem;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "artikel rekomendasi";
 }
+
+/*Rekomendasi*/
 
 .rekomen-img {
   width: 100%;
@@ -791,7 +797,7 @@ font-size: var(--form-big-font-size);
 .judul-konten::after{
 position: absolute;
   content: "";
-  width: 20rem;
+  width: 32rem;
   height: 0.18rem;
   left: 0;
   right: 0;
@@ -809,8 +815,8 @@ position: absolute;
   "img-thumbnail text-list"; 
   background: var(--f2f2);
   border-radius: 5px;
-  width: 50rem;
   margin-bottom: 1rem;
+  transition: background 0.2s linear;
 }
 .img-thumbnail { 
   grid-area: img-thumbnail; 
@@ -819,6 +825,7 @@ position: absolute;
 
 .img-thumbnail img { 
   border-radius: 5px;
+  height: 100%;
 }
 .text-list { 
   grid-area: text-list; 
@@ -833,9 +840,6 @@ position: absolute;
   grid-area: 1 / 1 / 2 / 2; 
   font-size: 1.3rem;
   font-weight: var(--font-bold);
-}
-
-.title-thumbnail a{
   color: var(--primary-color);
   text-transform: capitalize;
 }
@@ -927,10 +931,35 @@ body.dark{
   background: #06263A;
 }
 
-.desc.dark, .section-title.dark, .about__text.dark, .text-artikel.dark, .selengkapnya-artikel.dark, .text-activity.dark{
+.desc.dark, .section-title.dark, 
+.about__text.dark, .text-artikel.dark, 
+.selengkapnya-artikel.dark, .text-activity.dark, 
+p.dark, .thumbnail-description.dark, 
+.kategori-artikel.dark, .aboutsiapa.dark,
+.text-rekomen.dark{
   color: var(--light-theme);
 }
 
 .title-activity.dark{
   color: #B9E5E6;
+}
+
+.dark-artikel-kategori{
+  color: var(--accent-color);
+}
+
+.dark-penulis-kategori{
+  color: #E7BF60;
+}
+
+.dark-tanggal-kategori{
+  color: var(--light-theme);
+}
+
+.dark-box{
+  background: var(--primary-color);
+}
+
+.kategori-artikel{
+  color: var(--primary-color);
 }

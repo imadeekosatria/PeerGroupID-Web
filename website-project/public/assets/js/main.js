@@ -68,18 +68,4 @@ sr.reveal('.about__img',{});
 sr.reveal('.siapa',{delay: 400}); 
 sr.reveal('.about__text',{delay: 400});
 
-//Darkmode Toggle Button
 const chk = document.getElementById('chk');
-const header = document.getElementById('header');
-const siapa_desc = document.getElementById('siapa');
-const section = document.querySelectorAll('.section-title, .text-artikel, .selengkapnya-artikel, .title-activity, .text-activity');
-
-
-chk.addEventListener('change', () => {
-	document.body.classList.toggle('dark');
-    header.classList.toggle('dark');
-    siapa_desc.classList.toggle('dark');
-    for (i = 0; i < section.length; i++) {
-        section[i].classList.toggle('dark');
-    }
-});

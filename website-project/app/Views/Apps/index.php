@@ -174,22 +174,22 @@
         <section class="kontak section" id="kontak">
             <h2 class="section-title">Kontak Kami</h2>
             <div class="kontak-container">
-                <div class="kontak-description">
+                <div class="gambar">
                     <img src="/assets/images/Temukankami.svg" class="img-kontak" alt="">
                 </div>
-                <div class="kontak-descrption">
-                <div class="sosial-media">
-                    <img src="/assets/images/ig.svg" class="img-kontak-media" alt="">
-                    <a href="https://www.instagram.com/peergroup.id/" target="_blank" rel="noopener noreferrer">Peergroup.id</a> 
-                </div>
-                <div class="sosial-media">
-                    <img src="/assets/images/mail.svg" class="img-kontak-media" alt="">
-                    <a href="mailto:peergroup.id@gmail.com">peergroup.id@gmail.com</a>
-                </div>
-                <div class="sosial-media">
-                    <img src="/assets/images/linkedin.svg" class="img-kontak-media" alt="">
-                    <a href="https://www.linkedin.com/company/peer-group-id/" target="_blank" rel="noopener noreferrer">Peer Group ID</a>
-                </div>
+                <div class="sosmed">
+                    <div class="sosial-media">
+                        <img src="/assets/images/ig.svg" class="img-kontak-media" alt="">
+                        <a href="https://www.instagram.com/peergroup.id/" target="_blank" rel="noopener noreferrer">Peergroup.id</a> 
+                    </div>
+                    <div class="sosial-media">
+                        <img src="/assets/images/mail.svg" class="img-kontak-media" alt="">
+                        <a href="mailto:peergroup.id@gmail.com">peergroup.id@gmail.com</a>
+                    </div>
+                    <div class="sosial-media">
+                        <img src="/assets/images/linkedin.svg" class="img-kontak-media" alt="">
+                        <a href="https://www.linkedin.com/company/peer-group-id/" target="_blank" rel="noopener noreferrer">Peer Group ID</a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -198,5 +198,6 @@
     <script src="https://unpkg.com/scrollreveal"></script>
     <!--GASP-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+    <script src="/assets/js/index.js"></script>
 <?= $this->endsection();?>
     
