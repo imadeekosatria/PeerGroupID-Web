@@ -25,7 +25,7 @@
                     <img src="/assets/images/Siapakita.svg" alt="">
                 </div>
                 
-                <div>
+                <div class="about__desc">
                     <p class="about__text" id="siapa">Peer Group ID merupakan platform paling tepat bagi para pemuda yang ingin mengembangkan diri lewat potensi yang dimiliki dengan berbagai kegiatan menarik berbasis pembinaan, pendampingan, dan konseling. Bersama kami, kamu bisa temukan, kembangkan, dan menjadi hebat dengan potensimu.</p>     
                         <a href="about" class="button-link siapa">Kepoin Yuk <i class='bx bx-arrow-back bx-flip-horizontal' ></i></a>     
                 </div>                                   
@@ -131,6 +131,9 @@
                     
                 ?>
             </div>
+            <div class="artikel-mobile-container">
+
+            </div>
         </section>
 
         <!-- KEGIATAN KAMI--> 
@@ -172,7 +175,7 @@
 
         <!-- KONTAK -->
         <section class="kontak section" id="kontak">
-            <h2 class="section-title">Kontak Kami</h2>
+            <h2 class="section-title" id="kontak_kami">Kontak Kami</h2>
             <div class="kontak-container">
                 <div class="gambar">
                     <img src="/assets/images/Temukankami.svg" class="img-kontak" alt="">
@@ -180,15 +183,23 @@
                 <div class="sosmed">
                     <div class="sosial-media">
                         <img src="/assets/images/ig.svg" class="img-kontak-media" alt="">
-                        <a href="https://www.instagram.com/peergroup.id/" target="_blank" rel="noopener noreferrer">Peergroup.id</a> 
+                        <a href="https://www.instagram.com/peergroup.id/" target="_blank" rel="noopener noreferrer" class="link-sosmed">Peergroup.id</a> 
                     </div>
                     <div class="sosial-media">
                         <img src="/assets/images/mail.svg" class="img-kontak-media" alt="">
-                        <a href="mailto:peergroup.id@gmail.com">peergroup.id@gmail.com</a>
+                        <a href="mailto:peergroup.id@gmail.com" class="link-sosmed">peergroup.id@gmail.com</a>
                     </div>
                     <div class="sosial-media">
                         <img src="/assets/images/linkedin.svg" class="img-kontak-media" alt="">
-                        <a href="https://www.linkedin.com/company/peer-group-id/" target="_blank" rel="noopener noreferrer">Peer Group ID</a>
+                        <a href="https://www.linkedin.com/company/peer-group-id/" target="_blank" rel="noopener noreferrer" class="link-sosmed">Peer Group ID</a>
+                    </div>
+                </div>
+                <div class="mobile-sosmed-container" id="mobile-sosmed">
+                    <h2>Kontak Kami</h2>
+                    <div class="mobile-sosmed">
+                        <a href="https://www.instagram.com/peergroup.id/" target="_blank" rel="noopener noreferrer" class="mobile-sosmed-link"><i class='bx bxl-instagram' ></i></a>
+                        <a href="mailto:peergroup.id@gmail.com" class="mobile-sosmed-link"><i class='bx bx-mail-send' ></i></a>
+                        <a href="https://www.linkedin.com/company/peer-group-id/" target="_blank" rel="noopener noreferrer" class="mobile-sosmed-link"><i class='bx bxl-linkedin-square'></i></a>
                     </div>
                 </div>
             </div>

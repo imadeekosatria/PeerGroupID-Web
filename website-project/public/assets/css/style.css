@@ -51,7 +51,7 @@
     font-size: var(--normal-font-size);
     font-weight: 500;
     background-color: #fafafa;
-    transition: background 0.2s linear;
+    transition: background-color 0.2s linear;
   }
   
   h1,p,ul{
@@ -204,9 +204,7 @@
     background-color: var(--hover-button);
   }
 
-  .content{
-    max-width: 388px;
-  }
+  
   
 
 /*Needed*/
@@ -251,7 +249,6 @@
   background-color: var(--primary-color);
   color: #fff;
   padding: .75rem 2.5rem;
-  font-weight: var(--font-semi);
   border-radius: 100px;
   font-family: var(--font-family);
   font-weight: var(--font-bold);
@@ -263,9 +260,7 @@
   margin-left: 1rem;
 }
 
-.siapa{
-  margin-left: 2rem;
-}
+
 
 .front{
   width: 653px;
@@ -278,7 +273,7 @@
 /* ===== ABOUT =====*/
 .about__container{
   row-gap: 2rem;
-  text-align: center;
+  
 }
 .about__subtitle{
   margin-bottom: 1rem;
@@ -291,12 +286,6 @@
   border-radius: .5rem;
 }
 
-.about__container{
-  grid-template-columns: repeat(2,1fr);
-  align-items: center;
-  text-align: initial;
-}
-
 
 .section-title{
   position: relative;
@@ -307,10 +296,126 @@
 }
 /*Untuk Tampilan Mobile*/
 /* ===== MEDIA QUERIES =====*/
-@media screen and (min-width: 768px){
+@media screen and (max-width: 468px){
+  #kontak_kami{
+    display: none;
+  }
+  .mobile-sosmed-container{
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 200px;
+  }
+
+  .mobile-sosmed-container h2{
+    margin-block-end: 0.5rem;
+  }
+
+  .mobile-sosmed{
+    display: flex;
+    justify-content: space-between;
+    font-size: 2.5rem;
+  }
+  .mobile-sosmed a{
+    text-decoration: none;
+    color: #000000;
+  }
+
+  .sosial-media{
+    font-size: small;
+  }
+
+  .img-kontak-media{
+    width: 1rem;
+  }
+
+  .kontak-container{
+    width: 95%;
+    height: 200px;
+    grid-template-columns: 1fr 1.2fr;
+  }
+
+  .sosmed{
+    display: none; 
+  }
+
+  .about__container{
+    align-items: center;
+    text-align: justify;
+    font-size: small;
+  }
+  .about__img img {
+    height: 14rem;
+  }
+
+  .artikel-container{
+    display: none;
+  }
+
+  .artikel-mobile-container{
+    display: block;
+  }
+
+  .img-kontak{
+    max-height: 200px;
+  }
+}
+@media screen and (min-width: 769px){
   :root{
     --big-font-size: 5rem;
     --normal-font-size: 1rem;
+  }
+  
+  .about__container{
+    text-align: center;
+  }
+  .content{
+    max-width: 388px;
+  }
+  .sosmed{
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-auto-rows: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0em 0em;
+  }
+  .mobile-sosmed-container{
+    display: none;
+  }
+  .about__container{
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    text-align: initial;
+  }
+  .img-kontak-media{
+    width: 3rem;
+  }
+
+  .sosial-media{
+    font-size: 1.5rem;
+  }
+
+  .kontak-container{
+    width: 60%;
+    grid-template-columns: 1fr 1.3fr;
+  }
+
+  .img-kontak{
+    height: 24rem;
+  }
+
+  .sosmed{
+    padding: 5rem 0 5rem 0;
+    height: 100%;
+  }
+
+  .siapa{
+    margin-left: 2rem;
+  }
+
+  .artikel-mobile-container{
+    display: none;
   }
 }
 @media screen and (max-width: 768px){
@@ -323,21 +428,26 @@
   }
   .content{
     margin-top: 1rem;
+    width: 400px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .about__desc{
+    width: 400px;
+    margin-right: auto;
+    margin-left: auto;
   }
   .home__img{
     margin-left: auto;
     margin-right: auto;
     top: 0;
     margin-top: 1rem;
-    width: 53vw;
-    height: 25vh;
+    width: 434px;
   }
   .back {
     height: 21vh;
   }
-  .front{
-    height: 26vh;
-  }
+  
   .section-title{
     font-size: 2rem;
   }
@@ -561,38 +671,24 @@
 .kontak-container{
   display: grid; 
   grid-auto-columns: 1fr; 
-  grid-auto-rows: 1fr; 
-  grid-template-columns: 1fr 1.3fr; 
+  grid-auto-rows: 1fr;  
   gap: 0em 0em; 
-  width: 60%;
   background-color: #BFCEF4;
   border: 1px solid #B9E5E6;
   border-radius: 30px;
   margin-left: auto;
   margin-right: auto;
   justify-items: center;
+  transition: background 0.2s linear;
 }
 
-
-
-.sosmed{
-  display: grid;
-  grid-auto-columns: 1fr;
-  grid-auto-rows: 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  gap: 0em 0em;
-  height: 100%;
-  padding: 5rem 0 5rem 0;
-}
 
 .img-kontak{
   width: 22rem;
-  height: 24rem;
 }
 
 .sosial-media{
   display: flex;
-  font-size: 1.5rem;
   align-items: center;
 }
 
@@ -603,7 +699,6 @@
 }
 
 .img-kontak-media{
-  width: 3rem;
   height: 3rem;
 }
 
@@ -936,7 +1031,8 @@ body.dark{
 .selengkapnya-artikel.dark, .text-activity.dark, 
 p.dark, .thumbnail-description.dark, 
 .kategori-artikel.dark, .aboutsiapa.dark,
-.text-rekomen.dark{
+.text-rekomen.dark, .link-sosmed.dark,
+.mobile-sosmed-container.dark, .mobile-sosmed-link.dark{
   color: var(--light-theme);
 }
 
@@ -962,4 +1058,8 @@ p.dark, .thumbnail-description.dark,
 
 .kategori-artikel{
   color: var(--primary-color);
+}
+
+.kontak-container.dark{
+  background-color: #344464;
 }
