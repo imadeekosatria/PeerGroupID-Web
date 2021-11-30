@@ -279,10 +279,10 @@
   margin-bottom: 1rem;
 }
 .about__img{
-  justify-self: center;
+  text-align-last: center;
 }
 .about__img img{
-  width: 322px;
+  width: calc(100% - 2rem);
   border-radius: .5rem;
 }
 
@@ -346,7 +346,7 @@
     font-size: small;
   }
   .about__img img {
-    height: 14rem;
+    height: 16rem;
   }
 
   .artikel-container{
@@ -428,12 +428,12 @@
   }
   .content{
     margin-top: 1rem;
-    width: 400px;
+    width: calc(100% - 2rem);
     margin-right: auto;
     margin-left: auto;
   }
   .about__desc{
-    width: 400px;
+    width: calc(100% - 2rem);
     margin-right: auto;
     margin-left: auto;
   }
@@ -442,7 +442,7 @@
     margin-right: auto;
     top: 0;
     margin-top: 1rem;
-    width: 434px;
+    width: calc(100% - 2rem);
   }
   .back {
     height: 21vh;
