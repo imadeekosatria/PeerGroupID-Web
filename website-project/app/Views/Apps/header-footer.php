@@ -9,6 +9,7 @@
     <link rel="shortcut icon" href="/assets/images/Logo Peer Group.jpg" type="image/x-icon">
     <link rel="stylesheet" href="/assets/css/style.css">
     <link rel="stylesheet" type="text/css" href="/assets/css/about.css"> 
+    <link rel="stylesheet" href="/assets/css/artikel.css">
     <!--  Essential META Tags -->
     <meta name="application-name" content="Web Peer Group ID">
     <meta name="author" content="Web Development Team Peer Group ID">
