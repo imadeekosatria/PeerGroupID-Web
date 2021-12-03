@@ -256,12 +256,38 @@
     .home__img img {
         height: 12rem;
     }
+
+    .title-artikel-mobile{
+        color: #5F9695;
+        font-family: var(--font-family);
+        margin-left: 1rem;
+    }
+
+    .box-artikel-mobile{
+        width: calc(100% - 2rem);
+        background: #E2E2E2;
+        border-radius: 5px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .gambar-artikel-mobile{
+        width: 7rem;
+    }
+
+    .judul-artikel-mobile a{
+        text-decoration: none;
+        color: var(--primary-color);
+        font-size: var(--normal-font-size);
+        font-weight: var(--font-bold);
+    }
 }
 
-/* Tablet */
 @media screen and (min-width: 576px) {
     
 }
+
+/* Tablet */
 
 
 @media screen and (max-width: 768px) {
@@ -284,13 +310,13 @@
         margin-right: auto;
         margin-left: auto;
     }
-
+    
     .about__desc{
         width: calc(100% - 2rem);
         margin-right: auto;
         margin-left: auto;
     }
-
+    
     .section-title{
         font-size: 2rem;
     }

@@ -132,10 +132,61 @@
                 ?>
             </div>
             <div class="artikel-mobile-container">
-
+                <div class="self-def-mobile">
+                    <h1 class="title-artikel-mobile">SELF DEVELOPMENT</h1>
+                    <div class="box-artikel-mobile">
+                        <div class="gambar-artikel-mobile">
+                            <img src='/assets/images/artikel/<?=$scover?>' alt='cover'>
+                        </div>
+                        <div class="isi-artikel-mobile">
+                            <div class="judul-artikel-mobile">
+                                <a href="/detail-artikel/<?=$sslug?>"><?=$stitle?></a>
+                            </div>
+                            <div class="deskripsi-artikel-mobile">
+                                <p><?=$sdeskripsi?></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="artikel-mobile-container">
+                <div class="self-def-mobile">
+                    <h1 class="title-artikel-mobile">KARIR</h1>
+                    <div class="box-artikel-mobile">
+                        <div class="gambar-artikel-mobile">
+                            <img src='/assets/images/artikel/<?=$kcover?>' alt='cover'>
+                        </div>
+                        <div class="isi-artikel-mobile">
+                            <div class="judul-artikel-mobile">
+                                <a href="/detail-artikel/<?=$kslug?>"><?=$ktitle?></a>
+                            </div>
+                            <div class="deskripsi-artikel-mobile">
+                                <p><?=$kdeskripsi?></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="artikel-mobile-container">
+                <div class="self-def-mobile">
+                    <h1 class="title-artikel-mobile">JURUSAN</h1>
+                    <div class="box-artikel-mobile">
+                        <div class="gambar-artikel-mobile">
+                            <img src='/assets/images/artikel/<?=$jcover?>' alt='cover'>
+                        </div>
+                        <div class="isi-artikel-mobile">
+                            <div class="judul-artikel-mobile">
+                                <a href="/detail-artikel/<?=$jslug?>"><?=$jtitle?></a>
+                            </div>
+                            <div class="deskripsi-artikel-mobile">
+                                <p><?=$jdeskripsi?></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
-
+            
         <!-- KEGIATAN KAMI--> 
         <section class="kegiatan-kami section" id="kegiatan-kami">
         <h2 class="section-title">Kegiatan Kami</h2>
