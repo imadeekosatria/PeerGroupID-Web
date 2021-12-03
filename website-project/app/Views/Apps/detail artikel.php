@@ -11,10 +11,11 @@
 ?>
 <?= $this->extend('/Apps/header-footer');?>
 <?= $this->section('content')?>
-    <main class="l-main">
-        <section class="artikel section">
-            <div class="artikel__container detail">
-                <!--Area artikel-->
+<main class="l-main">
+    <section class="artikel section">
+        <div class="artikel__container detail">
+            <!--Area artikel-->
+            <article>
                 <div class="artikel">
                     <div class="header-artikel">
                         <h1 class="title-artikel"><?=$judul?></h1>
@@ -47,6 +48,8 @@
                         <lottie-player src="https://assets4.lottiefiles.com/packages/lf20_kmfssxfk.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop  autoplay></lottie-player>
                     </div>
                 </div>
+            </article>
+            <aside>
                 <!--Area Rekomendasi-->
                 <!--<div class="Rekomendasi">
                     <div class="rekomendasi-container">
@@ -97,7 +100,8 @@
                         </div>
                     </div>
                 </div>-->
-            </div>
-        </section>
-    </main>
+            </aside>
+        </div>
+    </section>
+</main>
 <?= $this->endsection();?>

@@ -69,3 +69,8 @@ sr.reveal('.siapa',{delay: 400});
 sr.reveal('.about__text',{delay: 400});
 
 const chk = document.getElementById('chk');
+
+
+// const isdark = sessionStorage.getItem('dark');
+
+// document.getElementById('chk').checked = true;

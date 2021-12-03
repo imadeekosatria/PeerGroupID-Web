@@ -6,7 +6,14 @@ const section = document.querySelectorAll('.section-title, .text-artikel, .selen
 const kontak = document.querySelector('.kontak-container');
 const mobile_sosmed = document.getElementById('mobile-sosmed');
 const mobile_icon = document.querySelectorAll('.mobile-sosmed-link');
+
+
 chk.addEventListener('change', () => {
+    dark();
+});
+
+
+function dark() {
     document.body.classList.toggle('dark');
     header.classList.toggle('dark');
     siapa_desc.classList.toggle('dark');
@@ -19,4 +26,4 @@ chk.addEventListener('change', () => {
     for (i = 0; i < mobile_icon.length; i++) {
         mobile_icon[i].classList.toggle('dark');
     }
-});
+}

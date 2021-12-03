@@ -8,6 +8,10 @@ const artikel = document.getElementById('artikel');
 const text_rekomen = document.querySelectorAll('.text-rekomen');
 
 chk.addEventListener('change', () => {
+    dark()
+});
+
+function dark() {
     document.body.classList.toggle('dark');
     artikel.classList.toggle('dark');
     for (i = 0; i < title_thumbnail.length; i++) {
@@ -20,4 +24,4 @@ chk.addEventListener('change', () => {
     for (i = 0; i < text_rekomen.length; i++) {
         text_rekomen[i].classList.toggle('dark');
     }
-});
+}

@@ -11,10 +11,12 @@ class Home extends BaseController
     protected $get;
     protected $getkegiatan;
     protected $deskripsi;
+    protected $dark;
     public function __construct(){
         $this->get = new ArtikelModel();
         $this->getkegiatan = new KegiatanModel();
         $this->deskripsi = 'Peer Group ID merupakan platform paling tepat bagi para pemuda yang ingin mengembangkan diri lewat potensi yang dimiliki dengan berbagai kegiatan menarik berbasis pembinaan, pendampingan, dan konseling. Bersama kami, kamu bisa temukan, kembangkan, dan menjadi hebat dengan potensimu';
+        $this->dark = '';
     }
 
     //Index
@@ -30,7 +32,9 @@ class Home extends BaseController
             'selfdev' => $selfdev,
             'karir' => $karir,
             'jurusan' => $jurusan,
-            'kegiatan' => $kegiatan
+            'kegiatan' => $kegiatan,
+            'css' => 'index.css',
+            'dark' => $this->dark
         ];
         return view('Apps/index', $data);
     }
@@ -46,20 +50,23 @@ class Home extends BaseController
         $data = [
             'title' => $title,
             'deskripsi' => $desk,
-            'artikel' => $list
+            'artikel' => $list,
+            'css' => 'detailartikel.css'
         ];
         return view('Apps/detail artikel', $data);
     }
 
     //Halaman Artikel
     public function artikel($e){
+        $css = 'artikel.css';
         if ($e == 'self') {
             $getartikel = $this->get->getdataartikel('self development');
             $data = [
                 'title' => 'Artikel Self Development',
                 'kategori' => 'Self Development',
                 'deskripsi' => $this->deskripsi,
-                'artikel' => $getartikel
+                'artikel' => $getartikel,
+                'css' => $css
             ];
         }elseif ($e == 'jurusan') {
             $getartikel = $this->get->getdataartikel($e);
@@ -67,7 +74,8 @@ class Home extends BaseController
                 'title' => 'Artikel Jurusan',
                 'kategori' => 'Jurusan',
                 'deskripsi' => $this->deskripsi,
-                'artikel' => $getartikel
+                'artikel' => $getartikel,
+                'css' => $css
             ];
         }elseif ($e == 'karir') {
             $getartikel = $this->get->getdataartikel($e);
@@ -75,7 +83,8 @@ class Home extends BaseController
                 'title' => 'Artikel Karir',
                 'kategori' => 'Karir',
                 'artikel' => $getartikel,
-                'deskripsi' => $this->deskripsi
+                'deskripsi' => $this->deskripsi,
+                'css' => $css
             ];
         }
         
@@ -86,7 +95,8 @@ class Home extends BaseController
     public function about(){
         $data = [
             'title' => 'Siapa Kita ?',
-            'deskripsi' => $this->deskripsi
+            'deskripsi' => $this->deskripsi,
+            'css' => 'about.css'
         ];
 
         return view('Apps/about', $data);
