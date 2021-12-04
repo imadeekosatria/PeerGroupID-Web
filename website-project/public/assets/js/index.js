@@ -27,3 +27,26 @@ function dark() {
         mobile_icon[i].classList.toggle('dark');
     }
 }
+/*===== SCROLL REVEAL ANIMATION =====*/
+const sr = ScrollReveal({
+    origin: 'top',
+    distance: '80px',
+    duration: 2000,
+    reset: true
+});
+
+/*SCROLL HOME*/
+sr.reveal('.title',{});
+sr.reveal('.desc',{delay: 400});
+sr.reveal('.kepoin', {delay: 400});
+
+
+/*SCROLL ABOUT*/
+sr.reveal('.about__img',{}); 
+sr.reveal('.siapa',{delay: 400}); 
+sr.reveal('.about__text',{delay: 400});
+
+/*SCROLL ABOUT*/
+sr.reveal('.title-artikel-mobile',{}); 
+sr.reveal('.box-artikel-mobile',{delay: 400});
+

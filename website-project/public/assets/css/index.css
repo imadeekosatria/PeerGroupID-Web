@@ -139,6 +139,7 @@
   
 .title-activity{
     color: #1E435B;
+    text-transform: uppercase;
 }
   
 .text-activity{
@@ -178,7 +179,22 @@
 .img-kontak-media{
     height: 3rem;
 }
+
 /* Small phone */
+@media screen and (max-width: 480px) {
+    .activity{
+        display: grid;
+        grid-auto-columns: 1fr;
+        grid-auto-rows: 1fr;
+        grid-template-columns: 1fr 1.6fr;
+        gap: 0em 0.5em;
+        width: 100%;
+        margin: 0em 0em;
+    }
+    .activity-container{
+        flex-direction: column;
+    }
+}
 @media screen and (max-width: 576px) {
     .artikel-mobile-container{
         display: block;
@@ -256,11 +272,16 @@
     .home__img img {
         height: 12rem;
     }
+/* Artikel */
+    .self-def-mobile{
+        margin-bottom: 1rem;
+    }
 
     .title-artikel-mobile{
         color: #5F9695;
         font-family: var(--font-family);
         margin-left: 1rem;
+        margin-bottom: .4rem;
     }
 
     .box-artikel-mobile{
@@ -269,25 +290,40 @@
         border-radius: 5px;
         margin-left: auto;
         margin-right: auto;
+        display: grid; 
+        grid-auto-columns: 1fr; 
+        grid-auto-rows: 1fr; 
+        grid-template-columns: 1fr 1.6fr; 
+        gap: 0em .5em; 
+        height: 10rem;
+        padding: 1rem 0;
     }
 
     .gambar-artikel-mobile{
-        width: 7rem;
+        width: 10rem;
+        height: 10rem;
     }
 
     .judul-artikel-mobile a{
         text-decoration: none;
         color: var(--primary-color);
-        font-size: var(--normal-font-size);
+        font-size: 1rem;
         font-weight: var(--font-bold);
+        margin-bottom: .5rem;
+        text-transform: uppercase;
     }
+
+/* Kegiatan */
+.activity-container{
+    margin: 1rem 1rem;
+}
 }
 
+/* Tablet */
 @media screen and (min-width: 576px) {
     
 }
 
-/* Tablet */
 
 
 @media screen and (max-width: 768px) {

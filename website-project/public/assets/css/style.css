@@ -473,7 +473,6 @@ p.dark, .thumbnail-description.dark,
     display: none;
   }
 
-  
   .nav__list{
     display: flex;
     font-family: var(--font-family);
@@ -494,13 +493,17 @@ p.dark, .thumbnail-description.dark,
     width: 50%;
     height: 100%;
     padding: 3.5rem 1.5rem 0;
-    background: rgba(30, 67, 91, 0.8);;
+    background: var(--primary-color);
     backdrop-filter: blur(10px);
     transition: .5s;
   }
   /*=== Show menu ===*/
   .show{
     right: 0;
+  }
+
+  .nav__link{
+    font-weight: var(--font-bold);
   }
 }
 
