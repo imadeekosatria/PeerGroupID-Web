@@ -293,24 +293,50 @@
         display: grid; 
         grid-auto-columns: 1fr; 
         grid-auto-rows: 1fr; 
-        grid-template-columns: 1fr 1.6fr; 
+        grid-template-columns: .4fr 1.6fr; 
         gap: 0em .5em; 
-        height: 10rem;
-        padding: 1rem 0;
+        height: 7rem;
+        padding: .5rem .5rem;
     }
 
     .gambar-artikel-mobile{
-        width: 10rem;
-        height: 10rem;
+        width: 8rem;
+        height: 6rem;   
+    }
+    .gambar-artikel-mobile img{
+        max-height: 100%;
+    }
+    
+    .isi-artikel-mobile{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        
     }
 
+    .judul-artikel-mobile{
+        text-overflow: ellipsis;
+        overflow: hidden;
+        max-height: 2.5rem;
+    }
+    
     .judul-artikel-mobile a{
-        text-decoration: none;
         color: var(--primary-color);
-        font-size: 1rem;
+        font-size: .8rem;
         font-weight: var(--font-bold);
-        margin-bottom: .5rem;
+        text-decoration: none;
+        margin-bottom: var(--form-smaller-font-size);
         text-transform: uppercase;
+    }
+
+    .deskripsi-artikel-mobile{
+        text-overflow: ellipsis;
+        line-break: auto;
+        /* text-align: justify; */
+        font-size: var(--normal-font-size);
+        max-height: 3rem;
+        overflow: hidden;
+        font-size: .8rem;
     }
 
 /* Kegiatan */
