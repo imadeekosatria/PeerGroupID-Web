@@ -133,7 +133,7 @@
             </div>
             <div class="artikel-mobile-container">
                 <div class="self-def-mobile">
-                    <h1 class="title-artikel-mobile">SELF DEVELOPMENT</h1>
+                    <h2 class="title-artikel-mobile">SELF DEVELOPMENT</h2>
                     <div class="box-artikel-mobile">
                         <div class="gambar-artikel-mobile">
                             <img src='/assets/images/artikel/<?=$scover?>' alt='cover'>
@@ -151,7 +151,7 @@
             </div>
             <div class="artikel-mobile-container">
                 <div class="self-def-mobile">
-                    <h1 class="title-artikel-mobile">KARIR</h1>
+                    <h2 class="title-artikel-mobile">KARIR</h2>
                     <div class="box-artikel-mobile">
                         <div class="gambar-artikel-mobile">
                             <img src='/assets/images/artikel/<?=$kcover?>' alt='cover'>
@@ -169,7 +169,7 @@
             </div>
             <div class="artikel-mobile-container">
                 <div class="self-def-mobile">
-                    <h1 class="title-artikel-mobile">JURUSAN</h1>
+                    <h2 class="title-artikel-mobile">JURUSAN</h2>
                     <div class="box-artikel-mobile">
                         <div class="gambar-artikel-mobile">
                             <img src='/assets/images/artikel/<?=$jcover?>' alt='cover'>
@@ -194,14 +194,14 @@
             <div class="activity">
             <img src="/assets/images/gambar1.png" class="img-activity" alt="">
                 <div class="activity-description">
-                    <a href="#"><h5 class="title-activity">LOREM IPSUM</h5></a>
+                    <a href="#"><h3 class="title-activity">LOREM IPSUM</h3></a>
                     <p class="text-activity">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam</p>
                 </div>
             </div>
             <div class="activity">
             <img src="/assets/images/gambar2.png" class="img-activity" alt="">
                 <div class="activity-description">
-                    <h5 class="title-activity">LOREM IPSUM</h5>
+                    <h3 class="title-activity">LOREM IPSUM</h3>
                     <p class="text-activity">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam</p>
                 </div>
             </div>
@@ -210,14 +210,14 @@
             <div class="activity">
             <img src="/assets/images/gambar3.png" class="img-activity" alt="">
                 <div class="activity-description">
-                    <h5 class="title-activity">LOREM IPSUM</h5>
+                    <h3 class="title-activity">LOREM IPSUM</h3>
                     <p class="text-activity">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam</p>
                 </div>
             </div>
             <div class="activity">
             <img src="/assets/images/gambar4.png" class="img-activity" alt="">
                 <div class="activity-description">
-                    <h5 class="title-activity">LOREM IPSUM</h5>
+                    <h3 class="title-activity">LOREM IPSUM</h3>
                     <p class="text-activity">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam</p>
                 </div>
             </div>

@@ -140,6 +140,7 @@
 .title-activity{
     color: #1E435B;
     text-transform: uppercase;
+    font-size: .89rem;
 }
   
 .text-activity{
@@ -295,7 +296,7 @@
         grid-auto-rows: 1fr; 
         grid-template-columns: .4fr 1.6fr; 
         gap: 0em .5em; 
-        height: 7rem;
+        height: 6.5rem;
         padding: .5rem .5rem;
     }
 
