@@ -33,21 +33,21 @@
     background-color: #BFCEF4;
     padding: 1rem 2rem;
     padding-bottom: 4rem;
-    border-radius: 10px;
-    display: grid; 
-    grid-auto-columns: 1fr; 
-    grid-auto-rows: 1fr; 
-    grid-template-columns: 1fr 1fr; 
-    gap: 0em 4em; 
+    border-radius: 10px; 
 }
 
-.vision { 
-    grid-area: 1 / 1 / 2 / 2; 
+.valueContent.dark{
+    background-color: #344464;
+    color: #fff;
+}
+
+.vision {  
     align-items: center;
     display: flex;
     flex-direction: column;
 }
-.mission { grid-area: 1 / 2 / 2 / 3; }
+
+/* .mission {  } */
 
 .theader { 
     text-align: center;
@@ -55,6 +55,10 @@
     width: 30%;
     margin-left: auto;
     margin-right: auto;
+}
+
+.theader.dark{
+    border-bottom: 2px solid #fff;
 }
 
 .aboutsiapa{
@@ -72,11 +76,71 @@
 }
 
 @media screen and (max-width:576px) {
+    .aboutcontent{
+        margin: 3rem 1rem;
+    }
     .abouttitle{
         margin-top: 4rem;
-        display: flex;
         margin-left: auto;
         margin-right: auto;
         width: 15rem;
+        margin-bottom: 1rem;
+    }
+
+    .about-container{
+        display: grid; 
+        grid-auto-columns: 1fr; 
+        grid-auto-rows: 1fr; 
+        grid-template-rows: 0.6fr 1.4fr; 
+        gap: 0em 0em; 
+        height: 32rem;
+    }
+
+    .imgContent{
+        grid-row: 1;
+        width: 100%;
+        float: none;
+        margin-bottom: 0;
+        height: 18rem;
+    }
+
+    .imgsiapakita{
+        height: 100%;
+    }
+
+    .descContent{
+        grid-row: 2;
+        width: 100%;
+        float: none;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        margin-bottom: 0;
+    }
+
+    .valueContent{
+        display: grid; 
+        grid-auto-columns: 1fr; 
+        grid-auto-rows: 1fr; 
+        grid-template-rows: 0fr 1fr; 
+        gap: 0em 0em; 
+        margin-left: auto;
+        margin-right: auto;
+        width: 95%;
+        padding: 1rem .5rem;
+    }
+
+    .vision, .mission{
+        font-size: .8rem;
+    }
+}
+
+/* Tablet */
+@media screen and (min-width: 576px){
+    .valueContent{
+        display: grid; 
+        grid-auto-columns: 1fr; 
+        grid-auto-rows: 1fr; 
+        grid-template-columns: 1fr 1fr; 
+        gap: 0em 4em;
     }
 }

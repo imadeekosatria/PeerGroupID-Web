@@ -6,12 +6,14 @@
             <h1 class="aboutsiapa">Siapa </h1>
             <h1 style="color: rgb(182, 149, 41);" class="aboutkita">Kita?</h1>
         </div>
-        <div class="descContent">
-            <h2 style="color: rgb(182, 149, 41);">Peer Group ID</h2>
-            <p id="header">Peer Group ID merupakan platform paling tepat bagi para pemuda yang ingin mengembangkan diri lewat potensi yang dimiliki dengan berbagai kegiatan menarik berbasis pembinaan, pendampingan, dan konseling. Bersama kami, kamu bisa temukan, kembangkan, dan menjadi hebat dengan potensimu.</p>
-        </div>
-        <div class="imgContent">
-            <img class="imgsiapakita" src="/assets/images/Siapakita.svg" alt="">
+        <div class="about-container">
+            <div class="descContent">
+                <h2 style="color: rgb(182, 149, 41);">Peer Group ID</h2>
+                <p id="header">Peer Group ID merupakan platform paling tepat bagi para pemuda yang ingin mengembangkan diri lewat potensi yang dimiliki dengan berbagai kegiatan menarik berbasis pembinaan, pendampingan, dan konseling. Bersama kami, kamu bisa temukan, kembangkan, dan menjadi hebat dengan potensimu.</p>
+            </div>
+            <div class="imgContent">
+                <img class="imgsiapakita" src="/assets/images/Siapakita.svg" alt="">
+            </div>
         </div>
     </div>
     <div class="valueContent">
