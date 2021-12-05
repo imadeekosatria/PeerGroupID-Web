@@ -172,7 +172,7 @@ position: absolute;
   }
 
   .text-list{
-    grid-template-rows: .5fr 0fr 1.5fr;
+    grid-template-rows: .5fr 0fr 1fr;
   }
 }
 @media screen and (max-width: 576px){
