@@ -22,7 +22,8 @@
                             <div class="text-list">
                                 <a href="/detail-artikel/<?php echo $data['slug']?>" class="title-thumbnail"><?php echo $data['judul']?></a>
                                 <div class="penulis">
-                                    <p class="penulis-artikel-home"><?php echo $data['penulis']  ?> <span class="tanggal-artikel-home"><?php echo strftime('%e %B %G', strtotime($data['created_at']));?></span></p>
+                                    <p class="penulis-artikel-home"><?php echo $data['penulis']  ?></p> 
+                                    <span class="tanggal-artikel-home"><?php echo strftime('%e %B %G', strtotime($data['created_at']));?></span>
                                 </div>
                                 <div class="thumbnail-description">
                                     <p><?php echo $data['deskripsi']?></p>
@@ -32,7 +33,7 @@
                         <?php endforeach?>
                     </div>
                     <!--Area Rekomendasi-->
-                    <div class="Rekomendasi">
+                    <!-- <div class="Rekomendasi">
                         <div class="rekomendasi-container">
                             <div class="header-rekomendasi-home">
                                 <h2>Rekomendasi</h2>
@@ -77,7 +78,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>                        
+                    </div>                         -->
                 </div>
             </div>
                 

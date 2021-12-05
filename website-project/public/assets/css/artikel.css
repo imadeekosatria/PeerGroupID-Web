@@ -16,8 +16,8 @@
 .konten { grid-area: konten; }
 
 .judul-konten{
-text-align: center;
-font-size: var(--form-big-font-size);
+  text-align: center;
+  font-size: var(--form-big-font-size);
 }
 
 .judul-konten::after{
@@ -34,7 +34,7 @@ position: absolute;
 
 .box{
   display: grid; 
-  grid-template-columns: 0.5fr 2.5fr; 
+  grid-template-columns: 1fr 2.5fr; 
   grid-template-rows: 1fr; 
   gap: 0px 1em; 
   grid-template-areas: 
@@ -46,7 +46,6 @@ position: absolute;
 }
 .img-thumbnail { 
   grid-area: img-thumbnail; 
-  width: 10rem;
 }
 
 .img-thumbnail img { 
@@ -58,8 +57,9 @@ position: absolute;
   display: grid;
   grid-template-rows: .5fr 0.2fr 1.5fr;
   grid-auto-columns: 1fr;
-  gap: 0px 0em;
+  gap: 0em 0em;
   grid-auto-flow: row;
+  padding: 0 0.5rem 0 0;
 }
 
 .title-thumbnail { 
@@ -141,17 +141,6 @@ position: absolute;
       ". ."; 
   }
   
-  
-  .konten{
-    display: grid;
-    grid-template-columns: 1fr 0.5fr;
-    grid-template-rows: 1fr;
-    gap: 0px 2rem;
-    grid-auto-flow: row;
-    grid-template-areas:
-      "artikel rekomendasi";
-  }
-  
   /*Rekomendasi*/
   
   .rekomen-img {
@@ -163,4 +152,98 @@ position: absolute;
     text-overflow: ellipsis;
     
   }
+
+  .dark-box{
+    background: var(--primary-color);
+  }
   
+  .Rekomendasi{
+    padding: 0 4rem;
+  }
+
+  .penulis{
+    display: flex;
+    justify-content: space-between;
+  }
+/* Small Phone */
+@media screen and (max-width: 525px) {
+  .penulis{ 
+    display: none;
+  }
+
+  .text-list{
+    grid-template-rows: .5fr 0fr 1.5fr;
+  }
+}
+@media screen and (max-width: 576px){
+  .judul-konten{
+    font-size: 1.5rem;
+  }
+
+  .judul-konten::after{
+    top: 7.5rem;
+    width: 14rem;
+  }
+
+  .konten{
+    display: grid; 
+    grid-auto-columns: 1fr; 
+    grid-auto-rows: 1fr; 
+    grid-template-rows: 0fr 1fr; 
+    gap: 0em 0em; 
+  }
+
+  .artikel{
+    grid-row: 1;
+  }
+
+  .Rekomendasi{
+    grid-row: 2;
+    padding: 0;
+  }
+
+  .container__artikel{
+    margin-left: .5rem;
+    margin-right: .5rem;
+  }
+
+  .box{
+    height: max-content;
+    gap: 0 0.5em;
+    background: #eaf1ff;
+    padding: .5rem .5rem;
+  }
+
+  .img-thumbnail{
+    width: 8rem;
+    height: 6rem;
+  }
+
+  .title-thumbnail{
+    text-overflow: ellipsis;
+  }
+  
+  .title-thumbnail{
+    font-size: 1rem;
+  }
+  .penulis, .thumbnail-description {
+    font-size: .7rem;
+  } 
+
+  .thumbnail-description{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    text-align: justify;
+    max-height: 3.5rem;
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .konten{
+    display: grid;
+    grid-template-columns: 1fr 0.5fr;
+    grid-template-rows: 1fr;
+    gap: 0px 2rem;
+    grid-auto-flow: row;
+  }
+}

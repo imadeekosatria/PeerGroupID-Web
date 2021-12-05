@@ -242,17 +242,13 @@
   margin: 3rem 0 0 0;
   color: #fff;
   text-align: center;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
 }
 
 /*ARTIKEL*/
 /*Grid*/
-.artikel { 
-  grid-area: artikel; 
-}
-
-.rekomendasi { 
-  grid-area: rekomendasi; 
-}
 
 .detail{
   margin-top: 4rem;

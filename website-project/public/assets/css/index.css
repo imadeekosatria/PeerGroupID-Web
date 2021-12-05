@@ -326,15 +326,12 @@
         font-size: .8rem;
         font-weight: var(--font-bold);
         text-decoration: none;
-        margin-bottom: var(--form-smaller-font-size);
         text-transform: uppercase;
     }
 
     .deskripsi-artikel-mobile{
         text-overflow: ellipsis;
         line-break: auto;
-        /* text-align: justify; */
-        font-size: var(--normal-font-size);
         max-height: 3rem;
         overflow: hidden;
         font-size: .8rem;
