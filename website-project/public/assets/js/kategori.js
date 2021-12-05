@@ -15,7 +15,7 @@ function dark() {
     document.body.classList.toggle('dark');
     artikel.classList.toggle('dark');
     for (i = 0; i < title_thumbnail.length; i++) {
-        title_thumbnail[i].classList.toggle('dark-artikel-kategori');
+        title_thumbnail[i].classList.toggle('dark');
         penulis[i].classList.toggle('dark-penulis-kategori');
         tanggal[i].classList.toggle('dark-tanggal-kategori');
         box[i].classList.toggle('dark-box');

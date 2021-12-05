@@ -51,6 +51,7 @@
     font-weight: 500;
     background-color: #fafafa;
     transition: background-color 0.2s linear;
+    margin-bottom: 5rem;
   }
   
   h1,p,ul{
@@ -250,100 +251,18 @@
 /*ARTIKEL*/
 /*Grid*/
 
-.detail{
-  margin-top: 4rem;
-}
-.title-artikel {
-  color: var(--accent-color);
-  font-family: var(--font-family);
-  font-size: 3rem;
-  text-transform: capitalize;
-}
 
-.header-artikel {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-}
-.author {
-  font-style: italic;
-  margin-bottom: 1rem;
-}
 
-.arti-image{
-  max-width: 720px;
-  height: 385px;
-  margin-bottom: 1rem;
-  margin-left: auto;
-  margin-right: auto;
-}
 
-.arti-image img {
-  width: 100rem;
-  height: 100%;
-  border-radius: 20px;
-}
 
-.sumber{
-  font-style: italic;
-  text-align: center;
-}
 
-.text{
-  margin-right: auto;
-  text-align: justify;
-  margin-top: 1rem;
-  line-height: 2.5rem;
-}
-
-.text, .header-artikel{
-  margin-left: 3rem;
-}
-
-.paragraph{
-  line-height: 1.5rem;
-  margin-top: 1rem;
-}
-
-.text-list-paragraph{
-  line-height: 1.5rem;
-  margin-top: 1rem;
-}
-
-.close{
-  margin-top: 1rem;
-}
-
-.open{
-  margin-bottom: 1rem;
-}
-
-.author-name{
-  color: #D3766A;
-}
-
-.date{
-  color: rgba(0, 0, 0, 0.5);
-}
 
 .ls-paragraph{
   padding-right: 2.7em;
 }
 
-.share{
-  display: flex;
-  margin-bottom: 2rem;
-  align-items: center;
-}
-.share img{
-  width: 30px;
-  margin-left: 1rem;
-}
 
-.animation{
-  display: flex;
-  justify-content: center;
-}
+
 
 .label{
   width: 50px;
@@ -399,9 +318,7 @@ p.dark, .thumbnail-description.dark,
   color: #B9E5E6;
 }
 
-.dark-artikel-kategori{
-  color: var(--accent-color);
-}
+
 
 .dark-penulis-kategori{
   color: #E7BF60;

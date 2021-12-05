@@ -20,14 +20,11 @@
                     <div class="header-artikel">
                         <h1 class="title-artikel"><?=$judul?></h1>
                         <div class="author">
-                            <p><span style="font-weight: var(--font-bold);">Penulis</span>  : <span class="author-name"><?php echo $penulis?></span> - <span class="date"><?php echo $date ?></span></p>
-                        </div>
-                        <div class="share">
-                            <span>Share</span> 
-                            <img src="/assets/images/facebook.svg" alt="facebook">
-                            <img src="/assets/images/twitter.svg" alt="twitter">
-                            <img src="/assets/images/whatsapp.svg" alt="whatsapp">
-                            <img src="/assets/images/telegram-plane.svg" alt="telegram">
+                            <div>
+                                <span id="penulis" style="font-weight: var(--font-bold);">Penulis :</span>   
+                                <span class="author-name"><?php echo $penulis?></span>  
+                            </div>
+                            <span class="date"><?php echo strftime('%e %B %G', strtotime($date)); ?></span>
                         </div>
                         <?php
                             if ($cover != NULL) {
@@ -42,7 +39,15 @@
                     </div>
                     <div class="text">
                         <?php echo $text?>
+                        <div class="share">
+                            <span>Share</span> 
+                            <img src="/assets/images/facebook.svg" alt="facebook">
+                            <img src="/assets/images/twitter.svg" alt="twitter">
+                            <img src="/assets/images/whatsapp.svg" alt="whatsapp">
+                            <img src="/assets/images/telegram-plane.svg" alt="telegram">
+                        </div>
                     </div>
+                    
                     <div class="animation">
                         <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
                         <lottie-player src="https://assets4.lottiefiles.com/packages/lf20_kmfssxfk.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop  autoplay></lottie-player>
@@ -51,57 +56,56 @@
             </article>
             <aside>
                 <!--Area Rekomendasi-->
-                <!--<div class="Rekomendasi">
-                    <div class="rekomendasi-container">
-                        <div class="header-rekomendasi">
-                            <h2>Rekomendasi</h2>
-                        </div>
-                        <div class="rekomen-fill">
-                            <div class="left">
-                                <div class="konten">
+                <!--Area Rekomendasi-->
+                    <!-- <div class="Rekomendasi">
+                        <div class="rekomendasi-container">
+                            <div class="header-rekomendasi-home">
+                                <h2>Rekomendasi</h2>
+                            </div>
+                            
+                            <div class="rekomen-fill">
+                                <div class="random">
                                     <div class="rekomen-img">
-                                        <img src="/assets/images/header artikel.jpg" alt="">
+                                        <img src="/assets/images/artikel/header artikel.jpg" alt="">
                                     </div>
                                     <p class="text-rekomen">Yuk, Belajar Memulai Karir di Dunia Startup</p>
                                 </div>
-                                <div class="konten">
+                                <div class="random">
                                     <div class="rekomen-img">
-                                        <img src="/assets/images/header artikel.jpg" alt="">
+                                        <img src="/assets/images/artikel/header artikel.jpg" alt="">
                                     </div>
                                     <p class="text-rekomen">Yuk, Belajar Memulai Karir di Dunia Startup</p>
                                 </div>
-                                <div class="konten">
+                                <div class="random">
                                     <div class="rekomen-img">
-                                        <img src="/assets/images/header artikel.jpg" alt="">
+                                        <img src="/assets/images/artikel/header artikel.jpg" alt="">
+                                    </div>
+                                    <p class="text-rekomen">Yuk, Belajar Memulai Karir di Dunia Startup</p>
+                                </div>
+                                <div class="random">
+                                    <div class="rekomen-img">
+                                        <img src="/assets/images/artikel/header artikel.jpg" alt="">
+                                    </div>
+                                    <p class="text-rekomen">Yuk, Belajar Memulai Karir di Dunia Startup</p>
+                                </div>
+                                <div class="random">
+                                    <div class="rekomen-img">
+                                        <img src="/assets/images/artikel/header artikel.jpg" alt="">
+                                    </div>
+                                    <p class="text-rekomen">Yuk, Belajar Memulai Karir di Dunia Startup</p>
+                                </div>
+                                <div class="random">
+                                    <div class="rekomen-img">
+                                        <img src="/assets/images/artikel/header artikel.jpg" alt="">
                                     </div>
                                     <p class="text-rekomen">Yuk, Belajar Memulai Karir di Dunia Startup</p>
                                 </div>
                             </div>
-                            <div class="right">
-                                <div class="konten">
-                                    <div class="rekomen-img">
-                                        <img src="/assets/images/header artikel.jpg" alt="">
-                                    </div>
-                                    <p class="text-rekomen">Yuk, Belajar Memulai Karir di Dunia Startup</p>
-                                </div>
-                                <div class="konten">
-                                    <div class="rekomen-img">
-                                        <img src="/assets/images/header artikel.jpg" alt="">
-                                    </div>
-                                    <p class="text-rekomen">Yuk, Belajar Memulai Karir di Dunia Startup</p>
-                                </div>
-                                <div class="konten">
-                                    <div class="rekomen-img">
-                                        <img src="/assets/images/header artikel.jpg" alt="">
-                                    </div>
-                                    <p class="text-rekomen">Yuk, Belajar Memulai Karir di Dunia Startup</p>
-                                </div>
-                            </div>
                         </div>
-                    </div>
-                </div>-->
+                    </div>                         -->
             </aside>
         </div>
     </section>
 </main>
+<script src="/assets/js/detailartikel.js"></script>
 <?= $this->endsection();?>
