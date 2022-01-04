@@ -1,3 +1,4 @@
+Sitemap:http://45.93.100.18/sitemap.xml
 User-agent: *
 Disallow:/process
 Disallow:/artikel-admin
