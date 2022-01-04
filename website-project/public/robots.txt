@@ -7,3 +7,4 @@ Disallow:/kegiatan-admin
 Disallow:/tambah-data
 Disallow:/profile
 Disallow:/update/profile
+Disallow:/phpmyadmin
