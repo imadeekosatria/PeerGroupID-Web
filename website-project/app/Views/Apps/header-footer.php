@@ -13,7 +13,7 @@
     <meta name="application-name" content="Web Peer Group ID">
     <meta name="author" content="Web Development Team Peer Group ID">
     <meta name="keywords" content="Self Development, Karir, Jurusan">
-    <!-- <meta rel="canonical" herf="https://peergroupid.org"> -->
+    <meta rel="canonical" herf="http://45.93.100.18/">
     <meta name="language" content="id">
     <meta name="geo.country" content="id">
     <meta name="geo.placename" content="Indonesia">
