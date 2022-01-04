@@ -3,7 +3,7 @@ User-agent: *
 Disallow: /process
 Disallow: /artikel-admin
 Disallow: /logout
-Disallow: /admin-artikel/
+Disallow: /admin-artikel
 Disallow: /kegiatan-admin
 Disallow: /tambah-data
 Disallow: /profile
