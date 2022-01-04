@@ -1,11 +1,11 @@
-Sitemap:http://45.93.100.18/sitemap.xml
+Sitemap: http://45.93.100.18/sitemap.xml
 User-agent: *
-Disallow:/process
-Disallow:/artikel-admin
-Disallow:/logout
-Disallow:/admin-artikel/
-Disallow:/kegiatan-admin
-Disallow:/tambah-data
-Disallow:/profile
-Disallow:/update/profile
-Disallow:/phpmyadmin
+Disallow: /process
+Disallow: /artikel-admin
+Disallow: /logout
+Disallow: /admin-artikel/
+Disallow: /kegiatan-admin
+Disallow: /tambah-data
+Disallow: /profile
+Disallow: /update/profile
+Disallow: /phpmyadmin
