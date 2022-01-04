@@ -1,5 +1,7 @@
 Sitemap: http://45.93.100.18/sitemap.xml
 User-agent: *
+Allow: /sitemap.xml
+Allow: /
 Disallow: /process
 Disallow: /artikel-admin
 Disallow: /logout
