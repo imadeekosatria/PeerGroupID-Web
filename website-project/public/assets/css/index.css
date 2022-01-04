@@ -121,6 +121,12 @@
   }
 
 /* KEGIATAN KAMI */
+.kegiatan-kami{
+    max-width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
 .activity{
     display: flex;
     margin: 1rem 1rem;

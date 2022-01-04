@@ -188,7 +188,7 @@
         </section>
             
         <!-- KEGIATAN KAMI--> 
-        <section class="kegiatan-kami section" id="kegiatan-kami">
+        <!-- <section class="kegiatan-kami section" id="kegiatan-kami">
         <h2 class="section-title">Kegiatan Kami</h2>
         <div class="activity-container">
             <div class="activity">
@@ -222,7 +222,7 @@
                 </div>
             </div>
         </div>
-        </section>
+        </section> -->
 
         <!-- KONTAK -->
         <section class="kontak section" id="kontak">
