@@ -18,6 +18,7 @@
     <meta name="geo.country" content="id">
     <meta name="geo.placename" content="Indonesia">
     <meta name="google-site-verification" content="dcafZgtDEYtfoIlnBdcKfBUDK_H64o2supuxhouLjrA" />
+    <meta name="msvalidate.01" content="BDA00100746935BFDB906DB88A70A01D" />
     <!--  Non-Essential, But Recommended -->
     <!-- <meta property="og:site_name" content="European Travel, Inc.">-->
     <!-- Non-Essential, But Required for Analytics -->
