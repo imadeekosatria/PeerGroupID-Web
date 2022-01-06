@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="<?php echo $deskripsi; ?>">
     <title>Login</title>
     <link rel="shortcut icon" href="/assets/images/Logo Peer Group.jpg" type="image/x-icon">
 
