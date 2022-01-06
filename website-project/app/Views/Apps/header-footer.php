@@ -13,7 +13,7 @@
     <meta name="application-name" content="Web Peer Group ID">
     <meta name="author" content="Web Development Team Peer Group ID">
     <meta name="keywords" content="Self Development, Karir, Jurusan">
-    <meta rel="canonical" herf="http://45.93.100.18/">
+    <meta rel="canonical" herf="http://peergroup.id/">
     <meta name="language" content="id">
     <meta name="geo.country" content="id">
     <meta name="geo.placename" content="Indonesia">
@@ -32,19 +32,19 @@
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ujicoba-peergroupid.000webhostapp.com/">
+    <meta property="og:url" content="http://peergroup.id/">
     <meta property="og:title" content="<?= $title?>">
     <meta property="og:description" content="<?=$deskripsi?>">
     <!-- Note : ukuran thumbnail 256x256 -->
-    <meta property="og:image" content="https://ujicoba-peergroupid.000webhostapp.com/assets/images/Logo Peer Group.jpg">
+    <meta property="og:image" content="http://peergroup.id/assets/images/Logo Peer Group.jpg">
     <!-- <meta property="og:site_name" content="Peer Group ID"> -->
     
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://ujicoba-peergroupid.000webhostapp.com/">
+    <meta property="twitter:url" content="http://peergroup.id/">
     <meta property="twitter:title" content="<?=$title?>">
     <meta property="twitter:description" content="<?=$deskripsi?>">
-    <meta property="twitter:image" content="https://ujicoba-peergroupid.000webhostapp.com/assets/images/Logo Peer Group.jpg">
+    <meta property="twitter:image" content="http://peergroup.id/assets/images/Logo Peer Group.jpg">
     <!-- <meta name="twitter:image:alt" content="Alt text for image"> -->
 </head>
 <body>
