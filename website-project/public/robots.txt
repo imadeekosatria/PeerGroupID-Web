@@ -1,9 +1,10 @@
-Sitemap: http://45.93.100.18/sitemap.xml
+Sitemap: http://peergroup.id/sitemap.xml
 User-agent: *
 Allow: /
+Disallow: /login
 Disallow: /process
-Disallow: /artikel-admin
 Disallow: /logout
+Disallow: /artikel-admin
 Disallow: /admin-artikel
 Disallow: /kegiatan-admin
 Disallow: /tambah-data
