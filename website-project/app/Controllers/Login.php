@@ -9,7 +9,10 @@ class Login extends BaseController
 {
     public function index()
     {
-        return view('Apps/login');
+        $data = [
+            'deskripsi' => 'Login Admin Peer Group ID'
+        ];
+        return view('Apps/login', $data);
     }
     
     //Global Constructor
