@@ -101,12 +101,21 @@
 }
 
 .close{
-    margin-top: 1rem;
+    margin-top: 3rem;
 }
   
 .open{
-    margin-bottom: 1rem;
+    margin-bottom: 3rem;
 }
+
+.quotes{
+    font-weight: bold;
+    margin-left: 7rem;
+    margin-right: 7rem;
+    line-height: 3rem;
+}
+
+
 
 /* Small Phone */
 @media screen and (max-width: 576px) {
