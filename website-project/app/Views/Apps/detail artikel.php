@@ -39,13 +39,13 @@
                     </div>
                     <div class="text">
                         <?php echo $text?>
-                        <div class="share">
+                        <!-- <div class="share">
                             <span>Share</span> 
                             <img src="/assets/images/facebook.svg" alt="facebook">
                             <img src="/assets/images/twitter.svg" alt="twitter">
                             <img src="/assets/images/whatsapp.svg" alt="whatsapp">
                             <img src="/assets/images/telegram-plane.svg" alt="telegram">
-                        </div>
+                        </div> -->
                     </div>
                     
                     <div class="animation">
