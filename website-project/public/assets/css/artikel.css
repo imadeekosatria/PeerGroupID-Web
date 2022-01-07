@@ -1,8 +1,13 @@
+.l-main{
+  max-width: calc(100% - 10rem);
+  margin-left: auto;
+  margin-right: auto;
+}
 /*Artikel*/
 .container__artikel{
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 0.3fr 1.7fr;
+    grid-template-rows: .5fr 1.5fr;
     gap: 0px 1em;
     grid-auto-flow: row;
     grid-template-areas:
@@ -28,7 +33,7 @@ position: absolute;
   left: 0;
   right: 0;
   margin: auto;
-  top: 9rem;
+  top: 3rem;
   background-color: var(--accent-color);
 }
 
@@ -43,6 +48,7 @@ position: absolute;
   border-radius: 5px;
   margin-bottom: 1rem;
   transition: background 0.2s linear;
+  max-height: 8rem;
 }
 .img-thumbnail { 
   grid-area: img-thumbnail; 
@@ -50,7 +56,9 @@ position: absolute;
 
 .img-thumbnail img { 
   border-radius: 5px;
-  height: 100%;
+  height: 8rem;
+  width: 100%;
+  object-fit: cover;
 }
 .text-list { 
   grid-area: text-list; 
@@ -80,7 +88,9 @@ position: absolute;
   grid-area: 3 / 1 / 4 / 2; 
   color: #030402;
   text-overflow: ellipsis;
-  font-size: .98rem; 
+  font-size: .89em;
+  max-height: 2rem;
+  overflow: hidden;
 }
 
 .header-rekomendasi-home{
@@ -99,6 +109,7 @@ position: absolute;
   font-style: italic;
   font-weight: var(--font-medium);
   color: var(--penulis-artikel-home);
+  font-size: .89em;
 }
 
 .tanggal-artikel-home{
@@ -161,9 +172,7 @@ position: absolute;
     background: var(--primary-color);
   }
   
-  .Rekomendasi{
-    padding: 0 4rem;
-  }
+
 
   .penulis{
     display: flex;
@@ -247,7 +256,26 @@ position: absolute;
     display: grid;
     grid-template-columns: 1fr 0.5fr;
     grid-template-rows: 1fr;
-    gap: 0px 2rem;
+    gap: 0px 10rem;
     grid-auto-flow: row;
+  }
+
+  .l-main{
+    margin-top: 6rem;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .title-thumbnail{
+    font-size: .9em;
+  }
+
+  .penulis-artikel-home, .tanggal-artikel-home{
+    font-size: .5em;
+  }
+
+  .thumbnail-description{
+    font-size: .8em;
+    max-height: 3rem;
   }
 }

@@ -5,7 +5,7 @@
         <section class="home">
             <div class="home__container bd-grid">
                 <div class="content">
-                    <h2 class="title">Self-development bukan hanya pengetahuan, tetapi kebutuhan.</h2>
+                    <h1 class="title">Self-development bukan hanya pengetahuan, tetapi kebutuhan.</h1>
                     <p class="desc" id="header">Yuk, bergabung bersama pemuda lainnya untuk temukan potensimu, belajar fokus pada kelebihanmu, dan menjadi unik versi dirimu. Bersama kami, mari belajar menjadi pribadi yang cemerlang!</p>
                     <a href="#about" class="button-link kepoin">Kepoin Yuk <i class='bx bx-arrow-back bx-rotate-270' ></i></a>
                 </div>
@@ -256,10 +256,11 @@
             </div>
         </section>
     </main>
-    <!--===== SCROLL REVEAL =====-->
+<?= $this->endsection();?>
+<?= $this->section('js')?>
+<!--===== SCROLL REVEAL =====-->
     <script src="https://unpkg.com/scrollreveal"></script>
     <!--GASP-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
     <script src="/assets/js/index.js"></script>
 <?= $this->endsection();?>
-    

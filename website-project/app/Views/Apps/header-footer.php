@@ -108,12 +108,12 @@
         </div>
     </header>
     <?= $this->renderSection('content');?>
-    <footer class="footer">
+    <div class="footer">
         <!-- <a href="#" class="nav__logo"><img src="/assets/images/Logo Peer Group Transparan.png" alt=""></a>  -->
         <small>Copyright &copy; Peergroup.id 2021</small>
-    </footer>
+    </div>
     <!--Main JS-->
     <script src="/assets/js/main.js"></script>
-    
+    <?=$this->renderSection('js');?>
 </body>
 </html>

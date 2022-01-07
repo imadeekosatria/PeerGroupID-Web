@@ -52,6 +52,15 @@
     background-color: #fafafa;
     transition: background-color 0.2s linear;
     margin-bottom: 5rem;
+    display: flex;
+    flex-direction: column;
+  }
+  .l-main{
+    flex: 1 0 auto;
+  }
+
+  html, body {
+    height: 100%;
   }
   
   h1,p,ul{
@@ -243,7 +252,7 @@
   margin: 3rem 0 0 0;
   color: #fff;
   text-align: center;
-  position: fixed;
+  /* position: fixed; */
   width: 100%;
   bottom: 0;
 }
