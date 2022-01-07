@@ -151,30 +151,30 @@ class Login extends BaseController
     public function simpan(){
         // dd($this->request->getVar());
         //Validation
-        if (!$this->validate([
-            'title' => [
-                'rules'=>'required|is_unique[artikel.judul]',
-                'error' =>[
-                    'is_unique' => '{field} Judul sudah ada'
-                ]
-            ],
-            'cover' => [
-                'rules' => 'max_size[cover,1024]|is_image[cover]|mime_in[cover,image/jpg,image/jpeg,image/png,image/svg]',
-                'error' => [
+        // if (!$this->validate([
+        //     'title' => [
+        //         'rules'=>'required|is_unique[artikel.judul]',
+        //         'error' =>[
+        //             'is_unique' => '{field} Judul sudah ada'
+        //         ]
+        //     ],
+        //     'cover' => [
+        //         'rules' => 'max_size[cover,1024]|is_image[cover]|mime_in[cover,image/jpg,image/jpeg,image/png,image/svg]',
+        //         'error' => [
                     
-                    'max_size' => 'Upload maksimal 1 MB',
-                    'is_image' => 'Yang anda upload bukan gambar',
-                    'mime_in' => 'Yang anda upload bukan gambar'
-                ]
-            ]
+        //             'max_size' => 'Upload maksimal 1 MB',
+        //             'is_image' => 'Yang anda upload bukan gambar',
+        //             'mime_in' => 'Yang anda upload bukan gambar'
+        //         ]
+        //     ]
             
 
             
-        ])) {
-            $validation = \Config\Services::validation();
-            return redirect()->to('/tambah-artikel')->withInput()->with('validation',$validation);
-            // return redirect()->to('/tambah-artikel')->withInput();
-        }
+        // ])) {
+        //     $validation = \Config\Services::validation();
+        //     // return redirect()->to('/tambah-data')->withInput()->with('validation',$validation);
+        //     return redirect()->to('/tambah-data')->withInput();
+        // }
 		
         //Ambil gambar
         $fileCover = $this->request->getFile('cover');
