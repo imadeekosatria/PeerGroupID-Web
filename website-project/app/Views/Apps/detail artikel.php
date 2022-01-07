@@ -29,7 +29,7 @@
                         <?php
                             if ($cover != NULL) {
                                 echo "<div class='arti-image'>
-                                            <img src='/assets/images/artikel/$cover' alt=''>
+                                            <img src='/assets/images/artikel/$cover' alt='cover $judul'>
                                     </div>
                                     <div class='sumber'>
                                         <p>Sumber: $sumber_cover</p>

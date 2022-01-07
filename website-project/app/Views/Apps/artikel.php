@@ -17,7 +17,7 @@
                         ?>
                         <div class="box">
                             <div class="img-thumbnail">
-                                <img src="/assets/images/artikel/<?php echo $data['cover']?>" alt="">
+                                <img src="/assets/images/artikel/<?php echo $data['cover']?>" alt="thumnail">
                             </div>
                             <div class="text-list">
                                 <a href="/detail-artikel/<?php echo $data['slug']?>" class="title-thumbnail"><?php echo $data['judul']?></a>
@@ -42,37 +42,37 @@
                             <div class="rekomen-fill">
                                 <div class="random">
                                     <div class="rekomen-img">
-                                        <img src="/assets/images/artikel/header artikel.jpg" alt="">
+                                        <img src="/assets/images/artikel/header artikel.jpg" alt="thumnail">
                                     </div>
                                     <p class="text-rekomen">Yuk, Belajar Memulai Karir di Dunia Startup</p>
                                 </div>
                                 <div class="random">
                                     <div class="rekomen-img">
-                                        <img src="/assets/images/artikel/header artikel.jpg" alt="">
+                                        <img src="/assets/images/artikel/header artikel.jpg" alt="thumbnail">
                                     </div>
                                     <p class="text-rekomen">Yuk, Belajar Memulai Karir di Dunia Startup</p>
                                 </div>
                                 <div class="random">
                                     <div class="rekomen-img">
-                                        <img src="/assets/images/artikel/header artikel.jpg" alt="">
+                                        <img src="/assets/images/artikel/header artikel.jpg" alt="thumbnail">
                                     </div>
                                     <p class="text-rekomen">Yuk, Belajar Memulai Karir di Dunia Startup</p>
                                 </div>
                                 <div class="random">
                                     <div class="rekomen-img">
-                                        <img src="/assets/images/artikel/header artikel.jpg" alt="">
+                                        <img src="/assets/images/artikel/header artikel.jpg" alt="thumbnail">
                                     </div>
                                     <p class="text-rekomen">Yuk, Belajar Memulai Karir di Dunia Startup</p>
                                 </div>
                                 <div class="random">
                                     <div class="rekomen-img">
-                                        <img src="/assets/images/artikel/header artikel.jpg" alt="">
+                                        <img src="/assets/images/artikel/header artikel.jpg" alt="thumbnail">
                                     </div>
                                     <p class="text-rekomen">Yuk, Belajar Memulai Karir di Dunia Startup</p>
                                 </div>
                                 <div class="random">
                                     <div class="rekomen-img">
-                                        <img src="/assets/images/artikel/header artikel.jpg" alt="">
+                                        <img src="/assets/images/artikel/header artikel.jpg" alt="thumbnail">
                                     </div>
                                     <p class="text-rekomen">Yuk, Belajar Memulai Karir di Dunia Startup</p>
                                 </div>

@@ -119,7 +119,7 @@
     <main class="form-signin">
     <div class="wrapper">
         <div class="right">
-            <img src="/assets/images/Logo Peer Group Transparan.png" alt="" class="img">
+            <img src="/assets/images/Logo Peer Group Transparan.png" alt="Logo Peer Group ID" class="img">
         </div>
         <div class="left">
         <button class="beranda"> <a href="home" class="link"> Beranda </a></button>

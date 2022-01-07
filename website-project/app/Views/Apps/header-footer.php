@@ -47,6 +47,14 @@
     <meta property="twitter:description" content="<?=$deskripsi?>">
     <meta property="twitter:image" content="http://peergroup.id/assets/images/Logo Peer Group.jpg">
     <!-- <meta name="twitter:image:alt" content="Alt text for image"> -->
+    <!-- Clarity tracking code for http://peergroup.id/ -->
+    <script>    
+        (function(c,l,a,r,i,t,y){        
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};        
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";        
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);    
+            })(window, document, "clarity", "script", "a2xfnv1ela");
+    </script>
 </head>
 <body>
     <!--Header-->
@@ -54,7 +62,7 @@
         <div class="l-header">
             <nav class="nav bd-grid">
                 <div>
-                    <a href="/" class="nav__logo"><img src="/assets/images/Logo Peer Group Transparan.png" alt=""></a> 
+                    <a href="/" class="nav__logo"><img src="/assets/images/Logo Peer Group Transparan.png" alt="Logo Peer Group ID"></a> 
                 </div>
                 <div class="nav__toggle" id="nav-toggle">
                     <i class='bx bx-menu'></i>

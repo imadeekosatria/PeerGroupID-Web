@@ -10,7 +10,7 @@
                     <a href="#about" class="button-link kepoin">Kepoin Yuk <i class='bx bx-arrow-back bx-rotate-270' ></i></a>
                 </div>
                 <div class="home__img">
-                    <img class="front" src="/assets/images/FAQ.svg" alt="">
+                    <img class="front" src="/assets/images/FAQ.svg" alt="FAQ">
                 </div>
             </div>
         </section>
@@ -22,7 +22,7 @@
 
             <div class="about__container bd-grid">
                 <div class="about__img">
-                    <img src="/assets/images/Siapakita.svg" alt="">
+                    <img src="/assets/images/Siapakita.svg" alt="Siapa Kita ?">
                 </div>
                 
                 <div class="about__desc">
@@ -49,7 +49,7 @@
                             echo "<div class='kategori'>
                                         <h3 class='text-artikel'>Self Development</h3>
                                     <div class='artikel-content'>
-                                        <img src='/assets/images/artikel/$scover' alt=''>
+                                        <img src='/assets/images/artikel/$scover' alt='Cover postingan self development'>
                                         <p class='home-artikel-judul'>$stitle</p>
                                         <p class='text-isi-artikel'>$sdeskripsi</p>
                                     </div id='self'>
@@ -59,7 +59,7 @@
                             echo "<div class='kategori'>
                                         <h3 class='text-artikel'>Self Development</h3>
                                     <div class='artikel-content'>
-                                        <img src='/assets/images/artikel/default.svg' alt=''>
+                                        <img src='/assets/images/artikel/default.svg' alt='Cover postingan self development'>
                                         <p class='home-artikel-judul'>$stitle</p>
                                         <p class='text-isi-artikel'>$sdeskripsi</p>
                                     </div id='self'>
@@ -79,7 +79,7 @@
                             echo "<div class='kategori'>
                                     <h3 class='text-artikel' id='karir'>Karir</h3>
                                 <div class='artikel-content'>
-                                    <img src='/assets/images/artikel/$kcover' alt=''>
+                                    <img src='/assets/images/artikel/$kcover' alt='Cover postingan Karir'>
                                     <p class='home-artikel-judul'>$ktitle</p>
                                     <p class='text-isi-artikel'>$kdeskripsi</p>
                                 </div>
@@ -89,7 +89,7 @@
                             echo "<div class='kategori'>
                                     <h3 class='text-artikel' id='karir'>Karir</h3>
                                 <div class='artikel-content'>
-                                    <img src='/assets/images/artikel/default.svg' alt=''>
+                                    <img src='/assets/images/artikel/default.svg' alt='Cover postingan Karir'>
                                     <p class='home-artikel-judul'>$ktitle</p>
                                     <p class='text-isi-artikel'>$kdeskripsi</p>
                                 </div>
@@ -110,7 +110,7 @@
                             echo "<div class='kategori'>
                                         <h3 class='text-artikel' id='jurusan'>Jurusan</h3>
                                     <div class='artikel-content'>
-                                        <img src='/assets/images/artikel/$jcover' alt=''>
+                                        <img src='/assets/images/artikel/$jcover' alt='Cover postingan Jurusan'>
                                         <p class='home-artikel-judul'>$jtitle</p>
                                         <p class='text-isi-artikel'>$jdeskripsi</p>
                                     </div>
@@ -120,7 +120,7 @@
                             echo "<div class='kategori'>
                                         <h3 class='text-artikel' id='jurusan'>Jurusan</h3>
                                     <div class='artikel-content'>
-                                        <img src='/assets/images/artikel/default.svg' alt=''>
+                                        <img src='/assets/images/artikel/default.svg' alt='Cover postingan Jurusan'>
                                         <p class='home-artikel-judul'>$jtitle</p>
                                         <p class='text-isi-artikel'>$jdeskripsi</p>
                                     </div>
@@ -136,7 +136,7 @@
                     <h2 class="title-artikel-mobile">SELF DEVELOPMENT</h2>
                     <div class="box-artikel-mobile">
                         <div class="gambar-artikel-mobile">
-                            <img src='/assets/images/artikel/<?=$scover?>' alt='cover'>
+                            <img src='/assets/images/artikel/<?=$scover?>' alt='Cover postingan self development'>
                         </div>
                         <div class="isi-artikel-mobile">
                             <div class="judul-artikel-mobile">
@@ -154,7 +154,7 @@
                     <h2 class="title-artikel-mobile">KARIR</h2>
                     <div class="box-artikel-mobile">
                         <div class="gambar-artikel-mobile">
-                            <img src='/assets/images/artikel/<?=$kcover?>' alt='cover'>
+                            <img src='/assets/images/artikel/<?=$kcover?>' alt='Cover postingan Karir'>
                         </div>
                         <div class="isi-artikel-mobile">
                             <div class="judul-artikel-mobile">
@@ -172,7 +172,7 @@
                     <h2 class="title-artikel-mobile">JURUSAN</h2>
                     <div class="box-artikel-mobile">
                         <div class="gambar-artikel-mobile">
-                            <img src='/assets/images/artikel/<?=$jcover?>' alt='cover'>
+                            <img src='/assets/images/artikel/<?=$jcover?>' alt='Cover postingan Jurusan'>
                         </div>
                         <div class="isi-artikel-mobile">
                             <div class="judul-artikel-mobile">
@@ -229,19 +229,19 @@
             <h2 class="section-title" id="kontak_kami">Kontak Kami</h2>
             <div class="kontak-container">
                 <div class="gambar">
-                    <img src="/assets/images/Temukankami.svg" class="img-kontak" alt="">
+                    <img src="/assets/images/Temukankami.svg" class="img-kontak" alt="Ilustrasi Find us">
                 </div>
                 <div class="sosmed">
                     <div class="sosial-media">
-                        <img src="/assets/images/ig.svg" class="img-kontak-media" alt="">
+                        <img src="/assets/images/ig.svg" class="img-kontak-media" alt="logo instagram">
                         <a href="https://www.instagram.com/peergroup.id/" target="_blank" rel="noopener noreferrer" class="link-sosmed">Peergroup.id</a> 
                     </div>
                     <div class="sosial-media">
-                        <img src="/assets/images/mail.svg" class="img-kontak-media" alt="">
+                        <img src="/assets/images/mail.svg" class="img-kontak-media" alt="logo email">
                         <a href="mailto:peergroup.id@gmail.com" class="link-sosmed">peergroup.id@gmail.com</a>
                     </div>
                     <div class="sosial-media">
-                        <img src="/assets/images/linkedin.svg" class="img-kontak-media" alt="">
+                        <img src="/assets/images/linkedin.svg" class="img-kontak-media" alt="logo linkedin">
                         <a href="https://www.linkedin.com/company/peer-group-id/" target="_blank" rel="noopener noreferrer" class="link-sosmed">Peer Group ID</a>
                     </div>
                 </div>
