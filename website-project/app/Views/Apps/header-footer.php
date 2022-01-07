@@ -17,7 +17,6 @@
     <meta name="language" content="id">
     <meta name="geo.country" content="id">
     <meta name="geo.placename" content="Indonesia">
-    <meta name="google-site-verification" content="dcafZgtDEYtfoIlnBdcKfBUDK_H64o2supuxhouLjrA" />
     <meta name="google-site-verification" content="0QO1JmqZq4tNNzNcwnlL0yQVebCiuxjR2o9le5VCRE8" />
     <meta name="msvalidate.01" content="BDA00100746935BFDB906DB88A70A01D" />
     <!--  Non-Essential, But Recommended -->
