@@ -41,8 +41,7 @@
   border-radius: 5px;
   margin-bottom: 1rem;
   transition: background 0.2s linear;
-  max-height: 8rem;
-  height: 8vw;
+  max-height: 8vw;
 }
 .img-thumbnail { 
   grid-area: img-thumbnail; 
@@ -57,7 +56,7 @@
 .text-list { 
   grid-area: text-list; 
   display: grid;
-  grid-template-rows: .5fr 0.2fr 1.5fr;
+  grid-template-rows: .5fr 0.5fr 1.5fr;
   grid-auto-columns: 1fr;
   gap: 0em 0em;
   grid-auto-flow: row;
@@ -69,7 +68,6 @@
   font-size: 1.3rem;
   font-weight: var(--font-bold);
   color: var(--primary-color);
-  text-transform: capitalize;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
@@ -160,6 +158,10 @@
   
   .rekomen-img {
     width: 100%;
+    height: max-content;
+  }
+  .rekomen-img img{
+    height: 100%;
   }
   
   .text-rekomen{
@@ -174,11 +176,10 @@
     background: var(--primary-color);
   }
   
-
-
   .penulis{
     display: flex;
     justify-content: space-between;
+    align-items: center;
   }
 /* Small Phone */
 @media screen and (max-width: 525px) {
@@ -252,7 +253,7 @@
 
 @media screen and (min-width: 576px) {
   .l-main{
-    margin-top: 6rem;
+    margin-top: 2rem;
   }
 }
 
@@ -273,6 +274,10 @@
     grid-template-rows: 1fr;
     gap: 0px 1.5rem;
     grid-auto-flow: row;
+  }
+
+  .rekomen-img img{
+    height: 7vw;
   }
 }
 
