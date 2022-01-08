@@ -56,52 +56,27 @@
             </article>
             <aside>
                 <!--Area Rekomendasi-->
-                    <div class="Rekomendasi">
+                <div class="Rekomendasi">
                         <div class="rekomendasi-container">
                             <div class="header-rekomendasi-home">
                                 <h2>Rekomendasi</h2>
                             </div>
-                            
                             <div class="rekomen-fill">
+                            <?php 
+                                foreach ($rekomen->getResultArray() as $rekomendasi):
+                            ?>
+                                <a href="/detail-artikel/<?php echo $rekomendasi['slug']?>">
                                 <div class="random">
                                     <div class="rekomen-img">
-                                        <img src="/assets/images/artikel/header artikel.jpg" alt="">
+                                        <img src="/assets/images/artikel/<?php echo $rekomendasi['cover']?>" alt="thumnail">
                                     </div>
-                                    <p class="text-rekomen">Yuk, Belajar Memulai Karir di Dunia Startup</p>
+                                    <p class="text-rekomen"><?php echo $rekomendasi['judul']?></p>
                                 </div>
-                                <div class="random">
-                                    <div class="rekomen-img">
-                                        <img src="/assets/images/artikel/header artikel.jpg" alt="">
-                                    </div>
-                                    <p class="text-rekomen">Yuk, Belajar Memulai Karir di Dunia Startup</p>
-                                </div>
-                                <div class="random">
-                                    <div class="rekomen-img">
-                                        <img src="/assets/images/artikel/header artikel.jpg" alt="">
-                                    </div>
-                                    <p class="text-rekomen">Yuk, Belajar Memulai Karir di Dunia Startup</p>
-                                </div>
-                                <div class="random">
-                                    <div class="rekomen-img">
-                                        <img src="/assets/images/artikel/header artikel.jpg" alt="">
-                                    </div>
-                                    <p class="text-rekomen">Yuk, Belajar Memulai Karir di Dunia Startup</p>
-                                </div>
-                                <div class="random">
-                                    <div class="rekomen-img">
-                                        <img src="/assets/images/artikel/header artikel.jpg" alt="">
-                                    </div>
-                                    <p class="text-rekomen">Yuk, Belajar Memulai Karir di Dunia Startup</p>
-                                </div>
-                                <div class="random">
-                                    <div class="rekomen-img">
-                                        <img src="/assets/images/artikel/header artikel.jpg" alt="">
-                                    </div>
-                                    <p class="text-rekomen">Yuk, Belajar Memulai Karir di Dunia Startup</p>
-                                </div>
+                                </a>
+                                <?php endforeach?>
                             </div>
                         </div>
-                    </div>                        
+                </div>                         
             </aside>
         </div>
     </section>
