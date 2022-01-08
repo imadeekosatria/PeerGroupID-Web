@@ -203,6 +203,9 @@ a:hover{
   }
 }
 @media screen and (max-width: 576px){
+  .title{ 
+    margin-top: 2rem;
+  }
   .l-main{
     max-width: 100%;
   }
@@ -232,15 +235,19 @@ a:hover{
   }
 
   .box{
-    height: max-content;
+    max-height: 100%;
     gap: 0 0.5em;
-    background: #eaf1ff;
+    background: var(--f2f2);
     padding: .5rem .5rem;
   }
 
   .img-thumbnail{
     width: 8rem;
     height: 6rem;
+  }
+
+  .img-thumbnail img{
+    height: 100%;
   }
 
   .title-thumbnail{
@@ -273,7 +280,7 @@ a:hover{
     display: grid; 
     grid-auto-columns: 1fr; 
     grid-auto-rows: 1fr; 
-    grid-template-rows: 0fr 1fr; 
+    grid-template-rows: 1fr 1fr; 
     gap: 0em 0em; 
   }
 }
