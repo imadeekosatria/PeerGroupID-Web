@@ -32,7 +32,7 @@
 
 .box{
   display: grid; 
-  grid-template-columns: 1fr 2.5fr; 
+  grid-template-columns: .6fr 2.5fr; 
   grid-template-rows: 1fr; 
   gap: 0px 1em; 
   grid-template-areas: 
