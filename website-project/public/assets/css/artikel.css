@@ -19,7 +19,9 @@
 
 
 .konten { grid-area: konten; }
-
+.title {
+  width: max-content;
+}
 .judul-konten{
   text-align: center;
   font-size: var(--form-big-font-size);
