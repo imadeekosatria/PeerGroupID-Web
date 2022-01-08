@@ -43,6 +43,7 @@ class Home extends BaseController
     public function detart($id){
         $list = $this->get->getartikel($id);
         // $deskripsi = $this->get->getmetadeskripsiartikel($id);
+        $random = $this->get->getrandomartikel();
         foreach ($list->getResult() as $meta) {
             $desk = $meta->deskripsi;
             $title = $meta->judul;
@@ -51,7 +52,8 @@ class Home extends BaseController
             'title' => $title,
             'deskripsi' => $desk,
             'artikel' => $list,
-            'css' => 'detailartikel.css'
+            'css' => 'detailartikel.css',
+            'rekomen' => $random
         ];
         return view('Apps/detail artikel', $data);
     }
@@ -59,6 +61,7 @@ class Home extends BaseController
     //Halaman Artikel
     public function artikel($e){
         $css = 'artikel.css';
+        $random = $this->get->getrandomartikel();
         if ($e == 'self') {
             $getartikel = $this->get->getdataartikel('self development');
             $data = [
@@ -66,7 +69,8 @@ class Home extends BaseController
                 'kategori' => 'Self Development',
                 'deskripsi' => 'Artikel tentang Self Development ada disini.',
                 'artikel' => $getartikel,
-                'css' => $css
+                'css' => $css,
+                'rekomen' => $random
             ];
         }elseif ($e == 'jurusan') {
             $getartikel = $this->get->getdataartikel($e);
@@ -75,7 +79,8 @@ class Home extends BaseController
                 'kategori' => 'Jurusan',
                 'deskripsi' => 'Artikel tentang Jurusan ada disini.',
                 'artikel' => $getartikel,
-                'css' => $css
+                'css' => $css,
+                'rekomen' => $random
             ];
         }elseif ($e == 'karir') {
             $getartikel = $this->get->getdataartikel($e);
@@ -84,7 +89,8 @@ class Home extends BaseController
                 'kategori' => 'Karir',
                 'artikel' => $getartikel,
                 'deskripsi' => 'Artikel tentang Karir ada disini.',
-                'css' => $css
+                'css' => $css,
+                'rekomen' => $random
             ];
         }
         

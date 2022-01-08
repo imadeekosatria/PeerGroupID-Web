@@ -172,6 +172,7 @@
 .title{
   color: var(--accent-color);
   font-family: var(--font-family);
+  width: max-content;
 }
 
 
@@ -257,14 +258,6 @@
 }
 
 /*ARTIKEL*/
-/*Grid*/
-
-
-
-
-
-
-
 .ls-paragraph{
   padding-right: 2.7em;
 }
@@ -353,10 +346,20 @@ p.dark, .thumbnail-description.dark,
 @media screen and (max-width: 468px){
   
 }
-@media screen and (min-width: 769px){
+
+@media screen and (max-width: 767px){
+  .random{
+    max-width: 30vw;
+  }
+}
+
+@media screen and (min-width: 768px){
   :root{
     --big-font-size: 5rem;
     --normal-font-size: 1rem;
+  }
+  .random{
+    max-width: 10vw;
   }
 }
 

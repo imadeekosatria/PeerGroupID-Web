@@ -56,8 +56,7 @@
             </article>
             <aside>
                 <!--Area Rekomendasi-->
-                <!--Area Rekomendasi-->
-                    <!-- <div class="Rekomendasi">
+                    <div class="Rekomendasi">
                         <div class="rekomendasi-container">
                             <div class="header-rekomendasi-home">
                                 <h2>Rekomendasi</h2>
@@ -102,7 +101,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>                         -->
+                    </div>                        
             </aside>
         </div>
     </section>

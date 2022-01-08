@@ -39,4 +39,9 @@ class ArtikelModel extends Model
         $query = $this->db->query("SELECT * FROM artikel ORDER BY created_at DESC");
         return $query;
     }
+
+    public function getrandomartikel(){
+        $query = $this->db->query("SELECT * FROM artikel ORDER BY RAND() LIMIT 6");
+        return $query;
+    }
 }
