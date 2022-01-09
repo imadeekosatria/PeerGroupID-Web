@@ -12,7 +12,7 @@ class Login extends BaseController
         $data = [
             'deskripsi' => 'Login Admin Peer Group ID'
         ];
-        return view('Apps/login', $data);
+        return view('Apps/new_login', $data);
     }
     
     //Global Constructor
