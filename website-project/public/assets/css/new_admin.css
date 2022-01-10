@@ -489,6 +489,9 @@ main a{
         margin-top: 1.8rem;
     }
 
+    aside .top{
+        margin-left: 1.8rem;
+    }
     main .insight{
         grid-template-columns: 1fr;
         gap: 0;
