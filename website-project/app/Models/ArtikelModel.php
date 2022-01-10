@@ -7,7 +7,7 @@ use CodeIgniter\Model;
 class ArtikelModel extends Model
 {
     protected $table = 'artikel';
-    protected $allowedFields = ['judul', 'slug','kategori','penulis', 'deskripsi', 'text', 'cover', 'sumber_cover', 'created_at'];
+    protected $allowedFields = ['judul', 'slug','kategori','penulis', 'deskripsi', 'text', 'cover', 'sumber_cover', 'created_at', 'updated_at'];
     protected $db;
     public function __construct(){
         $this->db = db_connect();
@@ -42,6 +42,16 @@ class ArtikelModel extends Model
 
     public function getrandomartikel(){
         $query = $this->db->query("SELECT * FROM artikel ORDER BY RAND() LIMIT 6");
+        return $query;
+    }
+
+    public function getallpost(){
+        $query = $this->db->query("SELECT * FROM artikel ORDER BY updated_at DESC");
+        return $query;
+    }
+
+    public function getpostajax($date){
+        $query = $this->db->query("SELECT * FROM artikel Where updated_at LIKE '%$date%'");
         return $query;
     }
 }

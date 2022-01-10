@@ -23,7 +23,7 @@
       </div>
       <div class="isi">
           <a href="/detail-artikel/<?php echo $data['slug']?>"><h2><?php echo $data['judul']?></h2></a>
-          <span style="color: #526260; font-style: italic; font-size: 14px; margin-bottom: 5px; text-transform: capitalize;"> <?php echo $data['penulis']?> </span> <span style="color: #526260; font-size: 14px; margin-bottom: 5px;">  &nbsp;  &nbsp;  <?php echo strftime('%e %B %G', strtotime($data['created_at'])); ?> </span>
+          <span style="color: #526260; font-style: italic; font-size: 14px; margin-bottom: 5px; text-transform: capitalize;"> <?php echo $data['penulis']?> </span> <span style="color: #526260; font-size: 14px; margin-bottom: 5px;">  &nbsp;  &nbsp;  <?php echo strftime('%e %b %Y', strtotime($data['created_at'])); ?> </span>
           <span style="color: #030402; font-size: 16px; display: flex; margin-bottom: 1rem; margin-top: 5px;"> <?php echo $data['deskripsi']?></span>
           <span style="color: #FFFFFF; font-size: 13px; background-color: #306181; padding: 8px 20px; border-radius: 5px; text-transform: capitalize;"> <?php echo $data['kategori']?> </span>
       </div>

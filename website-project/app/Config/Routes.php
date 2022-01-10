@@ -39,6 +39,7 @@ $routes->get('/about', 'Home::about');
 $routes->get('/login', 'Login::index');
 $routes->post('/process', 'Login::process');
 $routes->get('/logout', 'Login::logout');
+$routes->get('/admin-panel', 'Login::admin');
 //Bagian Admin Artikel
 $routes->get('/artikel-admin', 'Login::artikel');
 $routes->put('/admin-artikel/edit/(:any)', 'Login::edit_artikel/$1');
@@ -51,6 +52,9 @@ $routes->get('/tambah-data', 'Login::tambah_data');
 $routes->get('/profile', 'Login::profile');
 $routes->get('/update/profile/(:num)', 'Login::update_profile/$1');
 
+
+//Ajax Request
+$routes->get('/admin-panel/ajax/(:any)', 'Login::ajax/$1');
 
 
 

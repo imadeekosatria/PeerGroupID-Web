@@ -88,7 +88,7 @@
                         <?php
                             if ($session->logged_in == true) {
                                 $logout = base_url('logout');
-                                $admin_page = base_url('artikel-admin');
+                                $admin_page = base_url('admin-panel');
                                 echo "<li class='nav__item dropdown' >
                                         <a href='#' class='nav__link dropdown__link' id='dropdown'>$session->username <i class='bx bx-chevron-down dropdown__icon' id='drop-icon'></i></a>
                                         <ul class='dropdown__menu' id='dropdown-menu'>

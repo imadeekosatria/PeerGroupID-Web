@@ -40,7 +40,7 @@ class Login extends BaseController
                     'foto' => $dataUser->foto,
                     'logged_in' => TRUE
                 ]);
-                return redirect()->to('/artikel-admin');
+                return redirect()->to('/admin-panel');
             } else {
                 session()->setFlashdata('error', 'Password Salah');
                 return redirect()->back();
@@ -117,6 +117,20 @@ class Login extends BaseController
     }
 
     //Management Konten
+    public function admin(){
+        $session = session();
+        if ($session->logged_in != TRUE) {
+            return redirect()->to('/login');
+        }
+        $allpost = $this->get->getallpost();
+        $data = [
+            'title' => 'Admin Panel',
+            'allpost' => $allpost
+        ];
+        return view('Apps/admin_panel', $data);
+    }
+
+    
     //Artikel
     public function artikel(){
         $session = session();
@@ -258,4 +272,14 @@ class Login extends BaseController
         ];
         return view('Apps/kegiatan_admin', $data);
     }
+
+    //Ajax request
+    public function ajax($date){
+        $ajax = $this->get->getpostajax($date);
+        $data = [
+            'allpost' => $ajax
+        ];
+        return view('Apps/ajax', $data);
+    }
+    
 }
