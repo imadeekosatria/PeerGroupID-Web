@@ -27,7 +27,7 @@
             </div>
 
             <div class="sidebar">
-                <a href="admin panel.html" class="nav-link">
+                <a href="/admin-panel" class="nav-link <?php if(base_url('admin-panel')) echo "active"; ?>">
                     <span class="material-icons-sharp">grid_view</span>
                     <h3>Dashboard</h3>
                 </a>
