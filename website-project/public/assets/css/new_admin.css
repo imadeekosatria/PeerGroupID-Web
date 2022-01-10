@@ -503,7 +503,7 @@ main a{
     }
 
     main .recent-post table{
-        width: 83vw;
+        width: calc(100% - 30rem);
     }
 
     main table thead tr th:nth-child(2), main table thead tr th:nth-child(3){
@@ -512,6 +512,10 @@ main a{
 
     main table tbody tr td:nth-child(2), main table tbody tr td:nth-child(3){
         display: none;
+    }
+
+    .right{
+        margin-left: 3rem;
     }
 }
 
@@ -604,10 +608,11 @@ main a{
     .right .top .theme-toggler{
         width: 4.4rem;
         position: absolute;
-        left: 66%;
+        /* left: 66%; */
+        left: calc(100% - 10rem);
     }
 
-    .rigth .profile .info{
+    .info{
         display: none;
     }
 
