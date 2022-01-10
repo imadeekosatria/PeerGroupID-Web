@@ -76,7 +76,7 @@ class Login extends BaseController
             'foto' => $dataUser->foto 
         ];
 
-        return view('Apps/profil_admin', $data);
+        return view('Apps/new_profile', $data);
     }
 
 
