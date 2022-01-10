@@ -378,6 +378,13 @@ main table tbody tr:last-child td{
     border: none;
 }
 
+main table tbody tr td:first-child{
+    max-width: 150px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
 main a{
     text-align: center;
     display: block;

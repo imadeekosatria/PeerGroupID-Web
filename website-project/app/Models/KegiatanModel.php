@@ -25,6 +25,11 @@ class KegiatanModel extends Model
         return $query;
     }
 
+    public function getkegiatanwhere($date){
+        $query = $this->db->query("SELECT * FROM kegiatan Where updated_at LIKE '%$date%'");
+        return $query;
+    }
+
     //Get detail kegiatan
     public function getkegiatan($slug) {
         $query = $this->db->query("SELECT * FROM kegiatan Where slug = '$slug'");

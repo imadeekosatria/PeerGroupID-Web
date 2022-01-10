@@ -4,6 +4,7 @@ const closeBtn = document.querySelector("#close-btn");
 const themeToggle = document.querySelector(".theme-toggler");
 const date = document.getElementById("date-filter");
 const container = document.getElementById('recent-post');
+let darkMode = localStorage.getItem("darkMode");
 
 // Show sidebar
 menuBtn.addEventListener("click", () => {
@@ -16,11 +17,41 @@ closeBtn.addEventListener("click", () => {
 })
 
 // Change theme
-themeToggle.addEventListener("click", () => {
-    document.body.classList.toggle('dark-theme-variables');
+const enabledDarkMode = () => {
+    //Add dark mode
+    document.body.classList.add('dark-theme-variables');
+    //Set local storage
+    localStorage.setItem('darkMode', 'enabled');
+    themeToggle.querySelector('span:nth-child(2)').classList.add('active');
+    themeToggle.querySelector('span:nth-child(1)').classList.remove('active');
 
-    themeToggle.querySelector('span:nth-child(1)').classList.toggle('active');
-    themeToggle.querySelector('span:nth-child(2)').classList.toggle('active');
+}
+const disableDarkMode = () => {
+    //Add dark mode
+    document.body.classList.remove('dark-theme-variables');
+    //Set local storage
+    localStorage.setItem('darkMode', null);
+    themeToggle.querySelector('span:nth-child(2)').classList.remove('active');
+    themeToggle.querySelector('span:nth-child(1)').classList.add('active');
+}
+
+if (darkMode === 'enabled') {
+    enabledDarkMode();    
+}
+
+themeToggle.addEventListener("click", () => {
+    darkMode = localStorage.getItem('darkMode');
+    if (darkMode !== 'enabled') {
+        enabledDarkMode();
+    }else {
+        disableDarkMode();
+    }
+
+    
+    // document.body.classList.toggle('dark-theme-variables');
+
+    
+    
 })
 
 //Buat AJAX

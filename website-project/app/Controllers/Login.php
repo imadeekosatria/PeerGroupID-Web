@@ -36,11 +36,11 @@ class Login extends BaseController
                 $session = session();
                 $session->set([
                     'username' => $dataUser->username,
-                    'name' => $dataUser->nama,
+                    'panggilan' => $dataUser->panggilan,
                     'foto' => $dataUser->foto,
                     'logged_in' => TRUE
                 ]);
-                return redirect()->to('/admin-panel');
+                return redirect()->to(base_url('admin-panel'));
             } else {
                 session()->setFlashdata('error', 'Password Salah');
                 return redirect()->back();
@@ -54,7 +54,7 @@ class Login extends BaseController
     function logout()
     {
         session()->destroy();
-        return redirect()->to('/login');
+        return redirect()->to(base_url('login'));
     }
 
 
@@ -123,9 +123,11 @@ class Login extends BaseController
             return redirect()->to('/login');
         }
         $allpost = $this->get->getallpost();
+        $getkegiatan = $this->kegiatan->getadminkegiatan();
         $data = [
             'title' => 'Admin Panel',
-            'allpost' => $allpost
+            'allpost' => $allpost,
+            'kegiatan' => $getkegiatan
         ];
         return view('Apps/admin_panel', $data);
     }
@@ -139,11 +141,11 @@ class Login extends BaseController
         }
         $artikel = $this->get->getadminartikel();
         $data = [
-            'title' => 'Artikel Admin',
+            'title' => 'Artikel',
             'artikel' => $artikel
         ];
 
-        return view('Apps/artikel_admin', $data);
+        return view('Apps/new_admin_artikel', $data);
     }
 
     public function hapus_artikel($id){
@@ -267,7 +269,7 @@ class Login extends BaseController
         }
         $getkegiatan = $this->kegiatan->getadminkegiatan();
         $data = [
-            'title' => 'Kegiatan Admin',
+            'title' => 'Kegiatan',
             'kegiatan' => $getkegiatan
         ];
         return view('Apps/kegiatan_admin', $data);
@@ -275,10 +277,14 @@ class Login extends BaseController
 
     //Ajax request
     public function ajax($date){
+       
         $ajax = $this->get->getpostajax($date);
+        $ajax2 = $this->kegiatan->getkegiatanwhere($date);
         $data = [
-            'allpost' => $ajax
+            'allpost' => $ajax,
+            'kegiatan' => $ajax2
         ];
+        
         return view('Apps/ajax', $data);
     }
     

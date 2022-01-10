@@ -1,4 +1,4 @@
-<table>
+
     <thead>
         <tr>
             <th>Judul</th>
@@ -10,15 +10,40 @@
         </tr>
     </thead>
     <tbody>
-        <?php foreach ($allpost->getResultArray() as $data): ?>
-        <tr>
-            <td><a href="/detail-artikel/<?php echo $data['slug']?>"><?php echo $data['judul']?></a></td>
-            <td><?php echo $data['kategori']?></td>
-            <td><?php echo $data['penulis']?></td>
-            <td><?php echo strftime('%e %b %Y', strtotime($data['created_at'])); ?></td>
-            <td><?php echo strftime('%e %b %Y', strtotime($data['updated_at'])); ?></td>
-            <td>button</td>
-        </tr>
-        <?php endforeach?>
+        <?php
+            if ($allpost->getNumRows() > 0) {
+                foreach ($allpost->getResultArray() as $data){
+                    $created = strftime('%e %b %Y', strtotime($data['created_at']));
+                    $updated = strftime('%e %b %Y', strtotime($data['updated_at']));
+                    echo "<tr>
+                    <td><a href='/detail-artikel/$data[slug]'>$data[judul]</a></td>
+                    <td>$data[kategori]</td>
+                    <td>$data[penulis]</td>
+                    <td>$created</td>
+                    <td>$updated</td>
+                    <td>button</td>
+                </tr>";
+                }
+            }elseif ($kegiatan) {
+                if ($kegiatan->getNumRows() > 0) {
+                    foreach ($kegiatan->getResultArray() as $data){
+                        $created = strftime('%e %b %Y', strtotime($data['created_at']));
+                        $updated = strftime('%e %b %Y', strtotime($data['updated_at']));
+                        echo "<tr>
+                        <td><a href='/detail-artikel/$data[slug]'>$data[judul]</a></td>
+                        <td>$data[kategori]</td>
+                        <td>$data[penulis]</td>
+                        <td>$created</td>
+                        <td>$updated</td>
+                        <td>button</td>
+                    </tr>";
+                    }
+                }
+            }else{
+                echo "<tr>
+                    <td colspan='6'>No Data</td>
+                </tr>";
+            }
+        ?>
+        
     </tbody>
-</table>
