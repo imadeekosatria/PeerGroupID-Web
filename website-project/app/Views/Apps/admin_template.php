@@ -103,7 +103,6 @@
             <!-- End of Recent Updates -->
         </div>
     </div>
-    <?php echo uri_string(); ?>
     <script src="/assets/js/admin.js"></script>
 </body>
 </html>
