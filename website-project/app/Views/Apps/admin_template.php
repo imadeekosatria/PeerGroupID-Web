@@ -101,6 +101,69 @@
                 </div>
             </div>
             <!-- End of Recent Updates -->
+
+            <div class="analytics">
+                <a href="#" id="add-item">
+                    <div class="items add">
+                        <div>
+                            <span class="material-icons-sharp">add</span>
+                            <h3>Add</h3>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-modal">
+        <div class="modal-content">
+            <div class="close" id="close-modal">
+                <span class="material-icons-sharp">close</span>
+            </div>
+            <form action="<?basa_url('Login/simpan')?>" method="post" enctype="multipart/form-data">
+                <?=csrf_field();?>
+                <div>
+                    <label for="judul">Judul</label>
+                    <input type="text" name="judul" id="judul" placeholder="Masukkan Judul" required >
+                    <div>
+                        
+                    </div>
+                </div>
+                <div>    
+                    <label for="kategori">Kategori</label>
+                    <select name="kategori" required>
+                        <option value="">Pilih Kategori</option>
+                        <option value="self development">Self Development</option>
+                        <option value="karir">Karir</option>
+                        <option value="jurusan">Jurusan</option>
+                        <option value="jurusan">Kegiatan Kami</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="cover">Upload Cover</label>
+                    <input type="file" name="cover" id="cover" required>
+                </div>
+                <div>
+                    <label for="sumber_cover">Sumber Cover</label>
+                    <input type="text" name="sumber_cover" id="sumber_cover" placeholder="Masukkan sumber cover">
+                </div>
+                <div>
+                    <label for="deskripsi">Deskripsi</label>
+                    <textarea name="deskripsi" id="deskripsi" rows="3" required></textarea>
+                </div>
+                <div>
+                    <label for="name">Nama Penulis</label>
+                    <input type="text" name="name" id="name" placeholder="Masukkan nama penulis" required>
+                </div>
+                <div>
+                    <label for="content">Isi Konten</label>
+                    <textarea name="content" id="content" rows="10" required></textarea>
+                </div>
+                <div>
+                    <button type="submit">Kirim</button>
+                    <button type="reset">Reset</button>
+                </div>
+            </form>
         </div>
     </div>
     <script src="/assets/js/admin.js"></script>

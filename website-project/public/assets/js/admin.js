@@ -5,6 +5,8 @@ const themeToggle = document.querySelector(".theme-toggler");
 const date = document.getElementById("date-filter");
 const container = document.getElementById('recent-post');
 let darkMode = localStorage.getItem("darkMode");
+const addButton = document.getElementById("add-item");
+const closePop = document.getElementById('close-modal');
 
 // Show sidebar
 menuBtn.addEventListener("click", () => {
@@ -46,12 +48,7 @@ themeToggle.addEventListener("click", () => {
     }else {
         disableDarkMode();
     }
-
-    
     // document.body.classList.toggle('dark-theme-variables');
-
-    
-    
 })
 
 //Buat AJAX
@@ -65,4 +62,15 @@ date.addEventListener('change', () => {
     }
     xhr.open('GET', 'admin-panel/ajax/'+ date.value, true);
     xhr.send();
+})
+
+//Tombol Tambah
+addButton.addEventListener('click', () => {
+    document.querySelector('.bg-modal').style.display = 'flex';
+});
+
+//Tombol close popup
+closePop.addEventListener('click', () => {
+    document.querySelector('.bg-modal').style.display = 'none';
+    // console.log(closePop);
 })

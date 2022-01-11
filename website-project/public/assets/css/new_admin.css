@@ -464,6 +464,161 @@ main a{
     margin-bottom: 1rem;
 }
 
+.right .analytics{
+    margin-top: 2rem;
+}
+.right .analytics h2{
+    margin-bottom: .8rem;
+}
+
+.right .analytics .items{
+    background: var(--color-white);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: .7rem;
+    padding: 1.4rem var(--card-padding);
+    border-radius: var(--border-radius-3);
+    box-shadow: var(--box-shadow);
+    transition: all 300ms ease;
+}
+
+.right .analytics .items:hover{
+    box-shadow: none;
+}
+
+.right .analytics .add{
+    background: transparent;
+    border: 2px dashed var(--color-primary);
+    color: var(--color-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.right .analytics .add div {
+    display: flex;
+    align-items: center;
+    gap: .6rem;
+}
+
+.right .analytics .add div h3{
+    font-weight: 600;
+}
+
+.bg-modal{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.modal-content{
+    width: 80%;
+    height: 80%;
+    background-color: var(--color-white);
+    opacity: 1;
+    border-radius: var(--card-border-radius);
+    padding: var(--card-padding);
+    position: relative;
+    overflow-y: scroll;
+}
+.bg-modal .modal-content input, .bg-modal .modal-content select{
+    height: 2.5rem;
+}
+
+.bg-modal .modal-content input[type="file"]{
+    border: none;
+    border-radius: 0;
+    text-indent: 0;
+    background: none;
+} 
+
+.bg-modal .modal-content input, 
+.bg-modal .modal-content select,
+.bg-modal .modal-content textarea {
+    border: 2px solid var(--color-dark-variant);
+    border-radius: 0.5rem;
+    text-indent: 1rem;
+    background: var(--color-background);
+    color: var(--color-info-dark);
+}
+
+.bg-modal .modal-content .close {
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.bg-modal .modal-content form{
+    width: calc(100% - 3rem);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: .8rem;
+}
+
+.bg-modal .modal-content form label {
+    font-size: 1rem;
+    margin-left: 5rem;
+}
+
+.bg-modal .modal-content form textarea{
+    resize: none;
+}
+
+.bg-modal .modal-content form div {
+    display: grid;
+    grid-template-columns: .5fr 1fr;
+}
+
+.bg-modal .modal-content form div:last-child {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 5rem;
+    bottom: 1rem;
+    left: 2rem;
+    position: absolute;
+    right: 2rem;
+    justify-items: center;
+}
+
+.bg-modal .modal-content form div:last-child button{
+    height: 50px;
+    width: 300px;
+    background: var(--color-primary);
+    color: var(--color-white);
+    cursor: pointer;
+}
+::placeholder {
+    color: var(--color-info-dark);
+}
+
+::-webkit-scrollbar{
+    height: 90%;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+   
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888; 
+}
+  
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
 
 /* Media QUERIES */
 @media screen and (max-width: 1200px){
