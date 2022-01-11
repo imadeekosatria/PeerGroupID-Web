@@ -127,7 +127,8 @@ class Login extends BaseController
         $data = [
             'title' => 'Admin Panel',
             'allpost' => $allpost,
-            'kegiatan' => $getkegiatan
+            'kegiatan' => $getkegiatan,
+            'validation' => \Config\Services::validation()
         ];
         return view('Apps/admin_panel', $data);
     }

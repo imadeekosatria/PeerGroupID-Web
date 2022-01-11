@@ -124,10 +124,8 @@
                 <?=csrf_field();?>
                 <div>
                     <label for="judul">Judul</label>
-                    <input type="text" name="judul" id="judul" placeholder="Masukkan Judul" required >
-                    <div>
-                        
-                    </div>
+                    <input type="text" name="judul" id="judul" placeholder="Masukkan Judul" required <?=$validation->hasError('title')?>>
+                    <p class="error">jjkjkj</p>
                 </div>
                 <div>    
                     <label for="kategori">Kategori</label>
@@ -138,28 +136,40 @@
                         <option value="jurusan">Jurusan</option>
                         <option value="jurusan">Kegiatan Kami</option>
                     </select>
+                    <p class="error">jjkjkj</p>
+
                 </div>
                 <div>
                     <label for="cover">Upload Cover</label>
                     <input type="file" name="cover" id="cover" required>
+                    <p class="error">jjkjkj</p>
+
                 </div>
                 <div>
                     <label for="sumber_cover">Sumber Cover</label>
                     <input type="text" name="sumber_cover" id="sumber_cover" placeholder="Masukkan sumber cover">
+                    <p class="error">jjkjkj</p>
+
                 </div>
                 <div>
                     <label for="deskripsi">Deskripsi</label>
                     <textarea name="deskripsi" id="deskripsi" rows="3" required></textarea>
+                    <p class="error">jjkjkj</p>
+
                 </div>
                 <div>
                     <label for="name">Nama Penulis</label>
                     <input type="text" name="name" id="name" placeholder="Masukkan nama penulis" required>
+                    <p class="error">jjkjkj</p>
+
                 </div>
                 <div>
                     <label for="content">Isi Konten</label>
                     <textarea name="content" id="content" rows="8" required></textarea>
+                    <p class="error">jjkjkj</p>
+
                 </div>
-                <div>
+                <div class="button-group">
                     <button type="submit">Kirim</button>
                     <button type="reset">Reset</button>
                 </div>
