@@ -73,7 +73,8 @@ class Login extends BaseController
             'nama' => $dataUser->nama,
             'id' => $dataUser->id_user,
             'gender' => $dataUser->gender,
-            'foto' => $dataUser->foto 
+            'foto' => $dataUser->foto,
+            'validation' => \Config\Services::validation()
         ];
 
         return view('Apps/new_profile', $data);
@@ -143,7 +144,8 @@ class Login extends BaseController
         $artikel = $this->get->getadminartikel();
         $data = [
             'title' => 'Artikel',
-            'artikel' => $artikel
+            'artikel' => $artikel,
+            'validation' => \Config\Services::validation()
         ];
 
         return view('Apps/new_admin_artikel', $data);
@@ -168,30 +170,30 @@ class Login extends BaseController
     public function simpan(){
         // dd($this->request->getVar());
         //Validation
-        // if (!$this->validate([
-        //     'title' => [
-        //         'rules'=>'required|is_unique[artikel.judul]',
-        //         'error' =>[
-        //             'is_unique' => '{field} Judul sudah ada'
-        //         ]
-        //     ],
-        //     'cover' => [
-        //         'rules' => 'max_size[cover,1024]|is_image[cover]|mime_in[cover,image/jpg,image/jpeg,image/png,image/svg]',
-        //         'error' => [
+        if (!$this->validate([
+            'title' => [
+                'rules'=>'required|is_unique[artikel.judul]',
+                'error' =>[
+                    'is_unique' => '{field} Judul sudah ada'
+                ]
+            ],
+            'cover' => [
+                'rules' => 'max_size[cover,1024]|is_image[cover]|mime_in[cover,image/jpg,image/jpeg,image/png,image/svg]',
+                'error' => [
                     
-        //             'max_size' => 'Upload maksimal 1 MB',
-        //             'is_image' => 'Yang anda upload bukan gambar',
-        //             'mime_in' => 'Yang anda upload bukan gambar'
-        //         ]
-        //     ]
+                    'max_size' => 'Upload maksimal 1 MB',
+                    'is_image' => 'Yang anda upload bukan gambar',
+                    'mime_in' => 'Yang anda upload bukan gambar'
+                ]
+            ]
             
 
             
-        // ])) {
-        //     $validation = \Config\Services::validation();
-        //     // return redirect()->to('/tambah-data')->withInput()->with('validation',$validation);
-        //     return redirect()->to('/tambah-data')->withInput();
-        // }
+        ])) {
+            $validation = \Config\Services::validation();
+            // return redirect()->to('/tambah-data')->withInput()->with('validation',$validation);
+            return redirect()->back()->withInput();
+        }
 		
         //Ambil gambar
         $fileCover = $this->request->getFile('cover');
@@ -210,17 +212,31 @@ class Login extends BaseController
         //Slug if needed
         $slug = url_title($this->request->getVar('title'), '-', true);
         //Simpan
-		$this->get->save([
-			'judul' => $this->request->getVar('title'),
-            'slug' => $slug,
-            'cover' => $coverName,
-            'sumber_cover' => $this->request->getVar('sumber_cover'),
-            'deskripsi' => $this->request->getVar('deskripsi'),
-			'penulis' => $this->request->getVar('penulis'),
-			'kategori' => $this->request->getVar('kategori'),
-            'text' => $this->request->getVar('content')
-		]);
-        return redirect()->to('artikel-admin');
+        if($this->request->getVar('kategori') === 'kegiatan'){
+            $this->kegiatan->save([
+                'judul' => $this->request->getVar('title'),
+                'slug' => $slug,
+                'cover' => $coverName,
+                'sumber_cover' => $this->request->getVar('sumber_cover'),
+                'deskripsi' => $this->request->getVar('deskripsi'),
+                'penulis' => $this->request->getVar('penulis'),
+                'kategori' => $this->request->getVar('kategori'),
+                'text' => $this->request->getVar('content')
+            ]);
+            return redirect()->to('artikel-admin');
+        }else{
+            $this->get->save([
+                'judul' => $this->request->getVar('title'),
+                'slug' => $slug,
+                'cover' => $coverName,
+                'sumber_cover' => $this->request->getVar('sumber_cover'),
+                'deskripsi' => $this->request->getVar('deskripsi'),
+                'penulis' => $this->request->getVar('penulis'),
+                'kategori' => $this->request->getVar('kategori'),
+                'text' => $this->request->getVar('content')
+            ]);
+            return redirect()->to('artikel-admin');
+        }
 	}
 
     public function edit_artikel($id) {
@@ -271,22 +287,27 @@ class Login extends BaseController
         $getkegiatan = $this->kegiatan->getadminkegiatan();
         $data = [
             'title' => 'Kegiatan',
-            'kegiatan' => $getkegiatan
+            'kegiatan' => $getkegiatan,
+            'validation' => \Config\Services::validation()
         ];
         return view('Apps/kegiatan_admin', $data);
     }
 
     //Ajax request
     public function ajax($date){
-       
-        $ajax = $this->get->getpostajax($date);
-        $ajax2 = $this->kegiatan->getkegiatanwhere($date);
-        $data = [
-            'allpost' => $ajax,
-            'kegiatan' => $ajax2
-        ];
-        
-        return view('Apps/ajax', $data);
+        if ($date === NULL) {
+            admin();
+        }else {
+            
+            $ajax = $this->get->getpostajax($date);
+            $ajax2 = $this->kegiatan->getkegiatanwhere($date);
+            $data = [
+                'allpost' => $ajax,
+                'kegiatan' => $ajax2
+            ];
+            
+            return view('Apps/ajax', $data);
+        }
     }
     
 }

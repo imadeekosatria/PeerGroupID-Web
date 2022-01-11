@@ -38,6 +38,10 @@
                         <td>button</td>
                     </tr>";
                     }
+                }else{
+                    echo "<tr>
+                        <td colspan='6'>No Data</td>
+                    </tr>";
                 }
             }else{
                 echo "<tr>

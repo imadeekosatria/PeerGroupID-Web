@@ -120,12 +120,12 @@
             <div class="close" id="close-modal">
                 <span class="material-icons-sharp">close</span>
             </div>
-            <form action="<?basa_url('Login/simpan')?>" method="post" enctype="multipart/form-data">
+            <form action="<?php echo base_url('Login/simpan')?>" method="post" enctype="multipart/form-data">
                 <?=csrf_field();?>
                 <div>
                     <label for="judul">Judul</label>
                     <input type="text" name="judul" id="judul" placeholder="Masukkan Judul" required <?=$validation->hasError('title')?>>
-                    <p class="error">jjkjkj</p>
+                    <p class="error"><?= $validation->getError('title')?></p>
                 </div>
                 <div>    
                     <label for="kategori">Kategori</label>
@@ -134,40 +134,31 @@
                         <option value="self development">Self Development</option>
                         <option value="karir">Karir</option>
                         <option value="jurusan">Jurusan</option>
-                        <option value="jurusan">Kegiatan Kami</option>
+                        <option value="kegiatan">Kegiatan Kami</option>
                     </select>
-                    <p class="error">jjkjkj</p>
-
                 </div>
                 <div>
                     <label for="cover">Upload Cover</label>
                     <input type="file" name="cover" id="cover" required>
-                    <p class="error">jjkjkj</p>
+                    <p class="error"><?= $validation->getError('cover')?></p>
 
                 </div>
                 <div>
                     <label for="sumber_cover">Sumber Cover</label>
-                    <input type="text" name="sumber_cover" id="sumber_cover" placeholder="Masukkan sumber cover">
-                    <p class="error">jjkjkj</p>
+                    <input type="text" name="sumber_cover" id="sumber_cover" placeholder="Masukkan sumber cover" required>
 
                 </div>
                 <div>
                     <label for="deskripsi">Deskripsi</label>
                     <textarea name="deskripsi" id="deskripsi" rows="3" required></textarea>
-                    <p class="error">jjkjkj</p>
-
                 </div>
                 <div>
                     <label for="name">Nama Penulis</label>
                     <input type="text" name="name" id="name" placeholder="Masukkan nama penulis" required>
-                    <p class="error">jjkjkj</p>
-
                 </div>
                 <div>
                     <label for="content">Isi Konten</label>
                     <textarea name="content" id="content" rows="8" required></textarea>
-                    <p class="error">jjkjkj</p>
-
                 </div>
                 <div class="button-group">
                     <button type="submit">Kirim</button>
