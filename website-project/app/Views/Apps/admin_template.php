@@ -157,7 +157,7 @@
                 </div>
                 <div>
                     <label for="content">Isi Konten</label>
-                    <textarea name="content" id="content" rows="10" required></textarea>
+                    <textarea name="content" id="content" rows="8" required></textarea>
                 </div>
                 <div>
                     <button type="submit">Kirim</button>

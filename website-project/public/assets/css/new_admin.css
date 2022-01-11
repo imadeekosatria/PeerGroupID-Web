@@ -526,7 +526,6 @@ main a{
     border-radius: var(--card-border-radius);
     padding: var(--card-padding);
     position: relative;
-    overflow-y: scroll;
 }
 .bg-modal .modal-content input, .bg-modal .modal-content select{
     height: 2.5rem;
@@ -562,7 +561,7 @@ main a{
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    gap: .8rem;
+    gap: 1rem;
 }
 
 .bg-modal .modal-content form label {
@@ -572,6 +571,7 @@ main a{
 
 .bg-modal .modal-content form textarea{
     resize: none;
+    padding-top: .5rem;
 }
 
 .bg-modal .modal-content form div {
@@ -596,14 +596,25 @@ main a{
     background: var(--color-primary);
     color: var(--color-white);
     cursor: pointer;
+    border-radius: var(--border-radius-1);
+    box-shadow: var(--box-shadow);
+}
+
+.bg-modal .modal-content form div:last-child button:hover{
+    box-shadow: none;
+}
+
+.bg-modal .modal-content form div:nth-child(2) select{
+    width: 12rem;
+}
+
+.bg-modal .modal-content form div:nth-child(3) input{
+    width: 30rem;
 }
 ::placeholder {
     color: var(--color-info-dark);
 }
 
-::-webkit-scrollbar{
-    height: 90%;
-}
 
 /* Track */
 ::-webkit-scrollbar-track {
