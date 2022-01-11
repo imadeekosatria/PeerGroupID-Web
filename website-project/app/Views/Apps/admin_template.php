@@ -67,7 +67,7 @@
                         <small class="text-muted">Admin</small>
                     </div>
                     <div class="profile-photo">
-                        <img src="/assets/images/profile/latar-belakang-keluarga-mina-twice-ramai-dibicarakan-ini-alasannya_171.jpeg" alt="profile picture">
+                        <img src="/assets/images/profile/<?=$session->foto?>" alt="profile picture">
                     </div>
                 </div>
             </div>

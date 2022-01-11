@@ -634,6 +634,13 @@ main a{
     background: #555; 
 }
 
+.invert::-webkit-calendar-picker-indicator {
+    /* color: var(--color-dark);
+	position: relative; */
+	filter: invert(1);
+	/* z-index: 0; */
+}
+
 /* Media QUERIES */
 @media screen and (max-width: 1200px){
     .container{
