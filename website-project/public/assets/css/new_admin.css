@@ -640,7 +640,9 @@ main a{
 	filter: invert(1);
 	/* z-index: 0; */
 }
-
+.label-date-filter{
+    display: none;
+}
 /* Media QUERIES */
 @media screen and (max-width: 1200px){
     .container{
@@ -703,7 +705,10 @@ main a{
         width: 100%;
         grid-template-columns: 1fr;
     }
-
+    .label-date-filter{
+        display: block;
+        margin-top: 1rem;
+    }
     aside {
         position: fixed;
         left: -100%;

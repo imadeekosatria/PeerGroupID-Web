@@ -3,6 +3,7 @@
         <main>
             <h1>Dashboard</h1>
     
+            <h5 class="label-date-filter">Filter tanggal</h5>
             <div class="date">
                 <input type="date" name="date-filter" id="date-filter">
             </div>
