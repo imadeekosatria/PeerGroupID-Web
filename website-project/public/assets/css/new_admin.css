@@ -651,6 +651,24 @@ main a{
 .kegiatan{
     margin-top: 2rem !important; 
 }
+
+.button-action{
+    display: flex;
+    gap: .3rem;
+    justify-content: center;
+    align-items: center;
+    height: 3.8rem;
+}
+
+.button{    
+    width: 70px;
+    background: var(--color-primary);
+    color: var(--color-dark);
+    font-weight: 800;
+    cursor: pointer;
+    border-radius: var(--border-radius-1);
+    box-shadow: var(--box-shadow);
+}
 /* Media QUERIES */
 @media screen and (max-width: 1200px){
     .container{

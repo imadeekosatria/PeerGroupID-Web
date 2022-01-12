@@ -35,7 +35,18 @@
                             <td><?php echo $data['penulis']?></td>
                             <td><?php echo strftime('%e %b %Y', strtotime($data['created_at'])); ?></td>
                             <td><?php echo strftime('%e %b %Y', strtotime($data['updated_at'])); ?></td>
-                            <td>button</td>
+                            <td class="button-action">
+                                <form action="/admin-artikel/edit/<?=$data['slug']?>" method="post">
+                                    <?csrf_field();?>
+                                    <input type="hidden" name="_method" value="PUT">
+                                    <button type="submit" class="button">Edit</button>
+                                    </form>
+                                    <form action="/admin-artikel/hapus/<?=$data['id_kegiatan']?>" method="post">
+                                    <?csrf_field();?>
+                                    <input type="hidden" name="_method" value="DELETE">
+                                    <button type="submit" class="button" onclick="return confirm('Apakah anda yakin ingin menghapus <?=$data['judul']?> ?')">Hapus</button>
+                                </form>
+                            </td>
                         </tr>
                         <?php endforeach?>
                     </tbody>
