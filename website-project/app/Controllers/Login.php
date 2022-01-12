@@ -171,12 +171,12 @@ class Login extends BaseController
         // dd($this->request->getVar());
         //Validation
         if (!$this->validate([
-            'title' => [
+            'judul' => [
                 'rules'=>'required|is_unique[artikel.judul]',
                 'error' =>[
                     'is_unique' => '{field} Judul sudah ada'
-                ]
-            ],
+                    ]
+                ],
             'cover' => [
                 'rules' => 'max_size[cover,1024]|is_image[cover]|mime_in[cover,image/jpg,image/jpeg,image/png,image/svg]',
                 'error' => [
@@ -184,15 +184,14 @@ class Login extends BaseController
                     'max_size' => 'Upload maksimal 1 MB',
                     'is_image' => 'Yang anda upload bukan gambar',
                     'mime_in' => 'Yang anda upload bukan gambar'
-                ]
-            ]
-            
-
-            
+                    ]
+                    ]    
+                    
         ])) {
-            $validation = \Config\Services::validation();
-            // return redirect()->to('/tambah-data')->withInput()->with('validation',$validation);
-            return redirect()->back()->withInput();
+            $validation = \Config\Services::validation();   
+            // dd($validation);
+            // return redirect()->to('/admin-panel')->withInput()->with('validation',$validation);
+            return redirect()->to(base_url('admin-panel'))->withInput();
         }
 		
         //Ambil gambar
@@ -210,33 +209,33 @@ class Login extends BaseController
         }
         
         //Slug if needed
-        $slug = url_title($this->request->getVar('title'), '-', true);
+        $slug = url_title($this->request->getVar('judul'), '-', true);
         //Simpan
-        if($this->request->getVar('kategori') === 'kegiatan'){
-            $this->kegiatan->save([
-                'judul' => $this->request->getVar('title'),
-                'slug' => $slug,
-                'cover' => $coverName,
-                'sumber_cover' => $this->request->getVar('sumber_cover'),
-                'deskripsi' => $this->request->getVar('deskripsi'),
-                'penulis' => $this->request->getVar('penulis'),
-                'kategori' => $this->request->getVar('kategori'),
-                'text' => $this->request->getVar('content')
-            ]);
-            return redirect()->to('artikel-admin');
-        }else{
+        // $this->kegiatan->save([
+        //     'judul' => $this->request->getVar('judul'),
+        //     'slug' => $slug,
+        //     'cover' => $coverName,
+        //     'sumber_cover' => $this->request->getVar('sumber_cover'),
+        //     'deskripsi' => $this->request->getVar('deskripsi'),
+        //     'penulis' => $this->request->getVar('name'),
+        //     'kategori' => $this->request->getVar('kategori'),
+        //     'text' => $this->request->getVar('content')
+        // ]);
+        // return redirect()->to('artikel-admin');
+        // if($this->request->getVar('kategori') === 'kegiatan'){
+        // }else{
             $this->get->save([
-                'judul' => $this->request->getVar('title'),
+                'judul' => $this->request->getVar('judul'),
                 'slug' => $slug,
                 'cover' => $coverName,
                 'sumber_cover' => $this->request->getVar('sumber_cover'),
                 'deskripsi' => $this->request->getVar('deskripsi'),
-                'penulis' => $this->request->getVar('penulis'),
+                'penulis' => $this->request->getVar('name'),
                 'kategori' => $this->request->getVar('kategori'),
                 'text' => $this->request->getVar('content')
             ]);
             return redirect()->to('artikel-admin');
-        }
+        // }
 	}
 
     public function edit_artikel($id) {
@@ -268,7 +267,7 @@ class Login extends BaseController
         }
         $this->get->save([
             'id' => $id,
-			'judul' => $this->request->getVar('title'),
+			'judul' => $this->request->getVar('judul'),
             'cover' => $coverName,
             'sumber_cover' => $this->request->getVar('sumber_cover'),
             'deskripsi' => $this->request->getVar('deskripsi'),

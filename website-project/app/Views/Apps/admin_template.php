@@ -124,8 +124,10 @@
                 <?=csrf_field();?>
                 <div>
                     <label for="judul">Judul</label>
-                    <input type="text" name="judul" id="judul" placeholder="Masukkan Judul" required <?=$validation->hasError('title')?>>
-                    <p class="error"><?= $validation->getError('title')?></p>
+                    <div class="input-group">
+                        <input type="text" name="judul" id="judul" placeholder="Masukkan Judul" <?=$validation->hasError('judul')?> value="<?= old('judul')?>">
+                        <p class="error"><?= $validation->getError('judul')?></p>
+                    </div>
                 </div>
                 <div>    
                     <label for="kategori">Kategori</label>
@@ -139,30 +141,34 @@
                 </div>
                 <div>
                     <label for="cover">Upload Cover</label>
-                    <input type="file" name="cover" id="cover" required>
-                    <p class="error"><?= $validation->getError('cover')?></p>
-
+                    <div class="input-group">
+                        <input type="file" name="cover" id="cover" required>
+                        <p class="error"><?= $validation->getError('cover')?></p>
+                    </div>
                 </div>
                 <div>
                     <label for="sumber_cover">Sumber Cover</label>
-                    <input type="text" name="sumber_cover" id="sumber_cover" placeholder="Masukkan sumber cover" required>
-
+                    <div class="input-group">
+                        <input type="text" name="sumber_cover" id="sumber_cover" placeholder="Masukkan sumber cover" required value="<?= old('sumber_cover')?>">
+                        <p class="error"><?= $validation->getError('sumber_cover')?></p>
+                    </div>
                 </div>
                 <div>
                     <label for="deskripsi">Deskripsi</label>
-                    <textarea name="deskripsi" id="deskripsi" rows="3" required></textarea>
+                    <textarea name="deskripsi" id="deskripsi" rows="3" required><?= old('judul')?></textarea>
                 </div>
                 <div>
                     <label for="name">Nama Penulis</label>
-                    <input type="text" name="name" id="name" placeholder="Masukkan nama penulis" required>
+                    <input type="text" name="name" id="name" placeholder="Masukkan nama penulis" required value="<?= old('name')?>">
+                    <p class="error"><?= $validation->getError('name')?></p>
                 </div>
                 <div>
                     <label for="content">Isi Konten</label>
-                    <textarea name="content" id="content" rows="8" required></textarea>
+                    <textarea name="content" id="content" rows="8" required><?= old('judul')?></textarea>
                 </div>
                 <div class="button-group">
-                    <button type="submit">Kirim</button>
                     <button type="reset">Reset</button>
+                    <button type="submit">Kirim</button>
                 </div>
             </form>
         </div>

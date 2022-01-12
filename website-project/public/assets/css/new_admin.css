@@ -615,7 +615,6 @@ main a{
 }
 
 .error{
-    margin-left: 100%;
     margin-top: 0.5rem;
 }
 
@@ -642,6 +641,11 @@ main a{
 }
 .label-date-filter{
     display: none;
+}
+
+.bg-modal .modal-content form div .input-group{
+    display: flex;
+    flex-direction: column;
 }
 /* Media QUERIES */
 @media screen and (max-width: 1200px){
