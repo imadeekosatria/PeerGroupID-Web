@@ -39,6 +39,8 @@ const enabledDarkMode = () => {
     localStorage.setItem('darkMode', 'enabled');
     themeToggle.querySelector('span:nth-child(2)').classList.add('active');
     themeToggle.querySelector('span:nth-child(1)').classList.remove('active');
+    date.classList.add('invert');
+    dateKegiatan.classList.add('invert');
 }
 const disableDarkMode = () => {
     //Add dark mode
@@ -47,6 +49,8 @@ const disableDarkMode = () => {
     localStorage.setItem('darkMode', null);
     themeToggle.querySelector('span:nth-child(2)').classList.remove('active');
     themeToggle.querySelector('span:nth-child(1)').classList.add('active');
+    date.classList.remove('invert');
+    dateKegiatan.classList.remove('invert');
 }
 
 if (darkMode === 'enabled') {
@@ -57,12 +61,9 @@ themeToggle.addEventListener("click", () => {
     darkMode = localStorage.getItem('darkMode');
     if (darkMode !== 'enabled') {
         enabledDarkMode();
-        date.classList.add('invert');
-        dateKegiatan.classList.add('invert');
+        
     }else {
         disableDarkMode();
-        date.classList.remove('invert');
-        dateKegiatan.classList.remove('invert');
     }
     // document.body.classList.toggle('dark-theme-variables');
 })
