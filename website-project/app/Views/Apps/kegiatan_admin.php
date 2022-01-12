@@ -57,3 +57,7 @@
         <!-- End of the main section -->
 </main>
 <?= $this->endsection();?>
+<?= $this->section('js')?>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="/assets/js/about.js"></script>
+<?= $this->endsection();?>

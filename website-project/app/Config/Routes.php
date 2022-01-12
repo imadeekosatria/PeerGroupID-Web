@@ -42,10 +42,11 @@ $routes->get('/logout', 'Login::logout');
 $routes->get('/admin-panel', 'Login::admin');
 //Bagian Admin Artikel
 $routes->get('/artikel-admin', 'Login::artikel');
-$routes->put('/admin-artikel/edit/(:any)', 'Login::edit_artikel/$1');
-$routes->delete('/admin-artikel/hapus/(:num)', 'Login::hapus_artikel/$1');
+$routes->put('/artikel-admin/edit/(:any)', 'Login::edit_artikel/$1');
+$routes->delete('/artikel-admin/hapus/(:num)', 'Login::hapus_artikel/$1');
 //Bagian Admin Kegiatan
 $routes->get('/kegiatan-admin', 'Login::kegiatan');
+$routes->delete('/kegiatan-admin/hapus/(:num)', 'Login::hapus_artikel/$1');
 //Bagian Admin Tambah Data
 $routes->get('/tambah-data', 'Login::tambah_data');
 //Bagian Admin Profile Data
@@ -55,7 +56,10 @@ $routes->get('/update/profile/(:num)', 'Login::update_profile/$1');
 
 //Ajax Request
 $routes->get('/admin-panel/ajax/(:any)', 'Login::ajax/$1');
+$routes->get('/admin-panel/ajax', 'Login::ajax2');
 $routes->get('/admin-panel/ajax-kegiatan/(:any)', 'Login::ajaxKegiatan/$1');
+$routes->get('/admin-panel/ajax-kegiatan', 'Login::ajaxKegiatan2');
+
 
 
 

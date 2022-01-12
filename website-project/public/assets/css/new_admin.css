@@ -229,9 +229,10 @@ aside .sidebar a:hover span{
 
 aside .sidebar .message-count{
     background-color: var(--color-danger);
-    color: var(--color-white);
+    color: var(--color-info-light);
     padding: 2px 10px;
     font-size: 11px;
+    font-weight: 700;
     border-radius: var(--border-radius-1);
 }
 
