@@ -46,7 +46,7 @@ class ArtikelModel extends Model
     }
 
     public function getallpost(){
-        $query = $this->db->query("SELECT * FROM artikel ORDER BY updated_at DESC");
+        $query = $this->db->query("SELECT * FROM artikel ORDER BY updated_at DESC Limit 5");
         return $query;
     }
 

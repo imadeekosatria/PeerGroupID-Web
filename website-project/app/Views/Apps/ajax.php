@@ -11,22 +11,9 @@
     </thead>
     <tbody>
         <?php
-            if ($allpost->getNumRows() > 0) {
-                foreach ($allpost->getResultArray() as $data){
-                    $created = strftime('%e %b %Y', strtotime($data['created_at']));
-                    $updated = strftime('%e %b %Y', strtotime($data['updated_at']));
-                    echo "<tr>
-                    <td><a href='/detail-artikel/$data[slug]'>$data[judul]</a></td>
-                    <td>$data[kategori]</td>
-                    <td>$data[penulis]</td>
-                    <td>$created</td>
-                    <td>$updated</td>
-                    <td>button</td>
-                </tr>";
-                }
-            }elseif ($kegiatan) {
-                if ($kegiatan->getNumRows() > 0) {
-                    foreach ($kegiatan->getResultArray() as $data){
+            if ($allpost) {
+                if ($allpost->getNumRows() > 0) {
+                    foreach ($allpost->getResultArray() as $data){
                         $created = strftime('%e %b %Y', strtotime($data['created_at']));
                         $updated = strftime('%e %b %Y', strtotime($data['updated_at']));
                         echo "<tr>

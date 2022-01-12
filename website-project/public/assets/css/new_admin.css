@@ -647,6 +647,10 @@ main a{
     display: flex;
     flex-direction: column;
 }
+
+.kegiatan{
+    margin-top: 2rem !important; 
+}
 /* Media QUERIES */
 @media screen and (max-width: 1200px){
     .container{

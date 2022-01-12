@@ -299,10 +299,21 @@ class Login extends BaseController
         }else {
             
             $ajax = $this->get->getpostajax($date);
-            $ajax2 = $this->kegiatan->getkegiatanwhere($date);
             $data = [
                 'allpost' => $ajax,
-                'kegiatan' => $ajax2
+            ];
+            
+            return view('Apps/ajax', $data);
+        }
+    }
+
+    public function ajaxKegiatan($date){
+        if ($date === NULL) {
+            admin();
+        }else {
+            $ajax2 = $this->kegiatan->getkegiatanwhere($date);
+            $data = [
+                'allpost' => $ajax2
             ];
             
             return view('Apps/ajax', $data);

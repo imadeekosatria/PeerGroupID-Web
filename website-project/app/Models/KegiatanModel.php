@@ -22,7 +22,7 @@ class KegiatanModel extends Model
     
     //get admin kegiatan
     public function getadminkegiatan(){
-        $query = $this->db->query("SELECT * FROM kegiatan");
+        $query = $this->db->query("SELECT * FROM kegiatan ORDER BY updated_at DESC LIMIT 5");
         return $query;
     }
 

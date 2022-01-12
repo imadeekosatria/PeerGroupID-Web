@@ -55,6 +55,8 @@ $routes->get('/update/profile/(:num)', 'Login::update_profile/$1');
 
 //Ajax Request
 $routes->get('/admin-panel/ajax/(:any)', 'Login::ajax/$1');
+$routes->get('/admin-panel/ajax-kegiatan/(:any)', 'Login::ajaxKegiatan/$1');
+
 
 
 
