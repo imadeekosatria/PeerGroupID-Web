@@ -7,6 +7,7 @@ use CodeIgniter\Model;
 class KegiatanModel extends Model
 {
     protected $table = 'kegiatan';
+    protected $primaryKey = 'id_kegiatan';
     protected $allowedFields = ['judul', 'slug','penulis', 'deskripsi', 'isi', 'cover', 'sumber_cover', 'time'];
     protected $db;
     public function __construct(){
