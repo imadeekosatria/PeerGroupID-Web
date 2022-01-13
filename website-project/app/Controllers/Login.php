@@ -183,10 +183,10 @@ class Login extends BaseController
                     ]
                 ],
             'cover' => [
-                'rules' => 'max_size[cover,1024]|is_image[cover]|mime_in[cover,image/jpg,image/jpeg,image/png,image/svg]',
+                'rules' => 'max_size[cover,5120]|is_image[cover]|mime_in[cover,image/jpg,image/jpeg,image/png,image/svg]',
                 'error' => [
                     
-                    'max_size' => 'Upload maksimal 1 MB',
+                    'max_size' => 'Upload maksimal 5 MB',
                     'is_image' => 'Yang anda upload bukan gambar',
                     'mime_in' => 'Yang anda upload bukan gambar'
                     ]
