@@ -84,7 +84,7 @@
                         </li>
                         <!--<li class="nav__item"><a href="#" class="nav__link">#CeritaMereka</a></li>
                         <li class="nav__item"><a href="#" class="nav__link">Review</a></li>-->
-                        <li class="nav__item"><a href="#" class="nav__link">Kegiatan Kami</a></li>
+                        <!-- <li class="nav__item"><a href="#" class="nav__link">Kegiatan Kami</a></li> -->
                         <?php
                             if ($session->logged_in == true) {
                                 $logout = base_url('logout');
