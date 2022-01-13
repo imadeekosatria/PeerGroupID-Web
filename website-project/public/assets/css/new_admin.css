@@ -530,11 +530,15 @@ main a{
     position: relative;
     overflow-y: auto;
 }
-.bg-modal .modal-content input, .bg-modal .modal-content select{
+.bg-modal .modal-content input, 
+.bg-modal .modal-content select,
+.edit-container form input,
+.edit-container form select{
     height: 2.5rem;
 }
 
-.bg-modal .modal-content input[type="file"]{
+.bg-modal .modal-content input[type="file"],
+.edit-container form input[type="file"]{
     border: none;
     border-radius: 0;
     text-indent: 0;
@@ -543,7 +547,10 @@ main a{
 
 .bg-modal .modal-content input, 
 .bg-modal .modal-content select,
-.bg-modal .modal-content textarea {
+.bg-modal .modal-content textarea,
+.edit-container form input,
+.edit-container form select,
+.edit-container form textarea{
     border: 2px solid var(--color-dark-variant);
     border-radius: 0.5rem;
     text-indent: 1rem;
@@ -558,7 +565,8 @@ main a{
     cursor: pointer;
 }
 
-.bg-modal .modal-content form{
+.bg-modal .modal-content form,
+.edit-container form{
     width: calc(100% - 3rem);
     display: flex;
     flex-direction: column;
@@ -566,12 +574,13 @@ main a{
     gap: 1rem;
 }
 
-.bg-modal .modal-content form label {
+.bg-modal .modal-content form label{
     font-size: 1rem;
     margin-left: 5rem;
 }
 
-.bg-modal .modal-content form textarea{
+.bg-modal .modal-content form textarea,
+.edit-container form textarea{
     resize: none;
     padding-top: .5rem;
 }
@@ -581,7 +590,8 @@ main a{
     grid-template-columns: .5fr 1fr;
 }
 
-.bg-modal .modal-content form .button-group {
+.bg-modal .modal-content form .button-group,
+.edit-container form .button-group{
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 5rem;
@@ -589,7 +599,8 @@ main a{
     justify-items: center;
 }
 
-.bg-modal .modal-content form div:last-child button{
+.bg-modal .modal-content form div:last-child button,
+.edit-container form div:last-child button{
     height: 50px;
     width: 300px;
     background: var(--color-primary);
@@ -600,7 +611,8 @@ main a{
     box-shadow: var(--box-shadow);
 }
 
-.bg-modal .modal-content form div:last-child button:hover{
+.bg-modal .modal-content form div:last-child button:hover,
+.edit-container form div:last-child button:hover{
     box-shadow: none;
 }
 
@@ -644,7 +656,8 @@ main a{
     display: none;
 }
 
-.bg-modal .modal-content form div .input-group{
+.bg-modal .modal-content form div .input-group,
+.edit-container form div .input-group {
     display: flex;
     flex-direction: column;
 }
@@ -669,6 +682,23 @@ main a{
     cursor: pointer;
     border-radius: var(--border-radius-1);
     box-shadow: var(--box-shadow);
+}
+.edit-container{
+    background: var(--color-white);
+    width: 100%;
+    border-radius: var(--card-border-radius);
+    padding: var(--card-padding);
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    transition: all 300ms ease;
+}
+.edit-container:hover{
+    box-shadow: none;
+}
+
+.edit-container form div{
+    display: grid;
+    grid-template-columns: .5fr 1fr;
 }
 /* Media QUERIES */
 @media screen and (max-width: 1200px){

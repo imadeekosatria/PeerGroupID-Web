@@ -38,7 +38,7 @@
                 <a href="/kegiatan-admin" class="nav-link <?php if(uri_string() === 'kegiatan-admin') echo "active"; ?>">
                     <span class="material-icons-sharp">workspaces</span>
                     <h3>Kegiatan</h3>
-                    <span class="message-count">26</span>
+                    <!-- <span class="message-count">26</span> -->
                 </a>
                 <a href="/profile" class="nav-link <?php if(uri_string() === 'profile') echo "active"; ?>">
                     <span class="material-icons-sharp">person_outline</span>

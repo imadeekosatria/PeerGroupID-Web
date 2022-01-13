@@ -39,9 +39,9 @@
                                 <form action="/artikel-admin/edit/<?=$data['slug']?>" method="post">
                                     <?csrf_field();?>
                                     <input type="hidden" name="_method" value="PUT">
-                                    <button type="submit" class="button">Edit</button>
-                                    </form>
-                                    <form action="/artikel-admin/hapus/<?=$data['id']?>" method="post">
+                                    <button type="submit" class="button" id="edit">Edit</button>
+                                </form>
+                                <form action="/artikel-admin/hapus/<?=$data['id']?>" method="post">
                                     <?csrf_field();?>
                                     <input type="hidden" name="_method" value="DELETE">
                                     <button type="submit" class="button" onclick="return confirm('Apakah anda yakin ingin menghapus <?=$data['judul']?> ?')">Hapus</button>
@@ -53,7 +53,6 @@
                 </table>
                 <!-- <a href="#">Show All</a> -->
             </div>
-        </main>
-        <!-- End of the main section -->
 </main>
+        <!-- End of the main section -->
 <?= $this->endsection();?>

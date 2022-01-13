@@ -156,6 +156,11 @@ class Login extends BaseController
 		    return redirect()->back();
     }
 
+    public function hapus_kegiatan($id){
+        $this->kegiatan->delete($id);
+		    return redirect()->back();
+    }
+
     public function tambah_data(){
         $penulis = $this->user->penulis();
         $data = [
@@ -248,7 +253,19 @@ class Login extends BaseController
             'validation' => \Config\Services::validation()
 		];
 
-		return view('Apps/edit_form', $data);
+		return view('Apps/new_edit_form', $data);
+    }
+    public function edit_kegiatan($id) {
+        $edit = $this->kegiatan->getkegiatan($id);
+        
+        $data = [
+			'title' => 'Edit Kegiatan',
+			'tampil' => $edit,
+            
+            'validation' => \Config\Services::validation()
+		];
+
+		return view('Apps/new_edit_form', $data);
     }
     
     public function update($id){
@@ -265,15 +282,27 @@ class Login extends BaseController
             //Ambil nama gambar
             $coverName = $fileCover->getName();
         }
-        $this->get->save([
-            'id' => $id,
-			'judul' => $this->request->getVar('judul'),
-            'cover' => $coverName,
-            'sumber_cover' => $this->request->getVar('sumber_cover'),
-            'deskripsi' => $this->request->getVar('deskripsi'),
-			'kategori' => $this->request->getVar('kategori'),
-            'text' => $this->request->getVar('content')
-		]);
+        if ($this->request->getVar('kategori') === 'kegiatan') {
+            $this->kegiatan->save([
+                'id' => $id,
+                'judul' => $this->request->getVar('judul'),
+                'cover' => $coverName,
+                'sumber_cover' => $this->request->getVar('sumber_cover'),
+                'deskripsi' => $this->request->getVar('deskripsi'),
+                'kategori' => $this->request->getVar('kategori'),
+                'text' => $this->request->getVar('content')
+            ]);
+        }else{
+            $this->get->save([
+                'id' => $id,
+                'judul' => $this->request->getVar('judul'),
+                'cover' => $coverName,
+                'sumber_cover' => $this->request->getVar('sumber_cover'),
+                'deskripsi' => $this->request->getVar('deskripsi'),
+                'kategori' => $this->request->getVar('kategori'),
+                'text' => $this->request->getVar('content')
+            ]);
+        }
         return redirect()->to('artikel-admin');
     }
 
