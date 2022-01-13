@@ -175,6 +175,7 @@ class Login extends BaseController
     public function simpan(){
         // dd($this->request->getVar());
         //Validation
+        
         if (!$this->validate([
             'judul' => [
                 'rules'=>'required|is_unique[artikel.judul]',
@@ -183,7 +184,7 @@ class Login extends BaseController
                     ]
                 ],
             'cover' => [
-                'rules' => 'max_size[cover,5120]|is_image[cover]|mime_in[cover,image/jpg,image/jpeg,image/png,image/svg]',
+                'rules' => 'max_size[cover,5120]|is_image[cover]|mime_in[cover,image/jpg,image/jpeg,image/png,image/svg+xml]',
                 'error' => [
                     
                     'max_size' => 'Upload maksimal 5 MB',

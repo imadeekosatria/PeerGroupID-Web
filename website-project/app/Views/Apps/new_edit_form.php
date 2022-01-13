@@ -23,7 +23,7 @@
     <div class="recent-post" id="recent-post">
         <h2>Edit Post</h2>
         <div class="edit-container">
-        <form action="<?php echo base_url('Login/simpan')?>" method="post" enctype="multipart/form-data">
+        <form action="/Login/update/<?php echo $id?>" method="post" enctype="multipart/form-data">
                 <?=csrf_field();?>
                 <div>
                     <label for="judul">Judul</label>
@@ -62,7 +62,7 @@
                 </div>
                 <div>
                     <label for="name">Nama Penulis</label>
-                    <input type="text" name="name" id="name" placeholder="Masukkan nama penulis" required value="<?php echo $deskripsi; old('deskripsi');?>"penulis?>
+                    <input type="text" name="name" id="name" placeholder="Masukkan nama penulis" required value="<?php echo $penulis; old('deskripsi');?>"penulis?>
                     <p class="error"><?= $validation->getError('name')?></p>
                 </div>
                 <div>
