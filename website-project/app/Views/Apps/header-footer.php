@@ -47,6 +47,8 @@
     <meta property="twitter:description" content="<?=$deskripsi?>">
     <meta property="twitter:image" content="http://peergroup.id/assets/images/Logo Peer Group.jpg">
     <!-- <meta name="twitter:image:alt" content="Alt text for image"> -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5386817970723352"
+     crossorigin="anonymous"></script>
     <!-- Clarity tracking code for http://peergroup.id/ -->
     <script>    
         (function(c,l,a,r,i,t,y){        
