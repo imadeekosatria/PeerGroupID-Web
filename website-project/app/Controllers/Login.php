@@ -152,13 +152,29 @@ class Login extends BaseController
     }
 
     public function hapus_artikel($id){
+        $artikel = $this->get->findCover($id);
+        $row = $artikel->getRow();
+        $cover=$row->cover;
+        // If default.svg
+        if ($cover != 'default.svg') {
+            //Hapus gambar
+            unlink('assets/images/artikel/' . $cover);
+        }
         $this->get->delete($id);
-		    return redirect()->back();
+		return redirect()->back();
     }
 
     public function hapus_kegiatan($id){
+        $kegiatan = $this->kegiatan->findCover($id);
+        $row = $kegiatan->getRow();
+        $cover=$row->cover;
+        // If default.svg
+        if ($cover != 'default.svg') {
+            //Hapus gambar
+            unlink('assets/images/artikel/' . $cover);
+        }
         $this->kegiatan->delete($id);
-		    return redirect()->back();
+		return redirect()->back();
     }
 
     public function tambah_data(){
@@ -179,19 +195,19 @@ class Login extends BaseController
         if (!$this->validate([
             'judul' => [
                 'rules'=>'required|is_unique[artikel.judul]',
-                'error' =>[
-                    'is_unique' => '{field} Judul sudah ada'
-                    ]
-                ],
+                'rules'=>'required|is_unique[kegiatan.judul]',
+                'errors' =>[
+                    'is_unique' => 'Judul sudah ada'
+                ]
+            ],
             'cover' => [
                 'rules' => 'max_size[cover,5120]|is_image[cover]|mime_in[cover,image/jpg,image/jpeg,image/png,image/svg+xml]',
-                'error' => [
-                    
+                'errors' => [
                     'max_size' => 'Upload maksimal 5 MB',
                     'is_image' => 'Yang anda upload bukan gambar',
                     'mime_in' => 'Yang anda upload bukan gambar'
-                    ]
-                    ]    
+                ]
+            ]    
                     
         ])) {
             $validation = \Config\Services::validation();   

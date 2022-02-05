@@ -36,4 +36,8 @@ class KegiatanModel extends Model
         $query = $this->db->query("SELECT * FROM kegiatan Where slug = '$slug'");
         return $query;
     }
+    public function findCover($id){
+        $query = $this->db->query("SELECT cover FROM kegiatan Where id = '$id'");
+        return $query;
+    }
 }

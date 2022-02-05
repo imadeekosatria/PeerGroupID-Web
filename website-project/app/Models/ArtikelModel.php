@@ -54,4 +54,9 @@ class ArtikelModel extends Model
         $query = $this->db->query("SELECT * FROM artikel Where updated_at LIKE '%$date%'");
         return $query;
     }
+
+    public function findCover($id){
+        $query = $this->db->query("SELECT cover FROM artikel Where id = '$id'");
+        return $query;
+    }
 }

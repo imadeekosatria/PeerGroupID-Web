@@ -73,10 +73,10 @@
             </div>
             <!-- End of top -->
 
-            <div class="recent-updates">
+            <!-- <div class="recent-updates">
                 <h2>Recent Updates</h2>
                 <div class="updates">
-                    <!-- Use from here to repeat -->
+                    Use from here to repeat
                     <div class="update">
                         <div class="profile-photo">
                             <img src="/assets/images/profile/latar-belakang-keluarga-mina-twice-ramai-dibicarakan-ini-alasannya_171.jpeg" alt="profile image">
@@ -86,8 +86,8 @@
                             <small class="text-muted">2 minutes ago</small>
                         </div>
                     </div>
-                    <!-- end of repeat -->
-                    <!-- Use from here to repeat -->
+                    end of repeat
+                    Use from here to repeat
                     <div class="update">
                         <div class="profile-photo">
                             <img src="/assets/images/profile/profile.jpg" alt="profile image">
@@ -97,9 +97,9 @@
                             <small class="text-muted">2 minutes ago</small>
                         </div>
                     </div>
-                    <!-- end of repeat -->
+                    end of repeat
                 </div>
-            </div>
+            </div> -->
             <!-- End of Recent Updates -->
 
             <div class="analytics">
