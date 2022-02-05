@@ -115,7 +115,7 @@
         </div>
     </div>
 
-    <div class="bg-modal">
+    <div class="bg-modal" <?php if($validation) { echo 'style=display:flex;';}?>>
         <div class="modal-content">
             <div class="close" id="close-modal">
                 <span class="material-icons-sharp">close</span>
