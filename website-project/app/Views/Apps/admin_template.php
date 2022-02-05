@@ -115,7 +115,7 @@
         </div>
     </div>
 
-    <div class="bg-modal" <?php if($validation) { echo 'style=display:flex;';}?>>
+    <div class="bg-modal" <?php if($validation->getErrors()) { echo 'style=display:flex;';}?>>
         <div class="modal-content">
             <div class="close" id="close-modal">
                 <span class="material-icons-sharp">close</span>
@@ -142,7 +142,7 @@
                 <div>
                     <label for="cover">Upload Cover</label>
                     <div class="input-group">
-                        <input type="file" name="cover" id="cover" required>
+                        <input type="file" name="cover" id="cover" required value="<?= old('cover')?>">
                         <p class="error"><?= $validation->getError('cover')?></p>
                     </div>
                 </div>
