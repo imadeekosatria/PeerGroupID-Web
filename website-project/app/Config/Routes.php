@@ -46,8 +46,8 @@ $routes->put('/artikel-admin/edit/(:any)', 'Login::edit_artikel/$1');
 $routes->delete('/artikel-admin/hapus/(:num)', 'Login::hapus_artikel/$1');
 //Bagian Admin Kegiatan
 $routes->get('/kegiatan-admin', 'Login::kegiatan');
-$routes->delete('/kegiatan-admin/hapus/(:num)', 'Login::hapus_artikel/$1');
-$routes->put('/admin-kegiatan/edit/(:any)', 'Login::edit_kegiatan/$1');
+$routes->delete('/kegiatan-admin/hapus/(:num)', 'Login::hapus_kegiatan/$1');
+$routes->put('/kegiatan-admin/edit/(:any)', 'Login::edit_kegiatan/$1');
 //Bagian Admin Tambah Data
 $routes->get('/tambah-data', 'Login::tambah_data');
 //Bagian Admin Profile Data
